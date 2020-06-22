@@ -1,0 +1,32 @@
+To set up your git software to use your account, use:
+git config --global user.name (your github username)
+git config --global user.email (your email here)
+
+ls - list
+cd - change directory
+cd .. takes you up one file level
+
+
+git add (filename) - stages a change to be committed
+git commit -m "commit message" - commit changes to local repository
+commiting change tells local computer that you like the change, saves it locally
+
+git pull - pulls changes from online repository to local repository
+git push - pushes local changes to online repository
+
+To create a repository from an online one, use:
+git clone (paste path here)
+
+Cloning copies everything from the online repo into yours
+
+To see the history of everything that has been committed, use:
+git log
+
+When working with other people,
+1.  Commit your changes
+2.  Pull changes everyone else made
+3.  Resolve any conflicts
+4.  Push your changes.
+
+
+If you don't like using git through the terminal, use gitkraken instead for a fancy user interface.
