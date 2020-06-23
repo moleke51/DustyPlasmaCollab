@@ -36,7 +36,8 @@ def ABR_RK(x0,y0,z0,X,N,A):
     return(x,y)
 
 alpha, Phi_a = ABR_RK(7.03,4.10e-4,-2.34e-4,10**(-6),100000,1)
-
-
+J_ = alpha**2 * 43/(sp.sqrt(4*sp.pi)) * sp.exp(-Phi_a)
+print(alpha, Phi_a)
+print(J_)
 end = dt.now()
 print(f'Code completed in {(end-start).seconds}s')
