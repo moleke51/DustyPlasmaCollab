@@ -1,6 +1,4 @@
 Notes
-<<<<<<< HEAD
 Arnold is amazing
-=======
 Seals are amazing
->>>>>>> 65887aad49ccbb395a4601c0533d2b4baf19aa8d
+
