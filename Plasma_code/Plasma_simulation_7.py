@@ -406,11 +406,21 @@ else:
                 print('Invalid mu value.')
     else:
         #Calculate the mu value.
-        proton_number = 'pt.' + species + '.number'
-        mass = 'pt.' + species + '.mass'
-        m_a = eval(mass)
+        index = np.floor(elementList.index(species)/2)
+        index2 = 0
+        if index == 119:
+            index = 1
+            index2 = 1
+        elif index == 120:
+            index = 1
+            index2 = 2
+        
+            
+        m_a = (elements[index].mass) + index2*(elements[0].mass)#[kg]
         m_i = (m_a)*u #[kg]
-        mu = sp.sqrt(m_i/m_e) #Mu value
+        mu = np.sqrt(m_i/m_e) #Mu value
+        proton_number = elements[index].number
+        #print(index,m_a,proton_number)
 
     
 
@@ -438,7 +448,7 @@ if species.lower()=='override':
         except SyntaxError:
             print('Invalid charge value.')
 else:
-    z_max = eval(proton_number)
+    z_max = proton_number
     while counter==0:
         try:
             z = input('Enter the relative charge on the plasma ions, [1.60*10^-19 C] ; ') # z is the ion relative charge
