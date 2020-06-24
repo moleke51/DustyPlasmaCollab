@@ -10,7 +10,7 @@ J = 10000
 gamma = 10000
 z = 1
 mu = 43
-alpha = 1
+alpha = 1e10
 #============================FUNCTIONS============================#
 
 #Define the normalised current J from equation ABR 12
@@ -72,7 +72,7 @@ def retrive_Phi_a(J,mu,alpha):
 
 def ABR_solver(alpha,mu,z,gamma=10000):
     #Guess Phi_a (Its likely to be between 0 and 10)
-    Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,10,mu),args = (alpha,mu,z,gamma))
+    Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
     return retrive_Phi_a(Jsol,mu,alpha)
 Phi_a = ABR_solver(alpha,mu,z)
 print(Phi_a)
