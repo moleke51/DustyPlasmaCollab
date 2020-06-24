@@ -68,8 +68,13 @@ def delta_J(J,alpha,mu,z,gamma = 10000):
     return J - norm_J_current(alpha,Phi_J(J,alpha,mu,z,gamma = 10000),mu)
 def retrive_Phi_a(J,mu,alpha):
     return 2*np.log(alpha) + np.log(mu) - np.log(J) - 0.5*np.log(4*np.pi)
-Jguess = norm_J_current(alpha,3,mu) #Guess Phi_a (Its likely to be between 1 and 10)
-Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,10,mu),args = (alpha,mu,z,gamma))
-print(retrive_Phi_a(Jsol,mu,alpha))
+
+
+def ABR_solver(alpha,mu,z,gamma=10000):
+    #Guess Phi_a (Its likely to be between 0 and 10)
+    Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,10,mu),args = (alpha,mu,z,gamma))
+    return retrive_Phi_a(Jsol,mu,alpha)
+Phi_a = ABR_solver(alpha,mu,z)
+print(Phi_a)
 end = dt.now()
 print(f'Code completed in {(end-start).seconds}s')
