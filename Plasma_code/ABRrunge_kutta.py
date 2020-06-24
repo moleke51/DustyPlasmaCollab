@@ -35,9 +35,9 @@ def ABR_RK(x0,y0,z0,X,N,A):
         z += 1/6 * (l1 + 2*l2 + 2*l3 + l4)*h
                 
     return(x,y)
-
+mu = 43
 alpha, Phi_a = ABR_RK(7.03,4.10e-4,-2.34e-4,10**(-6),100000,1)
-J_ = alpha**2 * 43/(np.sqrt(4*np.pi)) * np.exp(-Phi_a)
+J_ = alpha**2 * mu/(np.sqrt(4*np.pi)) * np.exp(-Phi_a)
 print(alpha, Phi_a)
 print(J_)
 end = dt.now()
