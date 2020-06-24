@@ -2,5 +2,5 @@ Clean up simulation:
 -Separate modules for each model. for module in folder, import module (Dogan)
 -Priority functions ==> increase modularity (George)
 -Add new ABR (Dogan)
--Remove eval (George)
+-Remove eval (George) COMPLETED
 -Graph new ABR (Dogan)

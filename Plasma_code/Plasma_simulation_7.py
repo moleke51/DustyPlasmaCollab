@@ -216,7 +216,25 @@ def speciesinput():
     else:
         word = word.lower()
     return(word)
-
+def eval_input(x):
+    x = x.replace('^','**')
+    if '**' in x:
+        x = x.split('**')
+        a = x[0].split('*')
+        b = x[1].split('*')
+        A = 1
+        for i in range(len(a)-1):
+            A *= float(a[i])
+        for i in range(1,len(b)):
+            A *= float(b[i])
+        B = float(a[-1])**float(b[0])
+        X = A*B
+    else:
+        x = x.split('*')
+        X = 1
+        for i in range(len(x)):
+            X *= float(x[i])
+    return X
 #Define the function to choose and implement the models based on the inputs.
 def Potential_Finder(mu,z,alpha,Theta,upsilon,species):
     #Warm of cold test
@@ -373,7 +391,7 @@ else:
         counter = 0
         while counter == 0:
             try:
-                mu = float(eval(((input('Enter the mu value; ').replace('^','**'))).replace('print',''))) #Mu value
+                mu = eval_input(input('Enter the mu value; ')) #Mu value
                 if mu > 0:
                     counter=1
                 else:
@@ -396,16 +414,18 @@ else:
 
     
 
-#Ask the user for the charge on the ions in the plasma in Coulombs, charge can be added in multiples of e by inputting e after the value.
+#Ask the user for the relative charge on the ions in the plasma in integer multiples of the electron charge.
 counter=0
 if species.lower()=='override':
     while counter == 0:
         try:
-            print(z)
-            Z = float(eval((((input('Enter the charge on the plasma ions, [C] ; ').replace('^','**')).replace('e',' * e'))).replace('print',''))) # Z is the ion charge
-            if Z>0:
+            z = input('Enter the relative charge on the plasma ions, [1.60*10^-19 C] ; ') # z is the ion relative charge
+            if '.' in z:
+                print('The relative charge must be an integer.')
+            else:
+                z = float(z)
+            if z>0:
                 counter=1
-                z = Z/e
                 m_i = mu*m_e - z*m_e
             else:
                 print('The charge must be greater than zero.')
@@ -418,22 +438,25 @@ if species.lower()=='override':
         except SyntaxError:
             print('Invalid charge value.')
 else:
-    Z_max = eval(proton_number) * e
+    z_max = eval(proton_number)
     while counter==0:
         try:
-            Z = float(eval(((input('Enter the charge on the plasma ions, [C] ; ').replace('^','**')).replace('e',' * e').replace('print','')))) # Z is the ion charge
+            z = input('Enter the relative charge on the plasma ions, [1.60*10^-19 C] ; ') # z is the ion relative charge
+            if '.' in z:
+                print('The relative charge must be an integer.')
+            else:
+                z = float(z)
+            #z = eval_input(input('Enter the relative charge on the plasma ions, [1.60*10^-19 C] ; ')) 
             
-            if (Z > Z_max) == True:
-                print('The maximum charge for', species, 'is +' +str(Z_max).replace('e','*10^'),'C')
+            if (z > z_max) == True:
+                print('The maximum charge for', species, 'is +' +str(z_max))
+            elif (z < 0) == True:
+                print('The charge value must be greater than 0.')
                 
-            elif (Z < 0) == True:
-                print('The charge value must be greater than 0')
-                
-            elif (Z == 0) == True:
-                print('Species must be an ion')
+            elif (z == 0) == True:
+                print('Species must be an ion.')
                 
             else:
-                z = Z/e
                 m_i -= z*m_e
                 counter = 1
         except ValueError:
@@ -451,11 +474,10 @@ counter = 0
 thetaOverride = 0
 while counter == 0:
     try:
-        T_i = input('Set ion temperature (Kelvin); ').replace('^','**').replace('eV',' * e/k_B').replace('ev',' * e/k_B').replace('print','')
-        T_i = float(eval(T_i))
-        while (T_i < 0) == True:
+        T_i = input('Set ion temperature [K]; ').replace('eV','ev').replace('ev','*11594')
+        T_i = eval_input(T_i)
+        if (T_i < 0) == True:
             print('The temperature must be greater or equal to zero')
-            T_i = float(eval(input('Set ion temperature (Kelvin); ').replace('^','**').replace('print','')))
         else:
             counter = 1
     except ValueError:
@@ -464,7 +486,7 @@ while counter == 0:
             while counter == 1:
                 try:
                     #THETA VALUE
-                    Theta = float(eval(input('Set the Theta value; ').replace('^','**').replace('print','')))
+                    Theta = eval_input(input('Set the Theta value; '))
                     if Theta >= 0:
                         counter = 2
                         thetaOverride = 1
@@ -494,22 +516,19 @@ while counter == 0:
 counter = 0
 while counter == 0:
     try:
-        T_e = input('Set electron temperature (Kelvin); ').replace('^','**').replace('eV',' * e/k_B').replace('ev',' * e/k_B').replace('print','')
-        T_e = float(eval(T_e))
+        T_e = input('Set electron temperature [K]; ').replace('eV','ev').replace('ev','*11594')
+        T_e = eval_input(T_e)
         if (T_e <= 0) == True:
-            print('The temperature must be greater zero')
-            
+            print('The temperature must be greater than zero')
         else:
             
             counter = 1
             if thetaOverride == 0:   
                 Theta = T_i/T_e #THETA VALUE
-                
-            
-                #ASK ELECTRON DENSITY
+            #ASK ELECTRON DENSITY
             while counter == 1:
                 try:
-                    n_e = float(eval(input('Set the electron density [electrons][m^-3] ').replace('^','**').replace('print','').replace('k','*(10**3)').replace('M','*(10**6)').replace('G','*(10**9)').replace('T','*(10**12)').replace('P','*(10**15)')))
+                    n_e = eval_input(input('Set the electron density [electrons][m^-3] ').replace('k','*10**3').replace('M','*10**6').replace('G','*10**9').replace('T','*10**12').replace('P','*10**15'))
                     if (n_e <= 0) == True:
                         print('The electron density must be greater than 0')   
                     else:
@@ -517,7 +536,7 @@ while counter == 0:
                         lambda_D = sp.sqrt(epsilon_0*k_B*T_e/(n_e*e**2))
                         while counter == 2:
                             try:
-                                a = float(eval((input('Set the dust radius [m] ').replace('^','**').replace('print','').replace('m','*(10**(-3))').replace('u','*(10**(-6))').replace('n','*(10**(-9))'))))
+                                a = eval_input((input('Set the dust radius [m] ').replace('m','*10**-3').replace('u','*10**-6').replace('n','*10**-9')))
                                 if (a <= 0) == True:
                                     print('The dust radius must be greater than 0')
                                 else:
@@ -545,7 +564,7 @@ while counter == 0:
             thetaOverride = 1
             while counter == 1:
                 try:
-                    alpha = float(eval(input('Set the alpha value; ').replace('^','**').replace('print','')))
+                    alpha = eval_input(input('Set the alpha value; '))
                     if alpha > 0:
                         counter = 2
                     else:
@@ -574,8 +593,8 @@ counter = 0
 if thetaOverride == 0:
     while counter == 0:
         try:
-            v = input('Set plasma flow speed (m/s); ').replace('^','**').replace('print','')
-            v = sp.absolute(float(eval(v)))
+            v = input('Set plasma flow speed (m/s); ')
+            v = sp.absolute(eval_input(v))
             counter = 1
             if T_i != 0:
                 upsilon = v / sp.sqrt(2*k_B*T_i/m_i)
@@ -592,7 +611,7 @@ if thetaOverride == 0:
 else:
         while counter == 0:
             try:
-                upsilon = sp.absolute(float(eval(input('Set the upsilon value; ').replace('^','**').replace('print',''))))
+                upsilon = sp.absolute(eval_input(input('Set the upsilon value; ')))
                 counter = 1
                 print(str(upsilon).replace('e','*10^'))
             except ValueError:
