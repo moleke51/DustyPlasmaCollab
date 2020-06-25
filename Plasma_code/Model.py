@@ -18,3 +18,4 @@ class model:
     
 
 
+help(__import__)
