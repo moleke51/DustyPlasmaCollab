@@ -26,23 +26,14 @@ def realLambertW(x):
     else:
         return('This is an invalid input')
 
-#OML model for normalised dust surface potential - eqn 2.107 in Thomas' thesis
-def OML_surface_potential_finder(Theta,mu,z): 
-    x = (Theta/z) - realLambertW((mu*np.sqrt(Theta)/z)*np.exp(Theta/z))
-    return x
-
 #OML model for normalised dust surface potential - eqn 2.107 in Thomas' thesis (absolute values)
 def OML_surface_potential_finder_abs(Theta,mu,z): 
-    x = np.absolute(OML_surface_potential_finder(Theta,mu,z))
+    x = np.absolute((Theta/z) - realLambertW((mu*np.sqrt(Theta)/z)*np.exp(Theta/z)))
     return x
 
-#MOML (Modified OML) model for normalised dust surface potential - eqn 2.130 in Thomas' thesis
-def MOML_surface_potential_finder(Theta,mu,z,gamma): 
-    x = Theta - realLambertW((np.sqrt(2*np.pi*Theta*(1+gamma*Theta)))*np.exp(Theta)) + 0.5*np.log((2*np.pi*(1+gamma*Theta))/((z**2)*(mu)**2))
-    return x
 #MOML (Modified OML) model for normalised dust surface potential - eqn 2.130 in Thomas' thesis (absolute values)
-def MOML_surface_potential_finder_abs(Theta,mu,z,gamma): 
-    x = np.absolute(MOML_surface_potential_finder(Theta,mu,z,gamma))
+def MOML_surface_potential_finder_abs(Theta,mu,z): #gamma = 5/3
+    x = np.absolute(Theta - realLambertW((np.sqrt(2*np.pi*Theta*(1+(5/3)*Theta)))*np.exp(Theta)) + 0.5*np.log((2*np.pi*(1+(5/3)*Theta))/((z**2)*(mu)**2)))
     return x
 
 #Linear model for normalised dust surface potential - eqn 4.3 in Willis' thesis
@@ -50,10 +41,10 @@ def Linear_function(phi_OML,phi_TS,alpha_OML,alpha_TS,alpha):
     x = ((phi_TS - phi_OML)/(np.log(alpha_TS) - np.log(alpha_OML)))*np.log((alpha)/(alpha_TS)) + phi_TS
     return x 
 
-def potential_finder(Theta,mu,z,alpha):
+def potential_finder(Theta,mu,z,alpha,upsilon): #gamma = 5/3
     alpha_OML = 1.25*(Theta)**0.4
     alpha_TS = 50
-    Phi_MOML = MOML_surface_potential_finder_abs(Theta,mu,z,5/3)
+    Phi_MOML = MOML_surface_potential_finder_abs(Theta,mu,z) 
     Phi_OML = OML_surface_potential_finder_abs(Theta,mu,z)
     Phi = Linear_function(Phi_OML,Phi_MOML,alpha_OML,alpha_TS,alpha)
     return Phi #returned phi is positive

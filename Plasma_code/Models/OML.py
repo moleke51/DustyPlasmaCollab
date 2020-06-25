@@ -27,7 +27,7 @@ def realLambertW(x):
         return('This is an invalid input')
 
 #OML model for normalised dust surface potential - eqn 2.107 in Thomas' thesis
-def surface_potential(Theta, mu, z): 
+def surface_potential(Theta,mu,z,alpha,upsilon): 
     Phi = (Theta/z) - realLambertW((mu*np.sqrt(Theta)/z)*np.exp(Theta/z))
     return Phi #returned phi is positive
 

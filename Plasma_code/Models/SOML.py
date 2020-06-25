@@ -27,7 +27,7 @@ def realLambertW(x):
         return('This is an invalid input')
 
 #SOML (Shifted OML) model for normalised dust surface potential - eqn 2.138 in Thomas' thesis
-def potential_finder(Theta,mu,z,upsilon): 
+def potential_finder(Theta,mu,z,alpha,upsilon): 
     s_1 = ((np.sqrt(np.pi))*(1+2*(upsilon**2))* sps.erf(upsilon))/(4*upsilon) + 0.5*np.exp(-(upsilon**2))
     s_2 = (np.sqrt(np.pi)* sps.erf(upsilon))/(2*upsilon)
     Phi = (Theta*s_1)/(s_2) - realLambertW(((mu*z*np.sqrt(Theta))/(s_2))*np.exp((Theta*s_1)/(s_2)))

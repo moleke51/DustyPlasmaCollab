@@ -27,8 +27,8 @@ def realLambertW(x):
         return('This is an invalid input')
 
 #MOML (Modified OML) model for normalised dust surface potential - eqn 2.130 in Thomas' thesis
-def potential_finder(Theta,mu,z,gamma): 
-    Phi = Theta - realLambertW((np.sqrt(2*np.pi*Theta*(1+gamma*Theta)))*np.exp(Theta)) + 0.5*np.log((2*np.pi*(1+gamma*Theta))/((z**2)*(mu)**2))
+def potential_finder(Theta,mu,z,alpha,upsilon): #gamma = 5/3
+    Phi = Theta - realLambertW((np.sqrt(2*np.pi*Theta*(1+(5/3)*Theta)))*np.exp(Theta)) + 0.5*np.log((2*np.pi*(1+(5/3)*Theta))/((z**2)*(mu)**2))
     return Phi #returned phi is positive     
 
 def priority():
