@@ -15,7 +15,7 @@ alpha = 1e10
 
 #Define the normalised current J from equation ABR 12
 def norm_J_current(alpha,Phi,mu):
-    j = (alpha**2)*(mu/((4*sp.pi)**0.5))*sp.exp(-Phi)
+    j = (alpha**2)*(mu/((4*np.pi)**0.5))*np.exp(-Phi)
     return(j)
 #Define equation ABR 13 for the boundary potential Phi_b.
 def Eq_Phi_b(Phi_b, J, z=1,gamma = 10000):
@@ -26,8 +26,8 @@ def get_boundary(J,z,gamma):
     Phi_b_solution = fsolve(Eq_Phi_b, Phi_b_initial_guess, args = (J,z,gamma))
     Phi_b = Phi_b_solution[0]
     #Calculate rho at the boundary. 
-    rho_b = (sp.sqrt(J) * sp.exp(Phi_b/2))/((Phi_b*z)**(1/4))
-    #Calculate the first derivative of Phi with respect to rho evaluated at the boundary.
+    rho_b = (np.sqrt(J) * np.exp(Phi_b/2))/((Phi_b*z)**(1/4))
+    #Calculate the first derivative of Phi with renpect to rho evaluated at the boundary.
     dPhi_drho_b = ((2*rho_b/J) * (Phi_b**(3/2))/(Phi_b - 1/2) * np.exp(-Phi_b))*(z**0.5)
     return(rho_b,Phi_b,dPhi_drho_b)
 #Runge-Kutta 4th order ODE solver
@@ -69,11 +69,11 @@ def delta_J(J,alpha,mu,z,gamma = 10000):
 def retrive_Phi_a(J,mu,alpha):
     return 2*np.log(alpha) + np.log(mu) - np.log(J) - 0.5*np.log(4*np.pi)
 
-
-def ABR_solver(alpha,mu,z,gamma=10000):
+def potential_finder(alpha,mu,z,gamma=10000):
     #Guess Phi_a (Its likely to be between 0 and 10)
     Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
     return retrive_Phi_a(Jsol,mu,alpha)
+
 Phi_a = ABR_solver(alpha,mu,z)
 print(Phi_a)
 end = dt.now()

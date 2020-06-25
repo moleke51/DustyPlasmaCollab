@@ -83,9 +83,7 @@ def realLambertW(x):
 
 #Linear model for normalised dust surface potential - eqn 4.3 in Willis' thesis
 def Linear_function(phi_OML,phi_TS,alpha_OML,alpha_TS,alpha):
-
     x = ((phi_TS - phi_OML)/(sp.log(alpha_TS) - sp.log(alpha_OML)))*sp.log((alpha)/(alpha_TS)) + phi_TS
-
     return x 
 
 #OML model for normalised dust surface potential - eqn 2.107 in Thomas' thesis
