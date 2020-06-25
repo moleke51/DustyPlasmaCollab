@@ -5,6 +5,9 @@ import numpy as np
 from scipy.optimize import fsolve,bisect
 
 
+def get_name():
+    return "ABR"
+    
 #Define the normalised current J from equation ABR 12
 def norm_J_current(alpha,Phi,mu):
     j = (alpha**2)*(mu/((4*np.pi)**0.5))*np.exp(-Phi)

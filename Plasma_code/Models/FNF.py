@@ -4,7 +4,7 @@ import scipy.special as sps
 
 
 def get_name():
-    return "SNF"
+    return "FNF"
 
 def realLambertW(x):
     if type(x) is float or type(x) is int or type(x) is np.float64 :
