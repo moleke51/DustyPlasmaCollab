@@ -31,7 +31,7 @@ def potential_finder(Theta,mu,z,alpha,upsilon):
     s_1 = ((np.sqrt(np.pi))*(1+2*(upsilon**2))* sps.erf(upsilon))/(4*upsilon) + 0.5*np.exp(-(upsilon**2))
     s_2 = (np.sqrt(np.pi)* sps.erf(upsilon))/(2*upsilon)
     Phi = (Theta*s_1)/(s_2) - realLambertW(((mu*z*np.sqrt(Theta))/(s_2))*np.exp((Theta*s_1)/(s_2)))
-    return Phi #returned phi is positive
+    return np.absolute(Phi) #returned phi is positive
 
 def priority():
     return 1    

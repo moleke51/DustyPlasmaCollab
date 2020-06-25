@@ -47,7 +47,7 @@ def potential_finder(Theta,mu,z,alpha,upsilon): #gamma = 5/3
     Phi_MOML = MOML_surface_potential_finder_abs(Theta,mu,z) 
     Phi_OML = OML_surface_potential_finder_abs(Theta,mu,z)
     Phi = Linear_function(Phi_OML,Phi_MOML,alpha_OML,alpha_TS,alpha)
-    return Phi #returned phi is positive
+    return np.absolute(Phi) #returned phi is positive
 
 def priority():
     return 1    

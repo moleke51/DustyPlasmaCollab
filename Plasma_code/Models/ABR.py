@@ -61,7 +61,7 @@ def delta_J(J,alpha,mu,z,gamma = 10000):
 def retrive_Phi_a(J,mu,alpha):
     return 2*np.log(alpha) + np.log(mu) - np.log(J) - 0.5*np.log(4*np.pi)
 
-def potential_finder(mu,z,alpha,upsilon,gamma=10000):
+def potential_finder(Theta,mu,z,alpha,upsilon,gamma=10000):
     #Guess Phi_a (Its likely to be between 0 and 10)
     Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
     return retrive_Phi_a(Jsol,mu,alpha)
