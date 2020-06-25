@@ -1,9 +1,9 @@
-Clean up simulation:
--Separate modules for each model. for module in folder, import module (Dogan) COMPLETED
--Priority functions ==> increase modularity (George) COMPLETED
--Add new ABR (Dogan) COMPLETED
--Remove eval (George) COMPLETED 
--Master override (George) COMPLETED
--Put functions in a module
-Produce graphs
+Simulation 9:
+-Produce graphs
+-Add mode selecter (Physical units/Dimensionless units)
+-One variable can be set to variable and a range chosen
+-Make is acceptible value function inputs: requirements, variable name
+-If variable then return array
+-Take input (constant values and one array in a list determine variable by position of array)
+-Make graphs 
 

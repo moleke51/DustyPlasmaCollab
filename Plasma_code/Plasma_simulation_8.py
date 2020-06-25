@@ -90,7 +90,18 @@ def eval_input(x):
             X *= float(x[i])
     return X
        
+def get_Norm_Potential(Theta,mu,z,alpha,upsilon):
+    modellist = mdl.modelpicker('Plasma_code/Models/',Theta,mu,z,alpha,upsilon)
+    priority = 0
+    for model in modellist:
+        __import__(model.get_name())
+        if model.priority() > priority:
+            
+            priority = model.priority()
+            modelindex = modellist.index(model)
 
+    print(modellist[modelindex])
+    return modellist[modelindex].potential_finder()
 #Define the periodic table
 elements = pt.core.default_table()
 elementList = pt.core.define_elements(elements,globals())
@@ -356,17 +367,8 @@ else:
             except SyntaxError:
                 print('Invalid flow speed.')  
 
-modellist = mdl.modelpicker('Plasma_code/Models/',Theta,mu,z,alpha,upsilon)
-priority = 0
-for model in modellist:
-    __import__(model.get_name())
-    if model.priority() > priority:
-        
-        priority = model.priority()
-        modelindex = modellist.index(model)
 
-print(modellist[modelindex])
-Phi = modellist[modelindex].potential_finder()
+Phi = get_Norm_Potential(Theta,mu,z,alpha,upsilon)
 #Return the normalised potential
 print('The normalised dust grain surface potential is:',Phi)
 
