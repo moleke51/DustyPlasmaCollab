@@ -53,5 +53,17 @@ def potential_finder(Theta,mu,z,alpha,upsilon): #gamma = 5/3
     Phi = Linear_function(Phi_SOML,Phi_SMOML,alpha_OML,alpha_TS,alpha)
     return Phi #returned phi is positive
 
-def priority():
-    return 1    
+def priority(Theta,alpha,upsilon):
+    if Theta >= 1e-4:
+        P_t = 1
+    else:
+        P_t = 0.5
+    if alpha < 50 or alpha > 1.25*Theta**(0.4):
+        P_a = 1
+    else:
+        P_a = 0
+    if upsilon > 0:
+        P_u = 1
+    else:
+        P_u = 0
+    return (P_t + P_a + P_u)   
