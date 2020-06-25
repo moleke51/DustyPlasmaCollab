@@ -66,6 +66,15 @@ def potential_finder(Theta,mu,z,alpha,upsilon,gamma=10000):
     Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
     return retrive_Phi_a(Jsol,mu,alpha)
 
-def priority():
-    return 1   
+def priority(Theta,alpha,upsilon):
+    if Theta > 1e-4:
+        P_t = 0
+    else:
+        P_t = 1
+    P_a = 1
+    if upsilon > 0:
+        P_u = 0
+    else:
+        P_u = 1
+    return (P_t + P_a + P_u)
 

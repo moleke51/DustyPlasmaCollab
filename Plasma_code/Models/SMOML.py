@@ -33,5 +33,17 @@ def potential_finder(Theta,mu,z,alpha,upsilon): #gamma = 5/3
     Phi = (Theta*s_1)/(s_2) - realLambertW(((np.sqrt(2*np.pi*Theta*(1+(5/3)*Theta)))/(s_2))*np.exp((Theta*s_1)/(s_2))) + 0.5*np.log((2*np.pi*(1+(5/3)*Theta))/((z**2)*(mu)**2))
     return np.absolute(Phi) #returned phi is positive
 
-def priority():
-    return 1    
+def priority(Theta,alpha,upsilon):
+    if Theta >= 1e-4:
+        P_t = 1
+    else:
+        P_t = 0.5
+    if alpha >= 50:
+        P_a = 1
+    else:
+        P_a = 0
+    if upsilon > 0:
+        P_u = 1
+    else:
+        P_u = 0
+    return (P_t + P_a + P_u)    
