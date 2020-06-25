@@ -60,7 +60,6 @@ def DH_potential_to_charge(dustradius,Phi_a,lambda_d):
     return x
 
 #It should be noted that the Debye-Huckle potential reduces into the point charge potential when a<<lambda_d
-
 def Spherical_potential_to_charge(dustradius,Phi_a):
     x = 4*sp.pi*(epsilon_0)*dustradius*Phi_a
     return x
@@ -137,9 +136,6 @@ def eval_input(x):
             #Use ABR
             
 
-                
-
-
 #Define the periodic table
 elements = pt.core.default_table()
 elementList = pt.core.define_elements(elements,globals())
@@ -188,8 +184,6 @@ else:
         mu = np.sqrt(m_i/m_e) #Mu value
         proton_number = elements[index].number
         
-
-    
 
 #Ask the user for the relative charge on the ions in the plasma in integer multiples of the electron charge.
 counter=0
@@ -407,9 +401,11 @@ else:
             except SyntaxError:
                 print('Invalid flow speed.')  
 
-#make a list of objects, one for each model  
+#make a list of objects, one for each model 
+p = 
+for model in Models: 
 #Find object with largest priority record its position in the list
-# model = modellist[i]
+#model = modellist[i]
 #print(f'We will use the {model.get_name()} model')
 #Phi = model.potential_finder()
 #Return the normalised potential
