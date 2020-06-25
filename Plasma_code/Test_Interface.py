@@ -44,18 +44,16 @@ elements = pt.core.default_table()
 elementList = pt.core.define_elements(elements,globals())
 elementList.append('override')
 override = 'override'
-#print(elementList)
+print(elementList)
+print(pt.deuterium.mass)
 while True:
     species = speciesinput()
     while (species in elementList) == False:
         print('This species does not exist')
         species = speciesinput()
     i = np.floor(elementList.index(species)/2)
-
     proton_number = elements[i].number
-    m_i = (elements[i].mass)*u #[kg]
+    m_i = (elements[i].mass) #[kg]
     mu = np.sqrt(m_i/m_e) #Mu value
-
-
-
     print(m_i,proton_number)
+    

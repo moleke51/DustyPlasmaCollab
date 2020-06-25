@@ -407,20 +407,19 @@ else:
     else:
         #Calculate the mu value.
         index = np.floor(elementList.index(species)/2)
-        index2 = 0
-        if index == 119:
+        if index == 119: #Deuterium
             index = 1
-            index2 = 1
-        elif index == 120:
+            m_a = pt.deuterium.mass
+        elif index == 120: #Tritium
             index = 1
-            index2 = 2
+            m_a = pt.tritium.mass
         
-            
-        m_a = (elements[index].mass) + index2*(elements[0].mass)#[kg]
+        else:   
+            m_a = (elements[index].mass) #[kg]
         m_i = (m_a)*u #[kg]
         mu = np.sqrt(m_i/m_e) #Mu value
         proton_number = elements[index].number
-        #print(index,m_a,proton_number)
+        
 
     
 
@@ -454,14 +453,15 @@ else:
             z = input('Enter the relative charge on the plasma ions, [1.60*10^-19 C] ; ') # z is the ion relative charge
             if '.' in z:
                 print('The relative charge must be an integer.')
+                
             else:
                 z = float(z)
             #z = eval_input(input('Enter the relative charge on the plasma ions, [1.60*10^-19 C] ; ')) 
             
             if (z > z_max) == True:
-                print('The maximum charge for', species, 'is +' +str(z_max))
+                print('The maximum relative charge for', species, 'is +' +str(z_max))
             elif (z < 0) == True:
-                print('The charge value must be greater than 0.')
+                print('The relative charge value must be greater than 0.')
                 
             elif (z == 0) == True:
                 print('Species must be an ion.')
