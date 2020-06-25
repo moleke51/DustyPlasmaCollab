@@ -35,9 +35,6 @@ import periodictable as pt
 from scipy import integrate
 from scipy.optimize import fsolve
 import Model as mdl
-#=============================SET THE PATH==============================#
-#Enter the path to the program
-path = '/Users/georgedoran/Google Drive/Dusty_Bois/'
 #==============================KEY WORDS================================#
 masteroverride = 'normalise' 
 override = 'override'
@@ -48,13 +45,7 @@ epsilon_0 = 8.85e-12 #[F][m^-1] The permitivity of free space
 k_B = 1.38e-23 #[m^2][kg][s^-2][K^-1] The Boltzmann constant
 m_e = 9.11e-31 #[kg] The mass of an electron
 u = 1.66e-27 #[kg] The mass of a nucleon 
-Theta_critical = 10**(-5) #This is an arbitrary value
-#==============================MESSAGES================================#
-#Define the messages that will be returned for each of the models used 
-fmessage = 'We will use the {} model'
-message_OML = fmessage.format('OML')
 #==============================FUNCTIONS===============================#
-
 #Define the Debye-Huckle potential.
 def DH_potential_to_charge(dustradius,Phi_a,lambda_d):
     x = 4*sp.pi*(epsilon_0)*dustradius*Phi_a*sp.exp((dustradius)/(lambda_d))
