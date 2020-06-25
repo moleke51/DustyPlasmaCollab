@@ -54,7 +54,7 @@ def priority(Theta,alpha,upsilon):
         P_t = 1
     else:
         P_t = 0.5
-    if alpha < 50 or alpha > 1.25*Theta**(0.4):
+    if alpha < 50 and alpha > 1.25*Theta**(0.4):
         P_a = 1
     else:
         P_a = 0

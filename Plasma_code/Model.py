@@ -1,4 +1,8 @@
-from inspect import getmembers, isfunction
+import os
+
+import sys
+# insert at 1, 0 is the script path (or '' in REPL)
+sys.path.insert(1, 'Plasma_code/Models/')
 
 class model:
     def __init__(self,filename,Theta,mu,z,alpha,upsilon):
@@ -13,10 +17,19 @@ class model:
     def __repr__(self):
         return f'Model: {self._name}, at Theta = {self._Theta}, mu = {self._mu}, z = {self._z}, alpha = {self._alpha} and upsilon = {self._upsilon}'
     def priority(self):
-        return getattr(__import__(self._name), 'priority')(self._Theta,self._mu,self._z,self._alpha,self._upsilon)
+        return getattr(__import__(self._name), 'priority')(self._Theta,self._alpha,self._upsilon)
     def potential_finder(self,filename):
         return getattr(__import__(self._name), 'potential_finder')(self._Theta,self._mu,self._z,self._alpha,self._upsilon)
     
 
 
-help(__import__)
+
+def modelpicker(path,Theta,mu,z,alpha,upsilon):
+    FileList = os.listdir(path)
+    modellist = []
+    for File in FileList:
+        if ".py" in File:
+            m = model(File,Theta,mu,z,alpha,upsilon)
+            modellist.append(m)
+    return modellist
+
