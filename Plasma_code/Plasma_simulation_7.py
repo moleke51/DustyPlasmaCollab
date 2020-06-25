@@ -25,8 +25,7 @@
 # gamma: adiabatic constant
 # v: flow speed
 # upsilon = v / [2*(k_B * T_i)/m_i]^1/2: normalised flow speed
-# Z: ion charge
-# z = Z/e: normalised ion charge
+# z: relative ion charge
 #============================IMPORT PACKAGES============================#
 import numpy as np
 import scipy as sp
