@@ -391,6 +391,7 @@ else:
         proton_number = 'pt.' + species + '.number'
         mass = 'pt.' + species + '.mass'
         m_a = eval(mass)
+        print(m_a)
         m_i = (m_a)*u #[kg]
         mu = sp.sqrt(m_i/m_e) #Mu value
 

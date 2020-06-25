@@ -38,6 +38,9 @@ from scipy.optimize import fsolve
 #=============================SET THE PATH==============================#
 #Enter the path to the program
 path = '/Users/georgedoran/Google Drive/Dusty_Bois/'
+#==============================KEY WORDS================================#
+masteroverride = 'normalise' 
+override = 'override'
 #==============================CONSTANTS================================#
 #We define some of the universal constants
 e = 1.60e-19 #[C] The charge on an electron
@@ -209,8 +212,10 @@ def speciesinput():
         word = word.upper()
     elif len(word)==2 :
         word = word.lower().capitalize()
-    elif word.lower() == 'override':
-        word = 'override'
+    elif word.lower() == override:
+        word = override
+    elif word.lower() == masteroverride:
+        word = masteroverride
     else:
         word = word.lower()
     return(word)
@@ -320,10 +325,10 @@ def Potential_Finder(mu,z,alpha,Theta,upsilon,species):
         else:
             #Use ABR
             #Convert the species into its chemical symbol and check for override. 
-            if len(species) >=3 and species != 'override':
+            if len(species) >=3 and species != override:
                 index = elementList.index(species) - 1
                 species = elementList[index]
-            if species == 'override':
+            if species == override:
                 species = 'mu'+str(int(mu))+'z'
             #If the data exists in the database, extract the data and use it to find the value.
             try:    
@@ -374,8 +379,9 @@ def Potential_Finder(mu,z,alpha,Theta,upsilon,species):
 #Define the periodic table
 elements = pt.core.default_table()
 elementList = pt.core.define_elements(elements,globals())
-elementList.append('override')
-override = 'override'
+elementList.append(override)
+elementList.append(masteroverride)
+
 #==============================MAIN CODE================================#
 
 #Ask the user to input the species of the ions in the plasma or to override and imput a custom value of mu.
@@ -385,7 +391,7 @@ while (species in elementList) == False:
     species = speciesinput()
     
 else:
-    if species == 'override':
+    if species == override or species == masteroverride:
         counter = 0
         while counter == 0:
             try:
@@ -405,26 +411,25 @@ else:
     else:
         #Calculate the mu value.
         index = np.floor(elementList.index(species)/2)
-        index2 = 0
-        if index == 119:
+        if index == 119: #Deuterium
             index = 1
-            index2 = 1
-        elif index == 120:
+            m_a = pt.deuterium.mass
+        elif index == 120: #Tritium
             index = 1
-            index2 = 2
+            m_a = pt.tritium.mass
         
-            
-        m_a = (elements[index].mass) + index2*(elements[0].mass)#[kg]
+        else:   
+            m_a = (elements[index].mass) #[kg]
         m_i = (m_a)*u #[kg]
         mu = np.sqrt(m_i/m_e) #Mu value
         proton_number = elements[index].number
-        #print(index,m_a,proton_number)
+        
 
     
 
 #Ask the user for the relative charge on the ions in the plasma in integer multiples of the electron charge.
 counter=0
-if species.lower()=='override':
+if species.lower()== override or species == masteroverride:
     while counter == 0:
         try:
             z = input('Enter the relative charge on the plasma ions, [1.60*10^-19 C] ; ') # z is the ion relative charge
@@ -452,14 +457,15 @@ else:
             z = input('Enter the relative charge on the plasma ions, [1.60*10^-19 C] ; ') # z is the ion relative charge
             if '.' in z:
                 print('The relative charge must be an integer.')
+
             else:
                 z = float(z)
             #z = eval_input(input('Enter the relative charge on the plasma ions, [1.60*10^-19 C] ; ')) 
             
             if (z > z_max) == True:
-                print('The maximum charge for', species, 'is +' +str(z_max))
+                print('The maximum relative charge for', species, 'is +' +str(z_max))
             elif (z < 0) == True:
-                print('The charge value must be greater than 0.')
+                print('The relative charge value must be greater than 0.')
                 
             elif (z == 0) == True:
                 print('Species must be an ion.')
@@ -478,7 +484,10 @@ else:
 
 #Ask the user for the plasmas ion temperature in Kelvin, for temperatures in electron volts input eV after the value.
 #The user may directly input a theta value by typing override. 
-counter = 0
+if species == masteroverride:
+    counter = 2
+else:
+    counter = 0
 thetaOverride = 0
 while counter == 0:
     try:
@@ -489,14 +498,22 @@ while counter == 0:
         else:
             counter = 1
     except ValueError:
-        if T_i.lower() == 'override':
-            counter = 1
-            while counter == 1:
+        if T_i.lower() == override:
+            counter = 2
+        else:
+            print('Invalid ion temperature.')
+    except NameError:
+        print('Invalid ion temperature.')
+    except TypeError:
+        print('Invalid ion temperature.')
+    except SyntaxError:
+        print('Invalid ion temperature.')
+while counter == 2:
                 try:
                     #THETA VALUE
                     Theta = eval_input(input('Set the Theta value; '))
                     if Theta >= 0:
-                        counter = 2
+                        counter = 1
                         thetaOverride = 1
                     else:
                         print('Theta must be greater than or equal to zero.')
@@ -509,14 +526,6 @@ while counter == 0:
                     print('Invalid Theta value.')
                 except SyntaxError:
                     print('Invalid Theta value.')
-        else:
-            print('Invalid ion temperature.')
-    except NameError:
-        print('Invalid ion temperature.')
-    except TypeError:
-        print('Invalid ion temperature.')
-    except SyntaxError:
-        print('Invalid ion temperature.')
 #Ask the user for the electron temperature in Kelvin, for temperatures in electron volts input eV after the value.
 #The user will then be asked for an electron density in electrons per metre cubed, and a dust grain radius in metres.
 #The user may skip this step by inputting override, this will allow an alpha value to be directly inputted.
@@ -524,7 +533,10 @@ while counter == 0:
 counter = 0
 while counter == 0:
     try:
-        T_e = input('Set electron temperature [K]; ').replace('eV','ev').replace('ev','*11594')
+        if species == masteroverride:
+            T_e = override
+        else:
+            T_e = input('Set electron temperature [K]; ').replace('eV','ev').replace('ev','*11594')
         T_e = eval_input(T_e)
         if (T_e <= 0) == True:
             print('The temperature must be greater than zero')
@@ -567,7 +579,7 @@ while counter == 0:
                 except SyntaxError:
                     print('Invalid electron density')
     except ValueError:
-        if T_e.lower() == 'override':
+        if T_e.lower() == override and thetaOverride == 1:
             counter = 1
             thetaOverride = 1
             while counter == 1:
