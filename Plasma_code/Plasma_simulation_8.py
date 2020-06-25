@@ -34,6 +34,7 @@ import matplotlib.pyplot as plt
 import periodictable as pt
 from scipy import integrate
 from scipy.optimize import fsolve
+import Model as mdl
 #=============================SET THE PATH==============================#
 #Enter the path to the program
 path = '/Users/georgedoran/Google Drive/Dusty_Bois/'
@@ -97,44 +98,7 @@ def eval_input(x):
         for i in range(len(x)):
             X *= float(x[i])
     return X
-#Define the function to choose and implement the models based on the inputs.
-#def Potential_Finder(mu,z,alpha,Theta,upsilon,species):
-    #Warm of cold test
-    #if Theta >= Theta_critical:
-        #Small, medium or large test
-        #if alpha > 1.25*(Theta**0.4): #Medium or big
-            #if alpha < 50: #Medium
-                #Flowing test
-                #if upsilon > 0:
-                    #Use the FNF model
-                #else:
-                    #Use the SNF model
-                    
-            #else: #Large
-                #if upsilon > 0:
-                    #Use SMOML.
-                #else:
-                    #Use MOML   
-        #else: #Small
-            #if upsilon > 0:
-                #Use SOML
-                
-            #else:
-                #Use OML     
-    #else:
-        #Flowing test
-        #if upsilon > 0:
-            #if alpha > 1.25*(Theta**0.4): #Medium or big
-                #if alpha < 50: #Medium
-                    #Use FNF
-                #else: #Large
-                    #Use SMOML
-                    
-            #else: #Small
-                #Use SOML      
-        #else:
-            #Use ABR
-            
+       
 
 #Define the periodic table
 elements = pt.core.default_table()
@@ -401,13 +365,17 @@ else:
             except SyntaxError:
                 print('Invalid flow speed.')  
 
-#make a list of objects, one for each model 
-p = 
-for model in Models: 
-#Find object with largest priority record its position in the list
-#model = modellist[i]
-#print(f'We will use the {model.get_name()} model')
-#Phi = model.potential_finder()
+modellist = mdl.modelpicker('Plasma_code/Models/',Theta,mu,z,alpha,upsilon)
+priority = 0
+for model in modellist:
+    __import__(model.get_name())
+    if model.priority() > priority:
+        
+        priority = model.priority()
+        modelindex = modellist.index(model)
+
+print(modellist[modelindex])
+Phi = modellist[modelindex].potential_finder()
 #Return the normalised potential
 print('The normalised dust grain surface potential is:',Phi)
 

@@ -1,9 +1,6 @@
 import os
-
 import sys
-# insert at 1, 0 is the script path (or '' in REPL)
 sys.path.insert(1, 'Plasma_code/Models/')
-
 class model:
     def __init__(self,filename,Theta,mu,z,alpha,upsilon):
         self._name = filename.strip('.py')
@@ -18,7 +15,7 @@ class model:
         return f'Model: {self._name}, at Theta = {self._Theta}, mu = {self._mu}, z = {self._z}, alpha = {self._alpha} and upsilon = {self._upsilon}'
     def priority(self):
         return getattr(__import__(self._name), 'priority')(self._Theta,self._alpha,self._upsilon)
-    def potential_finder(self,filename):
+    def potential_finder(self):
         return getattr(__import__(self._name), 'potential_finder')(self._Theta,self._mu,self._z,self._alpha,self._upsilon)
     
 
