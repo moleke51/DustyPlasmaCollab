@@ -1,10 +1,11 @@
 Simulation 9:
 -Produce graphs COMPLETE
 -Add mode selecter (Physical units/Dimensionless units) COMPLETE
--One variable can be set to variable and a range chosen 
--Make is acceptible value function inputs: requirements, variable name
--If variable then return array
+-One variable can be set to variable and a range chosen COMPLETE
+-Make is acceptible value function inputs: requirements, variable name COMPLETE
+-If variable then return list COMPLETE
 -Take input (constant values and one array in a list determine variable by position of array) COMPLETE
 -Make graphs COMPLETE
 -Speed up graph process by reducing ABR calculations for variable T/Theta
+-Implement graphs with variable chooser code
 
