@@ -288,3 +288,4 @@ if variable_counter == 0:
         print('The charge on the dust grain is ' +str(Q)+ 'C')
 else:
     print('I need a graph pls')
+    
