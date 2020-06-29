@@ -184,6 +184,47 @@ def get_Norm_Potential(Theta,mu,z,alpha,upsilon):
 
     print(modellist[modelindex])
     return modellist[modelindex].potential_finder()
+
+def grapher(input_list,variable_index,Dimensionless):
+    if Dimensionless == False:
+        #Physical
+        title_list = ["ion temperature","electron temperature","electron density","relative ion charge","ion mass","dust radius","plasma flow speed"]
+        label_list = [r"$T_{i} \ [$K$]$",r"$T_{e} \ [$K$]$",r"$n_{0} \ [$m^{-3}$]$",r"$z$",r"$m_{i} \ [$u$]$",r"$a \ [$m$]$",r"$v \ [$$ms^{-1}$$]$"]
+        Theta = np.array(input_list[0]/input_list[1])
+        mu = np.array(np.sqrt(input_list[4]/m_e))
+        z = input_list[3]
+        alpha = np.array(input_list[5]/np.sqrt((epsilon_0*k_B*input_list[1])/(input_list[2]*e**2)))
+        upsilon = np.array(input_list[6]/np.sqrt(2*k_B*input_list[0]/input_list[4]))
+        Phi_list = []
+        for i in range(len(input_list[variable_index])):
+            Phi = get_Norm_Potential(Theta[i],mu[i],z[i],alpha[i],upsilon[i])
+            Phi_list.append(Phi)
+        Phi = np.array(Phi_list)
+        #un-normalise phi
+        Phi = (Phi*k_B*input_list[1])/e
+        plt.plot(input_list[variable_index], Phi)
+        plt.title(f"Variation of dust surface potential with {title_list[variable_index]}")
+        plt.ylabel("Surface potential, " + r"$\phi$ [V]")
+        plt.xlabel(f"{label_list[variable_index]}")
+        plt.grid()
+        plt.show()
+
+    else:
+        #Dimensionless
+        title_list = ["theta","mu","relative ion charge","normalised dust radius","normalised plasma flow speed"]
+        label_list = [r"$\Theta$",r"$\mu$",r"$\z$",r"$\alpha$",r"$\upsilon$"]
+        Phi_list = []
+        for i in range(len(input_list[variable_index])):
+            Phi = get_Norm_Potential(input_list[0][i],input_list[1][i],input_list[2][i],input_list[3][i],input_list[4][i])
+            Phi_list.append(Phi)
+        Phi = np.array(Phi_list)
+        plt.plot(input_list[variable_index], Phi)
+        plt.title(f"Variation of normalised dust surface potential with {title_list[variable_index]}")
+        plt.ylabel("Normalised surface potential, " + r"$\Phi$")
+        plt.xlabel(f"{label_list[variable_index]}")
+        plt.grid()
+        plt.show()
+
 #Define the periodic table
 elements = pt.core.default_table()
 elementList = pt.core.define_elements(elements,globals())
@@ -196,6 +237,7 @@ while choice != 'y' and choice != 'n':
      choice = input('Do you want to use dimensionless variables (y/n)').lower()
 else: 
     if choice == 'y':
+        choice = True
         mu = None
         while mu == None:
             mu,variable_counter = is_valid('mu',['is_num','>0'],variable_counter)
@@ -218,6 +260,7 @@ else:
         
         
     else:
+        choice = False
         species = speciesinput()
         while (species in elementList) == False:
             print('This species does not exist')
@@ -266,7 +309,7 @@ else:
             v,variable_counter = is_valid('plasma flow speed',['is_num','>=0'],variable_counter,'meters per second')
 
 if variable_counter == 0:
-    if choice == 'n':
+    if choice == False:
         Theta = T_i/T_e
         lambda_D = sp.sqrt(epsilon_0*k_B*T_e/(n_e*e**2))
         alpha = a/lambda_D
@@ -281,10 +324,23 @@ if variable_counter == 0:
     print('The normalised dust grain surface potential is:',Phi)
 
     #Return the potentail and the charge if available.
-    if choice == 'n':
+    if choice == False:
         phi = (Phi * k_B * T_e)/(e)
         Q = DH_potential_to_charge(a,phi,lambda_D)
         print('The dust grain surface potential is ' +str(phi)+ 'V')
         print('The charge on the dust grain is ' +str(Q)+ 'C')
 else:
-    print('I need a graph pls')
+    if choice == False:
+        input_list = [T_i,T_e,n_e,z,m_i,a,v] #len = 6
+    elif choice == True:
+        input_list = [Theta,mu,z,alpha,upsilon] #len = 4
+    for i in range(len(input_list)):
+        if type(input_list[i]) == list:
+            variable_index = i
+    for i in range(len(input_list)):
+        if i != variable_index:
+            input_list[i] = input_list[i]*np.ones(len(input_list[variable_index]))
+        else:
+            input_list[i] = np.array(input_list[i])
+    
+    grapher(input_list,variable_index,choice)
