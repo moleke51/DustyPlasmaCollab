@@ -104,7 +104,7 @@ def is_valid(name,requirements,var_counter,units = None):
             requirements.append(f'<{maximum}')
             while minimum == None:
                 minimum, a = is_valid('minimum '+name,requirements,1,units)
-            return(np.linspace(minimum,maximum,1000).tolist(),var_counter+1)
+            return(np.linspace(minimum,maximum,100000).tolist(),var_counter+1)
         elif var_counter == 1: 
             print('The variable has already been selected')
         else:
@@ -172,7 +172,7 @@ def is_valid(name,requirements,var_counter,units = None):
     else:
         return(user_input,var_counter)
          
-def get_Norm_Potential(Theta,mu,z,alpha,upsilon):
+def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model = None,previous_phi = None):
     modellist = mdl.modelpicker('Plasma_code/Models/',Theta,mu,z,alpha,upsilon)
     priority = 0
     for model in modellist:
@@ -181,9 +181,77 @@ def get_Norm_Potential(Theta,mu,z,alpha,upsilon):
             
             priority = model.priority()
             modelindex = modellist.index(model)
+    
+    if variable_counter == 0:
+        print(modellist[modelindex])
+        return modellist[modelindex].potential_finder()
+    else:
+        if modellist[modelindex].get_name() == 'ABR' and previous_model == 'ABR':
+            return(previous_phi, previous_model)
+        else:
+            return(modellist[modelindex].potential_finder(), modellist[modelindex].get_name(),modellist[modelindex].get_colour())
 
-    print(modellist[modelindex])
-    return modellist[modelindex].potential_finder()
+def grapher(input_list,variable_index,Dimensionless,variable_counter=1):
+    Phi_list = []
+    mod_name = None
+    mod_list =[]
+    Phi = None
+    mod_range = []
+    colour_list = []
+    if Dimensionless == False:
+        #Physical
+        title_list = ["ion temperature","electron temperature","electron density","relative ion charge","ion mass","dust radius","plasma flow speed"]
+        label_list = [r"$T_{i} \ [$K$]$",r"$T_{e} \ [$K$]$",r"$n_{0} \ [$m^{-3}$]$",r"$z$",r"$m_{i} \ [$u$]$",r"$a \ [$m$]$",r"$v \ [$$ms^{-1}$$]$"]
+        Theta = np.array(input_list[0]/input_list[1])
+        mu = np.array(np.sqrt(input_list[4]/m_e))
+        z = input_list[3]
+        alpha = np.array(input_list[5]/np.sqrt((epsilon_0*k_B*input_list[1])/(input_list[2]*e**2)))
+        upsilon = np.array(input_list[6]/np.sqrt(2*k_B*input_list[0]/input_list[4]))
+        for i in range(len(input_list[variable_index])):
+            Phi, mod_name, colour = get_Norm_Potential(Theta[i],mu[i],z[i],alpha[i],upsilon[i],variable_counter,mod_name,Phi)
+            Phi_list.append(Phi)
+            if mod_name not in mod_list:
+                mod_list.append(mod_name)
+                mod_range.append(i)
+                colour_list.append(colour)
+                print(mod_name)
+        mod_range.append(len(input_list[variable_index])+1)     
+
+        Phi = np.array(Phi_list)
+        #un-normalise phi
+        Phi = (Phi*k_B*input_list[1])/e
+        for i in range(len(mod_list)):
+            plt.plot(input_list[variable_index][mod_range[i]:mod_range[i+1]-1], Phi[mod_range[i]:mod_range[i+1]-1],color = colour_list[i],label = mod_list[i])
+        plt.title(f"Variation of dust surface potential with {title_list[variable_index]}")
+        plt.ylabel("Surface potential, " + r"$\phi$ [V]")
+        plt.xlabel(f"{label_list[variable_index]}")
+        plt.legend()
+        plt.grid()
+        plt.show()
+
+    else:
+        #Dimensionless
+        title_list = ["theta","mu","relative ion charge","normalised dust radius","normalised plasma flow speed"]
+        label_list = [r"$\Theta$",r"$\mu$",r"$\z$",r"$\alpha$",r"$\upsilon$"]
+        for i in range(len(input_list[variable_index])):
+            Phi, mod_name, colour = get_Norm_Potential(input_list[0][i],input_list[1][i],input_list[2][i],input_list[3][i],input_list[4][i],variable_counter,mod_name,Phi)
+            Phi_list.append(Phi)
+            if mod_name not in mod_list:
+                mod_list.append(mod_name)
+                mod_range.append(i)
+                print(mod_name)
+                colour_list.append(colour)
+        mod_range.append(len(input_list[variable_index])+1)     
+        Phi = np.array(Phi_list)
+        for i in range(len(mod_list)):
+            plt.plot(input_list[variable_index][mod_range[i]:mod_range[i+1]-1], Phi[mod_range[i]:mod_range[i+1]-1],color = colour_list[i],label = mod_list[i])
+        plt.title(f"Variation of normalised dust surface potential with {title_list[variable_index]}")
+        plt.ylabel("Normalised surface potential, " + r"$\Phi$")
+        plt.xlabel(f"{label_list[variable_index]}")
+        plt.legend()
+        plt.grid()
+        plt.show()
+
 #Define the periodic table
 elements = pt.core.default_table()
 elementList = pt.core.define_elements(elements,globals())
@@ -191,11 +259,12 @@ elementList = pt.core.define_elements(elements,globals())
 
 #Ask the user to input the species of the ions in the plasma or to override and imput a custom value of mu.
 variable_counter = 0
-choice = input('Do you want to use dimensionless variables (y/n); ').lower()
+choice = None 
 while choice != 'y' and choice != 'n':
-     choice = input('Do you want to use dimensionless variables (y/n)').lower()
+     choice = input('Do you want to use dimensionless variables (y/n); ').lower()
 else: 
     if choice == 'y':
+        choice = True
         mu = None
         while mu == None:
             mu,variable_counter = is_valid('mu',['is_num','>0'],variable_counter)
@@ -218,6 +287,7 @@ else:
         
         
     else:
+        choice = False
         species = speciesinput()
         while (species in elementList) == False:
             print('This species does not exist')
@@ -266,7 +336,7 @@ else:
             v,variable_counter = is_valid('plasma flow speed',['is_num','>=0'],variable_counter,'meters per second')
 
 if variable_counter == 0:
-    if choice == 'n':
+    if choice == False:
         Theta = T_i/T_e
         lambda_D = sp.sqrt(epsilon_0*k_B*T_e/(n_e*e**2))
         alpha = a/lambda_D
@@ -276,16 +346,34 @@ if variable_counter == 0:
             upsilon = 0
 
 
-    Phi = get_Norm_Potential(Theta,mu,z,alpha,upsilon)
+    Phi = get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter)
     #Return the normalised potential
     print('The normalised dust grain surface potential is:',Phi)
 
     #Return the potentail and the charge if available.
-    if choice == 'n':
+    if choice == False:
         phi = (Phi * k_B * T_e)/(e)
         Q = DH_potential_to_charge(a,phi,lambda_D)
         print('The dust grain surface potential is ' +str(phi)+ 'V')
         print('The charge on the dust grain is ' +str(Q)+ 'C')
 else:
+<<<<<<< HEAD
     print('I need a graph pls')
     
+=======
+    print("Producing your graph, please wait.")
+    if choice == False:
+        input_list = [T_i,T_e,n_e,z,m_i,a,v] #len = 6
+    elif choice == True:
+        input_list = [Theta,mu,z,alpha,upsilon] #len = 4
+    for i in range(len(input_list)):
+        if type(input_list[i]) == list:
+            variable_index = i
+    for i in range(len(input_list)):
+        if i != variable_index:
+            input_list[i] = input_list[i]*np.ones(len(input_list[variable_index]))
+        else:
+            input_list[i] = np.array(input_list[i])
+    
+    grapher(input_list,variable_index,choice)
+>>>>>>> e5f4989c58f1f896100496ff676bce8ef3bbf4ef

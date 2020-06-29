@@ -9,10 +9,12 @@ class model:
         self._z = float(z)
         self._alpha = float(alpha)
         self._upsilon = float(upsilon)
-    def get_name(self):
-        return self._name
     def __repr__(self):
         return f'Model: {self._name}, at Theta = {self._Theta}, mu = {self._mu}, z = {self._z}, alpha = {self._alpha} and upsilon = {self._upsilon}'
+    def get_name(self):
+        return self._name
+    def get_colour(self):
+        return getattr(__import__(self._name),'colour')()
     def priority(self):
         return getattr(__import__(self._name), 'priority')(self._Theta,self._alpha,self._upsilon)
     def potential_finder(self):
