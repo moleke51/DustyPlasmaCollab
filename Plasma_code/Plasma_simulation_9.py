@@ -249,6 +249,7 @@ def grapher(input_list,variable_index,Dimensionless,variable_counter=1):
         plt.ylabel("Normalised surface potential, " + r"$\Phi$")
         plt.xlabel(f"{label_list[variable_index]}")
         plt.legend()
+        plt.xscale('log')
         plt.grid()
         plt.show()
 
@@ -354,8 +355,10 @@ if variable_counter == 0:
     if choice == False:
         phi = (Phi * k_B * T_e)/(e)
         Q = DH_potential_to_charge(a,phi,lambda_D)
-        print('The dust grain surface potential is ' +str(phi)+ 'V')
-        print('The charge on the dust grain is ' +str(Q)+ 'C')
+        Z = Q/e
+        print('The dust grain surface potential is ' +str(phi)+ ' V')
+        print('The charge on the dust grain is ' +str(Q)+ ' C')
+        print('The relative charge of the dust grain is ' + str(Z))
 else:
     print("Producing your graph, please wait.")
     if choice == False:
