@@ -48,7 +48,7 @@ label_list = [r"$\Theta$",r"$\mu$",r"$\z$",r"$\alpha$",r"$\upsilon$"]
 #Physical
 #input_list = [T_i,T_e,n_0,z,m_i,a,v] #len = 6
 #title_list = ["ion temperature","electron temperature","electron density","relative ion charge","ion mass","dust radius","plasma flow speed"]
-#label_list = [r"$T_{i}$",r"$T_{e}$",r"$n_{0}$",r"$z$",r"$m_{i}$",r"$a$",r"$v$"]
+#label_list = [r"$T_{i} \ ($K$)$",r"$T_{e} \ ($K$)$",r"$n_{0} / ($m^{-3}$)$",r"$z$",r"$m_{i} / ($u$)$",r"$a / ($m$)$",r"$v / ($ms^{-1}$)$"]
 
 
 for i in range(len(input_list)):
@@ -79,7 +79,7 @@ def grapher(input_list,variable_index,Dimensionless):
         Phi = (Phi*k_B*input_list[1])/e
         plt.plot(input_list[variable_index], Phi)
         plt.title(f"Variation of dust surface potential with {title_list[variable_index]}")
-        plt.ylabel("Surface potential, " + r"$\phi$")
+        plt.ylabel("Surface potential, " + r"$\phi$ (V)")
         plt.xlabel(f"{label_list[variable_index]}")
         plt.grid()
         plt.show()
