@@ -6,6 +6,9 @@ import scipy.special as sps
 def get_name():
     return "SMOML"
 
+def colour():
+    return 'black'
+
 def realLambertW(x):
     if type(x) is float or type(x) is int or type(x) is np.float64 :
         w = sps.lambertw(x)

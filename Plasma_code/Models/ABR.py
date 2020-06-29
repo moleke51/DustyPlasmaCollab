@@ -7,6 +7,9 @@ from scipy.optimize import fsolve,bisect
 
 def get_name():
     return "ABR"
+
+def colour():
+    return 'blue'
     
 #Define the normalised current J from equation ABR 12
 def norm_J_current(alpha,Phi,mu):
