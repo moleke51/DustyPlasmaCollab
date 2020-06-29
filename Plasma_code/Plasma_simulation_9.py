@@ -360,6 +360,10 @@ if variable_counter == 0:
         print('The charge on the dust grain is ' +str(Q)+ ' C')
         print('The relative charge of the dust grain is ' + str(Z))
 else:
+<<<<<<< HEAD
+    print('I need a graph pls')
+    
+=======
     print("Producing your graph, please wait.")
     if choice == False:
         input_list = [T_i,T_e,n_e,z,m_i,a,v] #len = 6
@@ -375,3 +379,4 @@ else:
             input_list[i] = np.array(input_list[i])
     
     grapher(input_list,variable_index,choice)
+>>>>>>> e5f4989c58f1f896100496ff676bce8ef3bbf4ef
