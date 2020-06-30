@@ -33,7 +33,6 @@ import scipy.special as sps
 import matplotlib.pyplot as plt
 import periodictable as pt
 from scipy import integrate
-from scipy.optimize import fsolve
 import Model as mdl
 #==============================KEY WORDS================================#
 masteroverride = 'normalise' 
