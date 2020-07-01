@@ -71,16 +71,43 @@ def potential_finder(Theta,mu,z,alpha,upsilon,gamma=10000):
     #Guess Phi_a (Its likely to be between 0 and 10)
     Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
     return retrive_Phi_a(Jsol,mu,alpha)
-
+def presheath_pot(mu,z,alpha):
+    Phi_a = potential_finder(0,mu,z,alpha,0)
+    boundary = get_boundary(norm_J_current(alpha,Phi_a,mu),z,gamma = 10000)
+    return(Phi_a - boundary[1],boundary[1],Phi_a)
 def priority(Theta,alpha,upsilon):
     if Theta > 1e-4:
         P_t = 0
     else:
-        P_t = 1
-    P_a = 1
+        P_t = 0
+    P_a = 0
     if upsilon > 0:
         P_u = 0
     else:
-        P_u = 1
+        P_u = 0
     return (P_t + P_a + P_u)
+alpha = np.logspace(-10,10,100)
+mu = 43*np.ones(len(alpha))
+z = np.ones(len(alpha))
+Phi_s_list = []
+Phi_b_list = []
+Phi_a_list = []
+for i in range(len(alpha)):
+    print(i)
+    Phi_s,Phi_b,Phi_a = presheath_pot(mu[i],z[i],alpha[i])
+    Phi_s_list.append(Phi_s)
+    Phi_b_list.append(Phi_b)
+    Phi_a_list.append(Phi_a)
+Phi_s_arr = np.array(Phi_s_list)
+Phi_b_arr = np.array(Phi_b_list)
+Phi_a_arr = np.array(Phi_a_list)
 
+plt.plot(alpha,Phi_s_arr,label = 'Phi_a - Phi_b',color = 'purple')
+plt.plot(alpha,Phi_b_arr,label = 'Phi_b',color = 'blue')
+plt.plot(alpha,Phi_a_arr,label = 'Phi_a',color = 'red')
+plt.grid()
+plt.title('The potential drop from the far field plasma to the sheath edge (across the presheath)')
+plt.xlabel('alpha')
+plt.ylabel('|$\Phi_s$|')
+plt.xscale('log')
+plt.show()
