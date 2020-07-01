@@ -27,6 +27,7 @@ def get_boundary(J,z,gamma):
     rho_b = (np.sqrt(J) * np.exp(Phi_b/2))/((Phi_b*z)**(1/4))
     #Calculate the first derivative of Phi with renpect to rho evaluated at the boundary.
     dPhi_drho_b = ((2*rho_b/J) * (Phi_b**(3/2))/(Phi_b - 1/2) * np.exp(-Phi_b))*(z**0.5)
+    print(J,Phi_b)
     return(rho_b,Phi_b,dPhi_drho_b)
 #Runge-Kutta 4th order ODE solver
 def ABR_f(x,y,z):
