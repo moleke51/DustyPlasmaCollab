@@ -279,7 +279,7 @@ else:
         
         alpha = None
         while alpha == None:
-            alpha, variable_counter = is_valid('alpha',['is_num','>0'],variable_counter)
+            alpha, variable_counter = is_valid('alpha',['is_num','>=0'],variable_counter)
 
         upsilon = None
         while upsilon == None:
@@ -329,7 +329,7 @@ else:
 
         a = None
         while a == None:
-            a,variable_counter = is_valid('dust radius',['is_num','>0'],variable_counter,'meters')
+            a,variable_counter = is_valid('dust radius',['is_num','>=0'],variable_counter,'meters')
         
         v = None
         while v == None:
