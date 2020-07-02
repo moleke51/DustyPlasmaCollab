@@ -86,7 +86,7 @@ def priority(Theta,alpha,upsilon):
     else:
         P_u = 0
     return (P_t + P_a + P_u)
-alpha = np.logspace(-10,10,100)
+alpha = np.logspace(-10,0,50)
 mu = 43*np.ones(len(alpha))
 z = np.ones(len(alpha))
 Phi_s_list = []
