@@ -95,7 +95,7 @@ def priority(Theta,alpha,upsilon):
         P_u = 0
     return (P_t + P_a + P_u)
 
-
+'''
 Theta = 0
 alpha = 1e14
 mu = 43
@@ -105,7 +105,7 @@ Phi = potential_finder(Theta,mu,z,alpha,upsilon)
 print(Phi)
 '''
 
-alpha = np.logspace(10,20,11)
+alpha = np.logspace(-20,20,100)
 mu = 43*np.ones(len(alpha))
 z = np.ones(len(alpha))
 Phi_s_list = []
@@ -121,14 +121,14 @@ Phi_s_arr = np.array(Phi_s_list)
 Phi_b_arr = np.array(Phi_b_list)
 Phi_a_arr = np.array(Phi_a_list)
 
-plt.plot(alpha,Phi_s_arr,label = 'Phi_a - Phi_b',color = 'purple')
-plt.plot(alpha,Phi_b_arr,label = 'Phi_b',color = 'blue')
-plt.plot(alpha,Phi_a_arr,label = 'Phi_a',color = 'red')
+plt.plot(alpha,Phi_s_arr,label = '$\Phi_a$ - $\Phi_b$',color = 'purple')
+plt.plot(alpha,Phi_b_arr,label = '$\Phi_b$',color = 'blue')
+plt.plot(alpha,Phi_a_arr,label = '$\Phi_a$',color = 'red')
 plt.grid()
-plt.title('The potential drop from the far field plasma to the sheath edge (across the presheath)')
+plt.title('ABR potential')
 plt.xlabel('alpha')
-plt.ylabel('|$\Phi_s$|')
+plt.ylabel('|$\Phi$|')
 plt.xscale('log')
+plt.legend()
 plt.show()
 
-'''
