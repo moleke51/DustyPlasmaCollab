@@ -69,8 +69,16 @@ def retrive_Phi_a(J,mu,alpha):
 
 def potential_finder(Theta,mu,z,alpha,upsilon,gamma=10000):
     #Guess Phi_a (Its likely to be between 0 and 10)
-    Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
-    return retrive_Phi_a(Jsol,mu,alpha)
+    if alpha != 0 :
+        if alpha < 1e-5 and alpha > 0:
+            Jsol = fsolve(delta_J,norm_J_current(alpha,0,mu),args = (alpha,mu,z,gamma))
+        elif alpha > 1e12:
+            Jsol = fsolve(delta_J,norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
+        else:
+            Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
+        return retrive_Phi_a(Jsol,mu,alpha)
+    else:
+        return 0 #As argued by Kennedy and Allen
 def presheath_pot(mu,z,alpha):
     Phi_a = potential_finder(0,mu,z,alpha,0)
     boundary = get_boundary(norm_J_current(alpha,Phi_a,mu),z,gamma = 10000)
@@ -86,7 +94,18 @@ def priority(Theta,alpha,upsilon):
     else:
         P_u = 0
     return (P_t + P_a + P_u)
-alpha = np.logspace(-10,0,50)
+
+
+Theta = 0
+alpha = 1e14
+mu = 43
+z = 1
+upsilon = 0
+Phi = potential_finder(Theta,mu,z,alpha,upsilon)
+print(Phi)
+'''
+
+alpha = np.logspace(10,20,11)
 mu = 43*np.ones(len(alpha))
 z = np.ones(len(alpha))
 Phi_s_list = []
@@ -111,3 +130,5 @@ plt.xlabel('alpha')
 plt.ylabel('|$\Phi_s$|')
 plt.xscale('log')
 plt.show()
+
+'''

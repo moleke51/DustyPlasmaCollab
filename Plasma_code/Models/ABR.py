@@ -69,8 +69,16 @@ def retrive_Phi_a(J,mu,alpha):
 
 def potential_finder(Theta,mu,z,alpha,upsilon,gamma=10000):
     #Guess Phi_a (Its likely to be between 0 and 10)
-    Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
-    return retrive_Phi_a(Jsol,mu,alpha)
+    if alpha != 0 :
+        if alpha < 1e-5 and alpha > 0:
+            Jsol = fsolve(delta_J,norm_J_current(alpha,0,mu),args = (alpha,mu,z,gamma))
+        elif alpha > 1e12:
+            Jsol = fsolve(delta_J,norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
+        else:
+            Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
+        return retrive_Phi_a(Jsol,mu,alpha)
+    else:
+        return 0 #As argued by Kennedy and Allen
 
 def priority(Theta,alpha,upsilon):
     if Theta > 1e-4:
