@@ -1,19 +1,21 @@
 import numpy as np
 
-print(type(f'string{1}'))
-
 def eval_input(x):
     x = x.replace('^','**')
     if '**' in x:
-        x = x.split('**')
+        x = x.split('**',)
         a = x[0].split('*')
-        b = x[1].split('*')
+        b = x[-1].split('*')
         A = 1
         for i in range(len(a)-1):
             A *= float(a[i])
         for i in range(1,len(b)):
             A *= float(b[i])
-        B = float(a[-1])**float(b[0])
+        if len(x) == 3:
+            c,d = x[1].split('*')
+            B = (float(a[-1])**float(c))*(float(d)**float(b[0])) 
+        else:
+            B = float(a[-1])**float(b[0])
         X = A*B
     else:
         x = x.split('*')
@@ -105,6 +107,7 @@ reqs.append(f'<={N_max}')
 A = 0
 while A != '1':
     A = is_valid('number',reqs,0)
+    #A = eval_input(input("Enter a number: "))
     if A != None:
         print(A)
 

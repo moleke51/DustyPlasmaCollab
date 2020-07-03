@@ -68,15 +68,19 @@ def speciesinput():
 def eval_input(x):
     x = x.replace('^','**')
     if '**' in x:
-        x = x.split('**')
+        x = x.split('**',)
         a = x[0].split('*')
-        b = x[1].split('*')
+        b = x[-1].split('*')
         A = 1
         for i in range(len(a)-1):
             A *= float(a[i])
         for i in range(1,len(b)):
             A *= float(b[i])
-        B = float(a[-1])**float(b[0])
+        if len(x) == 3:
+            c,d = x[1].split('*')
+            B = (float(a[-1])**float(c))*(float(d)**float(b[0])) 
+        else:
+            B = float(a[-1])**float(b[0])
         X = A*B
     else:
         x = x.split('*')
@@ -279,7 +283,7 @@ else:
         
         alpha = None
         while alpha == None:
-            alpha, variable_counter = is_valid('alpha',['is_num','>0'],variable_counter)
+            alpha, variable_counter = is_valid('alpha',['is_num','>=0'],variable_counter)
 
         upsilon = None
         while upsilon == None:
@@ -329,7 +333,7 @@ else:
 
         a = None
         while a == None:
-            a,variable_counter = is_valid('dust radius',['is_num','>0'],variable_counter,'meters')
+            a,variable_counter = is_valid('dust radius',['is_num','>=0'],variable_counter,'meters')
         
         v = None
         while v == None:
