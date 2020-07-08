@@ -30,10 +30,10 @@ def realLambertW(x):
         return('This is an invalid input')
 
 #SMOML (Shifted Modified OML) model for normalised dust surface potential - eqn 2.140 in Thomas' thesis
-def potential_finder(Theta,mu,z,alpha,upsilon): #gamma = 5/3
+def potential_finder(Theta,mu,z,alpha,upsilon): #gamma = 3 for flowing plasmas
     s_1 = ((np.sqrt(np.pi))*(1+2*(upsilon**2))*sps.erf(upsilon))/(4*upsilon) + 0.5*np.exp(-(upsilon**2))
     s_2 = (np.sqrt(np.pi)*sps.erf(upsilon))/(2*upsilon)
-    Phi = (Theta*s_1)/(s_2) - realLambertW(((np.sqrt(2*np.pi*Theta*(1+(5/3)*Theta)))/(s_2))*np.exp((Theta*s_1)/(s_2))) + 0.5*np.log((2*np.pi*(1+(5/3)*Theta))/((z**2)*(mu)**2))
+    Phi = (Theta*s_1)/(z*s_2) - realLambertW(((np.sqrt(2*np.pi*Theta*(1+(3)*Theta)))/(s_2))*np.exp((Theta*s_1)/(z*s_2))) + 0.5*np.log(((z**2)*2*np.pi*(1+(3)*Theta))/((mu)**2))
     return np.absolute(Phi) #returned phi is positive
 
 def priority(Theta,alpha,upsilon):
