@@ -31,7 +31,7 @@ def realLambertW(x):
 
 #MOML (Modified OML) model for normalised dust surface potential - eqn 2.130 in Thomas' thesis
 def potential_finder(Theta,mu,z,alpha,upsilon): #gamma = 5/3 for static plasmas
-    Phi = (Theta/z) - realLambertW((np.sqrt(2*np.pi*Theta*(1+(5/3)*Theta)))*np.exp(Theta/z)) + 0.5*np.log(((z**2)*2*np.pi*(1+(5/3)*Theta))/((mu)**2))
+    Phi = 0.5*np.log(2*np.pi*(1+(5/3)*Theta)) - np.log(mu/z) - 0.5
     return np.absolute(Phi) #returned phi is positive     
 
 def priority(Theta,alpha,upsilon):
@@ -49,4 +49,4 @@ def priority(Theta,alpha,upsilon):
         P_u = 1
     return (P_t + P_a + P_u)             
 
-print(potential_finder(0.01,42.82,1,100,0))
+print(potential_finder(1,43,1,100,0))
