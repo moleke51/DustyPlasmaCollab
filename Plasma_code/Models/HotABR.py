@@ -3,6 +3,28 @@ import scipy as sp
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import fsolve,bisect
+import sys
+sys.path.append('.')
+import Model as mdl
+
+def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model = None,previous_phi = None):
+    modellist = mdl.modelpicker('Models/',Theta,mu,z,alpha,upsilon)
+    priority = 0
+    for model in modellist:
+        __import__(model.get_name())
+        if model.priority() > priority:
+            
+            priority = model.priority()
+            modelindex = modellist.index(model)
+    
+    if variable_counter == 0:
+        print(modellist[modelindex])
+        return modellist[modelindex].potential_finder()
+    else:
+        if modellist[modelindex].get_name() == 'ABR' and previous_model == 'ABR':
+            return(previous_phi, previous_model)
+        else:
+            return(modellist[modelindex].potential_finder(), modellist[modelindex].get_name(),modellist[modelindex].get_colour())
 
 
 def get_name():
@@ -69,20 +91,24 @@ def retrive_Phi_a(J,mu,alpha):
     return 2*np.log(alpha) + np.log(mu) - np.log(J) - 0.5*np.log(4*np.pi)
 
 def potential_finder(Theta,mu,z,alpha,upsilon,gamma=10000):
-    tau = (1/(4*np.pi))*Theta
+    tau = 0.5*Theta
     #tau = 1.5*Theta
     #Guess Phi_a (Its likely to be between 0 and 10)
-    if alpha != 0 :
-        if alpha < 1e-5 and alpha > 0:
-            Jsol = fsolve(delta_J,norm_J_current(alpha,0,mu),args = (alpha,mu,z,gamma))
-        elif alpha > 1e12:
-            Jsol = fsolve(delta_J,norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
+    if Theta == 0:
+        if alpha != 0 :
+            if alpha < 1e-5 and alpha > 0:
+                Jsol = fsolve(delta_J,norm_J_current(alpha,0,mu),args = (alpha,mu,z,gamma))
+            elif alpha > 1e12:
+                Jsol = fsolve(delta_J,norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
+            else:
+                Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,tau,z,gamma))
+            return retrive_Phi_a(Jsol,mu,alpha)
         else:
-            Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,tau,z,gamma))
-        return retrive_Phi_a(Jsol,mu,alpha)
+            return 0 #As argued by Kennedy and Allen
     else:
-        return 0 #As argued by Kennedy and Allen
-
+        Phi_guess = get_Norm_Potential(Theta,mu,z,alpha,upsilon,0)
+        Jsol = fsolve(delta_J,norm_J_current(alpha,Phi_guess,mu),args = (alpha,mu,z,gamma))
+        return retrive_Phi_a(Jsol,mu,alpha)
 def priority(Theta,alpha,upsilon):
     if Theta > 1e-4:
         P_t = 0
@@ -96,4 +122,5 @@ def priority(Theta,alpha,upsilon):
     return (P_t + P_a + P_u)
 
 #potential_finder(Theta,mu,z,alpha,upsilon)
-print(potential_finder(0.01,43,1,5,0))
+
+print(potential_finder(0.01,43,1,1,0))
