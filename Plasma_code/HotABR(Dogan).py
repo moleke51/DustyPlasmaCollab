@@ -48,9 +48,9 @@ def Phi_J(Theta,mu,z,alpha,gamma,J):
     #x0,y0,z0 = get_boundary(Theta,z,gamma,J) 
     x0 = np.sqrt(J/z)*(2/(1+gamma*Theta))**(1/4)
     y0 = 0
-    z0 = (J/(2*np.sqrt(z)))*np.sqrt(2/(1+gamma*Theta))
+    z0 = (2*np.sqrt(z)/J)*((1+gamma*Theta)/2)**(1/4)
     Phi_b,Phi_alpha = ABR_RK(x0,y0,z0,alpha,(J/z)*np.sqrt(2/(1+gamma*Theta)),N=10000)
-    #print(Phi_alpha)
+    print(Phi_alpha)
     return Phi_alpha
 
 def delta_J(J,alpha,mu,z):
@@ -60,7 +60,7 @@ def retrive_Phi_a(J,mu,alpha):
 
 def potential_finder(Theta,mu,z,alpha,upsilon,gamma):
     #Guess Phi_a (Its likely to be between 0 and 10)
-    Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,5,mu),args = (alpha,mu,z))
+    Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,10,mu),args = (alpha,mu,z))
     #Jsol = fsolve(delta_J,norm_J_current(alpha,0.5,mu),args = (alpha,mu,z))
     return retrive_Phi_a(Jsol,mu,alpha)
 
