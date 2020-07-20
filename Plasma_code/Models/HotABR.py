@@ -86,11 +86,13 @@ def ABR_RK(x0,y0,w0,X,J,tau,z,N):
 
 def Phi_J(J,alpha,mu,tau,z,gamma = 10000):
     x0,y0,w0 = get_boundary(J,tau,z,gamma) 
-    Phi_b,Phi_alpha = ABR_RK(x0,y0,w0,alpha,J,tau,z,N=10000)
+    Phi_b,Phi_alpha = ABR_RK(x0,y0,w0,alpha,J,tau,z,N=100000)
     return Phi_alpha
 
 def delta_J(J,alpha,mu,tau,z,gamma = 10000):
     return J - norm_J_current(alpha,Phi_J(J,alpha,mu,tau,z,gamma = 10000),mu)
+def delta_Phi(Phi_a,alpha,mu,tau,z,gamma = 10000):
+    return Phi_a - Phi_J(norm_J_current(alpha,Phi_a,mu),alpha,mu,tau,z,gamma = 10000)
 def retrive_Phi_a(J,mu,alpha):
     return 2*np.log(alpha) + np.log(mu) - np.log(J) - 0.5*np.log(4*np.pi)
 
@@ -111,10 +113,10 @@ def potential_finder(Theta,mu,z,alpha,upsilon,kappa = 0.5,gamma=10000):
     else:
         Phi_guess = potential_finder(0,mu,z,alpha,upsilon)
         print(Phi_guess)
-        Jsol = fsolve(delta_J,norm_J_current(alpha,Phi_guess,mu),args = (alpha,mu,tau,z,gamma))[0]
-        #Jsol = bisect(delta_J,norm_J_current(alpha,9,mu),norm_J_current(alpha,0,mu),args = (alpha,mu,tau,z,gamma))
-        return retrive_Phi_a(Jsol,mu,alpha)
-    
+        #Jsol = fsolve(delta_J,norm_J_current(alpha,Phi_guess,mu),args = (alpha,mu,tau,z,gamma))[0]
+        #Jsol = bisect(delta_J,norm_J_current(alpha,2.0,mu),norm_J_current(alpha,5,mu),args = (alpha,mu,tau,z,gamma))
+        #return retrive_Phi_a(Jsol,mu,alpha)
+        return(fsolve(delta_Phi,Phi_guess,args= (alpha,mu,tau,z,gamma))[0])
 def priority(Theta,alpha,upsilon):
     if Theta > 1e-4:
         P_t = 0
@@ -128,7 +130,7 @@ def priority(Theta,alpha,upsilon):
     return (P_t + P_a + P_u)
 
 
-print(potential_finder(0.1,43,1,100,0,1))
+print(potential_finder(0.01,43,1,10,0,2))
 
 
 '''
