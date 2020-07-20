@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import fsolve,bisect
 import sys
+'''
 sys.path.append('.')
 import Model as mdl
 
@@ -27,7 +28,7 @@ def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model 
             return(previous_phi, previous_model)
         else:
             return(modellist[modelindex].potential_finder(), modellist[modelindex].get_name(),modellist[modelindex].get_colour())
-
+'''
 
 def get_name():
     return "HotABR"
@@ -99,17 +100,19 @@ def potential_finder(Theta,mu,z,alpha,upsilon,kappa = 0.5,gamma=10000):
     if Theta == 0:
         if alpha != 0 :
             if alpha < 1e-5 and alpha > 0:
-                Jsol = fsolve(delta_J,norm_J_current(alpha,0,mu),args = (alpha,mu,z,gamma))
+                Jsol = fsolve(delta_J,norm_J_current(alpha,0,mu),args = (alpha,mu,tau,z,gamma))
             elif alpha > 1e12:
-                Jsol = fsolve(delta_J,norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,z,gamma))
+                Jsol = fsolve(delta_J,norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,tau,z,gamma))
             else:
                 Jsol = bisect(delta_J,norm_J_current(alpha,0,mu),norm_J_current(alpha,-0.5*np.log(2*np.pi)+0.5+np.log(z*mu),mu),args = (alpha,mu,tau,z,gamma))
             return retrive_Phi_a(Jsol,mu,alpha)
         else:
             return 0 #As argued by Kennedy and Allen
     else:
-        Phi_guess = get_Norm_Potential(Theta,mu,z,alpha,upsilon,0)
-        Jsol = fsolve(delta_J,norm_J_current(alpha,Phi_guess,mu),args = (alpha,mu,z,gamma))
+        Phi_guess = potential_finder(0,mu,z,alpha,upsilon)
+        print(Phi_guess)
+        Jsol = fsolve(delta_J,norm_J_current(alpha,Phi_guess,mu),args = (alpha,mu,tau,z,gamma))[0]
+        #Jsol = bisect(delta_J,norm_J_current(alpha,9,mu),norm_J_current(alpha,0,mu),args = (alpha,mu,tau,z,gamma))
         return retrive_Phi_a(Jsol,mu,alpha)
     
 def priority(Theta,alpha,upsilon):
@@ -123,3 +126,19 @@ def priority(Theta,alpha,upsilon):
     else:
         P_u = 1
     return (P_t + P_a + P_u)
+
+
+print(potential_finder(0.1,43,1,100,0,1))
+
+
+'''
+Philip = np.linspace(-100,100,10000)
+Jay = norm_J_current(np.ones(len(Philip)),Philip,43*np.ones(len(Philip)))
+
+Logan = 'log'
+plt.plot(Philip,Jay)
+plt.grid()
+plt.xscale(Logan)
+plt.yscale(Logan)
+plt.show()
+'''
