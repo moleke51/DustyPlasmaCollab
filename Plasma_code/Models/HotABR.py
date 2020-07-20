@@ -1,4 +1,5 @@
 #============================IMPORT STUFF==========================#
+
 import scipy as sp
 import matplotlib.pyplot as plt
 import numpy as np
@@ -6,6 +7,7 @@ from scipy.optimize import fsolve,bisect
 import sys
 sys.path.append('.')
 import Model as mdl
+
 
 def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model = None,previous_phi = None):
     modellist = mdl.modelpicker('Models/',Theta,mu,z,alpha,upsilon)
@@ -33,6 +35,7 @@ def get_name():
 def colour():
     return 'blue'
     
+
 #Define the normalised current J from equation ABR 12
 def norm_J_current(alpha,Phi,mu):
     j = (alpha**2)*(mu/((4*np.pi)**0.5))*np.exp(-Phi)
@@ -108,6 +111,7 @@ def potential_finder(Theta,mu,z,alpha,upsilon,kappa = 0.5,gamma=10000):
         Phi_guess = get_Norm_Potential(Theta,mu,z,alpha,upsilon,0)
         Jsol = fsolve(delta_J,norm_J_current(alpha,Phi_guess,mu),args = (alpha,mu,z,gamma))
         return retrive_Phi_a(Jsol,mu,alpha)
+    
 def priority(Theta,alpha,upsilon):
     if Theta > 1e-4:
         P_t = 0
@@ -123,4 +127,7 @@ def priority(Theta,alpha,upsilon):
 #potential_finder(Theta,mu,z,alpha,upsilon)
 
 #print(potential_finder(0.01,43,1,1,0))
+<<<<<<< HEAD
 print(get_Norm_Potential(0.01,43,1,1,0,0))
+=======
+>>>>>>> 1d17a1691af792b6134fdca4cf9b1266664e5b6f

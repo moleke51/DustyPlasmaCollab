@@ -47,12 +47,12 @@ u = 1.66e-27 #[kg] The mass of a nucleon
 #==============================FUNCTIONS===============================#
 #Define the Debye-Huckle potential.
 def DH_potential_to_charge(dustradius,Phi_a,lambda_d):
-    x = 4*sp.pi*(epsilon_0)*dustradius*Phi_a*sp.exp((dustradius)/(lambda_d))
+    x = 4*np.pi*(epsilon_0)*dustradius*Phi_a*np.exp((dustradius)/(lambda_d))
     return x
 
 #It should be noted that the Debye-Huckle potential reduces into the point charge potential when a<<lambda_d
 def Spherical_potential_to_charge(dustradius,Phi_a):
-    x = 4*sp.pi*(epsilon_0)*dustradius*Phi_a
+    x = 4*np.pi*(epsilon_0)*dustradius*Phi_a
     return x
 
 #This allows the chemical symbols or element names to be entered in either upper or lower case.
@@ -342,10 +342,10 @@ else:
 if variable_counter == 0:
     if choice == False:
         Theta = T_i/T_e
-        lambda_D = sp.sqrt(epsilon_0*k_B*T_e/(n_e*e**2))
+        lambda_D = np.sqrt(epsilon_0*k_B*T_e/(n_e*e**2))
         alpha = a/lambda_D
         if T_i != 0:
-            upsilon = v / sp.sqrt(2*k_B*T_i/m_i)
+            upsilon = v / np.sqrt(2*k_B*T_i/m_i)
         else:
             upsilon = 0
 
