@@ -1,11 +1,7 @@
 Simulation:
--log stuff
--10^-2 mm
-MOML:
--wtf is going on
--graph currents as a function of potential
--Look at potential drops across the sheath and presheath check they aren't zero.
--Try subtracting phi b from ABR
+-Check all values in Runge Kutta
+-New numerical solver
+
 
 
 
