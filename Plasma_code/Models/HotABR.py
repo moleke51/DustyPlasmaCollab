@@ -123,11 +123,3 @@ def priority(Theta,alpha,upsilon):
     else:
         P_u = 1
     return (P_t + P_a + P_u)
-
-#potential_finder(Theta,mu,z,alpha,upsilon)
-
-#print(potential_finder(0.01,43,1,1,0))
-<<<<<<< HEAD
-print(get_Norm_Potential(0.01,43,1,1,0,0))
-=======
->>>>>>> 1d17a1691af792b6134fdca4cf9b1266664e5b6f
