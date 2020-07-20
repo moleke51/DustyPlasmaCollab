@@ -8,7 +8,7 @@ import sys
 sys.path.append('.')
 import Model as mdl
 
-'''
+
 def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model = None,previous_phi = None):
     modellist = mdl.modelpicker('Models/',Theta,mu,z,alpha,upsilon)
     priority = 0
@@ -28,14 +28,14 @@ def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model 
         else:
             return(modellist[modelindex].potential_finder(), modellist[modelindex].get_name(),modellist[modelindex].get_colour())
 
-'''
+
 def get_name():
     return "ABR"
 
 def colour():
     return 'blue'
     
-'''
+
 #Define the normalised current J from equation ABR 12
 def norm_J_current(alpha,Phi,mu):
     j = (alpha**2)*(mu/((4*np.pi)**0.5))*np.exp(-Phi)
@@ -113,7 +113,6 @@ def potential_finder(Theta,mu,z,alpha,upsilon,gamma=10000):
         Jsol = fsolve(delta_J,norm_J_current(alpha,Phi_guess,mu),args = (alpha,mu,z,gamma))
         return retrive_Phi_a(Jsol,mu,alpha)
     
-'''
 def priority(Theta,alpha,upsilon):
     if Theta > 1e-4:
         P_t = 0
