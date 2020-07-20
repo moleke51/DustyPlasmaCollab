@@ -28,7 +28,7 @@ def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model 
 
 
 def get_name():
-    return "ABR"
+    return "HotABR"
 
 def colour():
     return 'blue'
@@ -90,9 +90,8 @@ def delta_J(J,alpha,mu,tau,z,gamma = 10000):
 def retrive_Phi_a(J,mu,alpha):
     return 2*np.log(alpha) + np.log(mu) - np.log(J) - 0.5*np.log(4*np.pi)
 
-def potential_finder(Theta,mu,z,alpha,upsilon,gamma=10000):
-    tau = 0.5*Theta
-    #tau = 1.5*Theta
+def potential_finder(Theta,mu,z,alpha,upsilon,kappa = 0.5,gamma=10000):
+    tau = kappa*Theta
     #Guess Phi_a (Its likely to be between 0 and 10)
     if Theta == 0:
         if alpha != 0 :
@@ -123,4 +122,5 @@ def priority(Theta,alpha,upsilon):
 
 #potential_finder(Theta,mu,z,alpha,upsilon)
 
-print(potential_finder(0.01,43,1,1,0))
+#print(potential_finder(0.01,43,1,1,0))
+print(get_Norm_Potential(0.01,43,1,1,0,0))
