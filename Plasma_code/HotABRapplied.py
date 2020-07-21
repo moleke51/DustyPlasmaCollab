@@ -107,7 +107,7 @@ Phi = np.zeros(len(Theta))
 for i in range(len(Theta)):
    Phi[i] = potential_finder(Theta[i],43,1,100,0,1)
    print(Theta[i],Phi[i])
-plt.plot(Theta,Phi,label = 'Kappa = 0.5')
+plt.plot(Theta,Phi,label = 'Kappa = 2')
 plt.xlabel("Theta")
 plt.ylabel("Normalised potential")
 plt.grid()
