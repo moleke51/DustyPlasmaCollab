@@ -5,30 +5,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import fsolve,bisect
 import sys
-'''
-sys.path.append('.')
-import Model as mdl
-
-
-def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model = None,previous_phi = None):
-    modellist = mdl.modelpicker('Models/',Theta,mu,z,alpha,upsilon)
-    priority = 0
-    for model in modellist:
-        __import__(model.get_name())
-        if model.priority() > priority:
-            
-            priority = model.priority()
-            modelindex = modellist.index(model)
-    
-    if variable_counter == 0:
-        print(modellist[modelindex])
-        return modellist[modelindex].potential_finder()
-    else:
-        if modellist[modelindex].get_name() == 'ABR' and previous_model == 'ABR':
-            return(previous_phi, previous_model)
-        else:
-            return(modellist[modelindex].potential_finder(), modellist[modelindex].get_name(),modellist[modelindex].get_colour())
-'''
 
 def get_name():
     return "HotABR"
@@ -59,7 +35,7 @@ def get_boundary(J,tau,z,gamma):
 def ABR_f(x,y,w):
     return w
 def ABR_g(x,y,w,J,tau,z):
-    return -(2/x)*w + (J/(x**2))*(tau + z*(y**(-0.5))) - np.exp(-y)
+    return -(2/x)*w + (J/(x**2))*((tau + z*y)**(-0.5)) - np.exp(-y)
 def ABR_RK(x0,y0,w0,X,J,tau,z,N):
     h = (X-x0)/N
     x = X - N*h
@@ -86,7 +62,7 @@ def ABR_RK(x0,y0,w0,X,J,tau,z,N):
 
 def Phi_J(J,alpha,mu,tau,z,gamma = 10000):
     x0,y0,w0 = get_boundary(J,tau,z,gamma) 
-    Phi_b,Phi_alpha = ABR_RK(x0,y0,w0,alpha,J,tau,z,N=100000)
+    Phi_b,Phi_alpha = ABR_RK(x0,y0,w0,alpha,J,tau,z,N=1000)
     return Phi_alpha
 
 def delta_J(J,alpha,mu,tau,z,gamma = 10000):
@@ -111,8 +87,7 @@ def potential_finder(Theta,mu,z,alpha,upsilon,kappa = 0.5,gamma=10000):
         else:
             return 0 #As argued by Kennedy and Allen
     else:
-        Phi_guess = potential_finder(0,mu,z,alpha,upsilon)
-        print(Phi_guess)
+        Phi_guess = 3#potential_finder(0,mu,z,alpha,upsilon)
         #Jsol = fsolve(delta_J,norm_J_current(alpha,Phi_guess,mu),args = (alpha,mu,tau,z,gamma))[0]
         #Jsol = bisect(delta_J,norm_J_current(alpha,2.0,mu),norm_J_current(alpha,5,mu),args = (alpha,mu,tau,z,gamma))
         #return retrive_Phi_a(Jsol,mu,alpha)
@@ -129,21 +104,19 @@ def priority(Theta,alpha,upsilon):
         P_u = 1
     return (P_t + P_a + P_u)
 
-<<<<<<< HEAD
+#print(potential_finder(0.01,43,1,1,0,2))
 
-=======
->>>>>>> 6d1ac20bef605060f4eec8892a1a7957a4714797
-print(potential_finder(0.01,43,1,100,0,2))
-
-
+var = np.logspace(-2,2,5)
+Phi = np.zeros(len(var))
+for i in range(len(var)):
+   Phi[i] = potential_finder(0.01,43,1,var[i],0,0)
+   print(var[i],Phi[i])
 '''
-Philip = np.linspace(-100,100,10000)
-Jay = norm_J_current(np.ones(len(Philip)),Philip,43*np.ones(len(Philip)))
-
-Logan = 'log'
-plt.plot(Philip,Jay)
+plt.plot(var,Phi,label = 'Kappa = 0.5')
+plt.xlabel("alpha")
+plt.ylabel("Normalised potential")
 plt.grid()
-plt.xscale(Logan)
-plt.yscale(Logan)
+plt.xscale('log')
+plt.legend()
 plt.show()
 '''

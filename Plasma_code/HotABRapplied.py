@@ -105,7 +105,7 @@ def priority(Theta,alpha,upsilon):
 Theta = np.logspace(-5,0,6)
 Phi = np.zeros(len(Theta))
 for i in range(len(Theta)):
-   Phi[i] = potential_finder(Theta[i],43,1,100,0,0.5)
+   Phi[i] = potential_finder(Theta[i],43,1,100,0,1)
    print(Theta[i],Phi[i])
 plt.plot(Theta,Phi,label = 'Kappa = 0.5')
 plt.xlabel("Theta")
