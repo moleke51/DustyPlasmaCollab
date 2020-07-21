@@ -86,12 +86,10 @@ def potential_finder(Theta,mu,z,alpha,upsilon,kappa = 0.5,gamma=10000):
         else:
             return 0 #As argued by Kennedy and Allen
     else:
-        Psi_guess = potential_finder(0,mu,z,alpha,upsilon)
-        print(Psi_guess)
         #Jsol = fsolve(delta_J,norm_J_current(alpha,Phi_guess,mu),args = (alpha,mu,tau,z,gamma))[0]
         #Jsol = bisect(delta_J,norm_J_current(alpha,2.0,mu),norm_J_current(alpha,5,mu),args = (alpha,mu,tau,z,gamma))
         #return retrive_Phi_a(Jsol,mu,alpha)
-        return((fsolve(delta_Psi,Psi_guess,args= (alpha,mu,tau,z,gamma))[0]-tau)/z)
+        return((fsolve(delta_Psi,3,args= (alpha,mu,tau,z,gamma))[0]-tau)/z)
 def priority(Theta,alpha,upsilon):
     if Theta > 1e-4:
         P_t = 0
@@ -104,10 +102,18 @@ def priority(Theta,alpha,upsilon):
         P_u = 1
     return (P_t + P_a + P_u)
 
-
-print(potential_finder(0.01,43,1,10,0,0.5))
-
-
+Theta = np.logspace(-5,0,6)
+Phi = np.zeros(len(Theta))
+for i in range(len(Theta)):
+   Phi[i] = potential_finder(Theta[i],43,1,100,0,0.5)
+   print(Theta[i],Phi[i])
+plt.plot(Theta,Phi,label = 'Kappa = 0.5')
+plt.xlabel("Theta")
+plt.ylabel("Normalised potential")
+plt.grid()
+plt.xscale('log')
+plt.legend()
+plt.show()
 '''
 Philip = np.linspace(-100,100,10000)
 Jay = norm_J_current(np.ones(len(Philip)),Philip,43*np.ones(len(Philip)))
