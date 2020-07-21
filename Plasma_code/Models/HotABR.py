@@ -53,7 +53,7 @@ def get_boundary(J,tau,z,gamma):
     #Calculate rho at the boundary. 
     rho_b = (np.sqrt(J) * np.exp(Phi_b/2))/((P_b)**(1/4))
     #Calculate the first derivative of Phi with renpect to rho evaluated at the boundary.
-    dPhi_drho_b = (((2*rho_b/J) * (P_b**(3/2))/(P_b - 0.5*z)) * np.exp(-Phi_b))*(z**0.5)
+    dPhi_drho_b = (((2*rho_b/J) * (P_b**(3/2))/(P_b - 0.5*z)) * np.exp(-Phi_b))
     return(rho_b,Phi_b,dPhi_drho_b)
 #Runge-Kutta 4th order ODE solver
 def ABR_f(x,y,w):
@@ -129,8 +129,7 @@ def priority(Theta,alpha,upsilon):
         P_u = 1
     return (P_t + P_a + P_u)
 
-
-print(potential_finder(0.01,43,1,10,0,2))
+print(potential_finder(0.01,43,1,100,0,2))
 
 
 '''
