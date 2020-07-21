@@ -129,10 +129,6 @@ def priority(Theta,alpha,upsilon):
         P_u = 1
     return (P_t + P_a + P_u)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 6d1ac20bef605060f4eec8892a1a7957a4714797
 print(potential_finder(0.01,43,1,100,0,2))
 
 

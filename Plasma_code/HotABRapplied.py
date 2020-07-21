@@ -86,8 +86,9 @@ def potential_finder(Theta,mu,z,alpha,upsilon,kappa = 0.5,gamma=10000):
         else:
             return 0 #As argued by Kennedy and Allen
     else:
-        Psi_guess = potential_finder(0,mu,z,alpha,upsilon)
-        print(Psi_guess)
+        Psi_guess = 3
+        #Psi_guess = potential_finder(0,mu,z,alpha,upsilon)
+        #print(Psi_guess)
         #Jsol = fsolve(delta_J,norm_J_current(alpha,Phi_guess,mu),args = (alpha,mu,tau,z,gamma))[0]
         #Jsol = bisect(delta_J,norm_J_current(alpha,2.0,mu),norm_J_current(alpha,5,mu),args = (alpha,mu,tau,z,gamma))
         #return retrive_Phi_a(Jsol,mu,alpha)
@@ -105,7 +106,7 @@ def priority(Theta,alpha,upsilon):
     return (P_t + P_a + P_u)
 
 
-print(potential_finder(0.01,43,1,10,0,0.5))
+print(potential_finder(1,43,1,10,0,2))
 
 
 '''
