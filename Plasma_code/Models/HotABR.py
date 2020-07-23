@@ -104,7 +104,6 @@ def priority(Theta,alpha,upsilon):
         P_u = 1
     return (P_t + P_a + P_u)
 
-#print(potential_finder(0.01,43,1,1,0,2))
 '''
 var = np.logspace(-2,2,5)
 Phi = np.zeros(len(var))
