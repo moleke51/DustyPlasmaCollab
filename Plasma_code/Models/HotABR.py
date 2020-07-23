@@ -62,7 +62,7 @@ def ABR_RK(x0,y0,w0,X,J,tau,z,N):
 
 def Phi_J(J,alpha,mu,tau,z,gamma = 10000):
     x0,y0,w0 = get_boundary(J,tau,z,gamma) 
-    Phi_b,Phi_alpha = ABR_RK(x0,y0,w0,alpha,J,tau,z,N=10000)
+    Phi_b,Phi_alpha = ABR_RK(x0,y0,w0,alpha,J,tau,z,N=1000)
     return Phi_alpha
 
 def delta_J(J,alpha,mu,tau,z,gamma = 10000):
