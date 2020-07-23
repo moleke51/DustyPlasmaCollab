@@ -12,7 +12,7 @@ def function(alpha,kappa):
     Phi = abr.potential_finder(Theta,mu,z,alpha,upsilon,kappa)
     return Phi
 
-alpha,Phi = np.loadtxt("/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Plasma_code/Models/OMData1.txt",skiprows=1,unpack=True)
+alpha,Phi = np.loadtxt("/Users/georgedoran/Documents/'George Doran'/Imperial/Physics/'Dust in plasma'/DustyPlasmaCollab/Plasma_code/Models/OMData1.py",skiprows=1,unpack=True)
 
 Phi_fit, Phi_cov = spl.curve_fit(function,alpha,Phi)
 print(Phi_fit)
