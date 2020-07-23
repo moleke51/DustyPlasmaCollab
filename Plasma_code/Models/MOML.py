@@ -19,7 +19,7 @@ def potential_finder(Theta,mu,z,alpha,upsilon):
     Phi = bisect(MOML_function,-10,10,args = (Theta,mu,z,alpha,upsilon))
     return np.absolute(Phi)
 def planar_presheath(Theta,mu,z,alpha,upsilon):
-    return -0.5*np.log((2*np.pi*(1+(5/3)*Theta)/(mu**2))) + np.log(2)
+    return -0.5*np.log((2*np.pi*(1+(5/3)*Theta)/(mu**2))) + 0.5
 
 def priority(Theta,alpha,upsilon):
     if Theta >= 1e-4:
@@ -36,5 +36,4 @@ def priority(Theta,alpha,upsilon):
         P_u = 1
     return (P_t + P_a + P_u)             
 
-print(potential_finder(1,43,1,100,0))
-print(planar_presheath(1,43,1,100,0))
+print(planar_presheath(0,43,1,100,0))

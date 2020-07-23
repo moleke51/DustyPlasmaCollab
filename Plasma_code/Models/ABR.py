@@ -91,5 +91,3 @@ def priority(Theta,alpha,upsilon):
     else:
         P_u = 1
     return (P_t + P_a + P_u)
-
-print(potential_finder(0,43,1,100,0))
