@@ -16,10 +16,6 @@ def function(alpha,kappa):
     Phi = np.array(Phi_list)
     return Phi
 
-<<<<<<< HEAD
-alpha,Phi = np.loadtxt("/Users/georgedoran/Documents/'George Doran'/Imperial/Physics/'Dust in plasma'/DustyPlasmaCollab/Plasma_code/Models/OMData1.py",skiprows=1,unpack=True)
-=======
->>>>>>> 978249a019bb7387dfc0b9a27a1132b2b3002534
 
 alpha,Phi = np.loadtxt("/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Plasma_code/Models/OMData3.txt",skiprows=1,unpack=True)
 Kappa, cov = spo.curve_fit(function,alpha,Phi,0.25)
