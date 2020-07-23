@@ -3,6 +3,7 @@ import numpy as np
 import scipy.special as sps
 import OML as oml
 import MOML as moml
+import matplotlib.pyplot as plt
 
 def get_name():
     return "SNF"
@@ -38,4 +39,3 @@ def priority(Theta,alpha,upsilon):
     else:
         P_u = 1
     return (P_t + P_a + P_u)    
-
