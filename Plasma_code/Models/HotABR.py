@@ -62,7 +62,7 @@ def ABR_RK(x0,y0,w0,X,J,tau,z,N):
 
 def Phi_J(J,alpha,mu,tau,z,gamma = 10000):
     x0,y0,w0 = get_boundary(J,tau,z,gamma) 
-    Phi_b,Phi_alpha = ABR_RK(x0,y0,w0,alpha,J,tau,z,N=1000)
+    Phi_b,Phi_alpha = ABR_RK(x0,y0,w0,alpha,J,tau,z,N=10000)
     return Phi_alpha
 
 def delta_J(J,alpha,mu,tau,z,gamma = 10000):
@@ -105,13 +105,13 @@ def priority(Theta,alpha,upsilon):
     return (P_t + P_a + P_u)
 
 #print(potential_finder(0.01,43,1,1,0,2))
-
+'''
 var = np.logspace(-2,2,5)
 Phi = np.zeros(len(var))
 for i in range(len(var)):
    Phi[i] = potential_finder(0.01,43,1,var[i],0,0)
    print(var[i],Phi[i])
-'''
+
 plt.plot(var,Phi,label = 'Kappa = 0.5')
 plt.xlabel("alpha")
 plt.ylabel("Normalised potential")
