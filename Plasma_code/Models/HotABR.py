@@ -103,6 +103,7 @@ def priority(Theta,alpha,upsilon):
     else:
         P_u = 1
     return (P_t + P_a + P_u)
+    
 
 '''
 var = np.logspace(-2,2,5)
