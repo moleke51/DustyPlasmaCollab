@@ -65,6 +65,78 @@ def speciesinput():
     else:
         word = word.lower()
     return(word)
+class IsInteger:
+    """Class for the condition the input is an integer"""
+    def check(self,input_number):
+        try:
+            if input_number == int(input_number):
+                return True
+            return False
+        except TypeError:
+            return False
+    def error_message(self):
+        return 'an integer'
+
+class GreaterThan:
+    """Class for the condition greater than x"""
+    def __init__(self,x):
+        self._x = x
+    
+    def check(self,input_number):
+        try:
+            if input_number > self._x:
+                return True
+            return False
+        except TypeError:
+            return False
+    def error_message(self):
+        return f'greater than {self._x}'
+
+class GreaterThanEqualTo:
+    """Class for the condition greater than or equal to x"""
+    def __init__(self,x):
+        self._x = x
+    
+    def check(self,input_number):
+        try:
+            if input_number >= self._x:
+                return True
+            return False
+        except TypeError:
+            return False
+    def error_message(self):
+        return f'greater than or equal to {self._x}'
+
+class LessThan:
+    """Class for the condition less than x"""
+    def __init__(self,x):
+        self._x = x
+    
+    def check(self,input_number):
+        try:
+            if input_number < self._x:
+                return True
+            return False
+        except TypeError:
+            return False
+    def error_message(self):
+        return f'less than {self._x}'
+
+class LessThanEqualTo:
+    """Class for the condition less than or equal to x"""
+    def __init__(self,x):
+        self._x = x
+    
+    def check(self,input_number):
+        try:
+            if input_number <= self._x:
+                return True
+            return False
+        except TypeError:
+            return False
+    def error_message(self):
+        return f'less than or equal to {self._x}'
+
 def eval_input(x):
     x = x.replace('^','**')
     if '**' in x:
@@ -89,91 +161,54 @@ def eval_input(x):
             X *= float(x[i])
     return X
 
-
 def is_valid(name,requirements,var_counter,units = None):
     units_message = '; '
     if units != None:
         units_message = f' with units of {units}; '
     user_input = input(f'Enter the {name} value{units_message}')
-    prefixes = {'Y': '*10**24', 'Z': '*10**21', 'E': '*10**18', 'P': '*10**15', 'T': '*10**12', 'G': '*10**9', 'M': '*10**6', 'k': '*10**3', 'm': '*10**-3', 'u': '*10**-6', 'n': '*10**-9', 'p': '*10**-12', 'f': '*10**-15', 'a': '*10**-18', 'z': '*10**-21', 'y': '*10**-24'}
-    check = True
-    message = ''
     if user_input.lower() == 'variable':
         if user_input.lower() == 'variable' and var_counter == 0:
             maximum = None
             minimum = None
-            while maximum == None:
-                maximum, a = is_valid('maximum '+name,requirements,1,units)
-            requirements.append(f'<{maximum}')
             while minimum == None:
-                minimum, a = is_valid('minimum '+name,requirements,1,units)
+                minimum, placeholder = is_valid('minimum '+name,requirements,1,units)
+                requirements.append(GreaterThan(minimum))
+            while maximum == None:
+                maximum, placeholder = is_valid('maximum '+name,requirements,1,units)
             return(np.linspace(minimum,maximum,100000).tolist(),var_counter+1)
         elif var_counter == 1: 
             print('The variable has already been selected')
+            return is_valid(name,requirements,var_counter,units = None)
         else:
             print('This parameter cannot be varied')
-    if 'is_num' in requirements:
-        try:
-            str_number = eval_input((user_input.replace('eV','ev').replace('ev','*11594')).translate(str.maketrans(prefixes)))
-            number = float(str_number)
-            if 'is_int' in requirements:
-                if '.' in user_input:
-                    check = False
-                    if message == '':
-                        message = f'{name} must be an integer'
-                    else:
-                        message += f', {name} must be an integer'
-            if '>0' in requirements:
-                if number <= 0:
-                    check = False
-                    if message == '':
-                        message = f'{name} must be greater than zero'
-                    else:
-                        message += f', {name} must be greater than zero'
-            if '>=0' in requirements: 
-                if number < 0:
-                    check = False
-                    if message == '':
-                        message = f'{name} must be greater than or equal to zero'
-                    else:
-                        message += f', {name} must be greater than or equal to zero' 
-            for req in requirements:
-                if '<=' in req:
-                    max_num = float(req.strip('<='))
-                    if number > max_num:
-                        check = False
-                        if message == '':
-                            message = f'{name} must be smaller than {max_num}'
-                        else:
-                            message += f', {name} must be smaller than {max_num}'
-            for req in requirements:
-                if '<' in req and '<=' not in req:
-                    max_num = float(req.strip('<'))
-                    if number >= max_num:
-                        check = False
-                        if message == '':
-                            message = f'{name} must be smaller than {max_num}'
-                        else:
-                            message += f', {name} must be smaller than {max_num}'
-        except ValueError:
-            check = False
-            message = (f'{name} must be a number.')
-            
-        except NameError:
-            check = False
-            message = (f'{name} must be a number.')
-            
-        except TypeError:
-            check = False
-            message = (f'{name} must be a number.')
-            
-        if check == True:
-            return(str_number, var_counter)
-        else:
-            print(message)
-            return(None,var_counter)
-    else:
-        return(user_input,var_counter)
+            return is_valid(name,requirements,var_counter,units = None)
+    try:
+        prefixes = {'Y': '*10**24', 'Z': '*10**21', 'E': '*10**18', 'P': '*10**15', 'T': '*10**12', 'G': '*10**9', 'M': '*10**6', 'k': '*10**3', 'm': '*10**-3', 'u': '*10**-6', 'n': '*10**-9', 'p': '*10**-12', 'f': '*10**-15', 'a': '*10**-18', 'z': '*10**-21', 'y': '*10**-24'}
+        user_input = eval_input((user_input.replace('eV','ev').replace('ev','*11594')).translate(str.maketrans(prefixes)))
+        errors = []
+        for req in requirements:
+            if req.check(user_input) == False:
+                errors.append(req.error_message())
+        if len(errors) == 0:
+            return user_input, var_counter
+        error_message = f'The {name} value should be '
+        error_message += errors[0]
+        if len(errors) > 1:
+            for i in range(1,len(errors)-1):
+                error_message += ', '+errors[i]
+            error_message += ' and '+errors[-1]
+        print(error_message)
+        return is_valid(name,requirements,var_counter,units = None)
+        
+    except ValueError:
+        print(f'{name} must be a number.')
+        return is_valid(name,requirements,var_counter,units = None)
+    except NameError:
+        print(f'{name} must be a number.') 
+        return is_valid(name,requirements,var_counter,units = None)
+    except TypeError:
+        print(f'{name} must be a number.')
+        return is_valid(name,requirements,var_counter,units = None)
          
 def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model = None,previous_phi = None):
     modellist = mdl.modelpicker('Plasma_code/Models/',Theta,mu,z,alpha,upsilon)
@@ -269,25 +304,11 @@ while choice != 'y' and choice != 'n':
 
 if choice == 'y':
     choice = True
-    mu = None
-    while mu == None:
-        mu,variable_counter = is_valid('mu',['is_num','>0'],variable_counter)
-
-    z = None
-    while z == None:
-        z,variable_counter = is_valid('relative ion charge',['is_num','>0','is_int'],variable_counter)
-    
-    Theta = None
-    while Theta == None:
-        Theta, variable_counter = is_valid('Theta',['is_num','>=0'],variable_counter)
-    
-    alpha = None
-    while alpha == None:
-        alpha, variable_counter = is_valid('alpha',['is_num','>=0'],variable_counter)
-
-    upsilon = None
-    while upsilon == None:
-        upsilon, variable_counter = is_valid('upsilon',['is_num'],variable_counter)
+    mu,variable_counter = is_valid('mu',[GreaterThan(0)],variable_counter)
+    z,variable_counter = is_valid('relative ion charge',[GreaterThan(0),IsInteger()],variable_counter)
+    Theta,variable_counter = is_valid('Theta',[GreaterThanEqualTo(0)],variable_counter)
+    alpha,variable_counter = is_valid('alpha',[GreaterThanEqualTo(0)],variable_counter)
+    upsilon,variable_counter = is_valid('upsilon',[],variable_counter)
     
     
 else:
@@ -296,7 +317,6 @@ else:
     while (species in elementList) == False:
         print('This species does not exist')
         species = speciesinput()
-
     else:
         #Calculate the mu value.
         index = np.floor(elementList.index(species)/2)
@@ -313,31 +333,12 @@ else:
         proton_number = elements[index].number
         z_max = proton_number
     
-    
-    
-    z = None
-    while z == None:
-        z,usless = is_valid('relative ion charge',['is_num','>0','is_int',f'<={z_max}'],-1,'1.60*10^-19 C')
-    
-    T_i = None
-    while T_i == None:
-        T_i,variable_counter = is_valid('ion temperature',['is_num','>0'],variable_counter,'Kelvin')
-    
-    T_e = None
-    while T_e == None:
-        T_e,variable_counter = is_valid('electron temperature',['is_num','>0'],variable_counter,'Kelvin')   
-    
-    n_e = None
-    while n_e == None:
-        n_e,variable_counter = is_valid('electron density',['is_num','>0'],variable_counter,'electrons per meter cubed')
-
-    a = None
-    while a == None:
-        a,variable_counter = is_valid('dust radius',['is_num','>=0'],variable_counter,'meters')
-    
-    v = None
-    while v == None:
-        v,variable_counter = is_valid('plasma flow speed',['is_num','>=0'],variable_counter,'meters per second')
+    z,place_holder = is_valid('relative ion charge',[GreaterThan(0),IsInteger(),LessThanEqualTo(z_max)],-1,'1.60*10^-19 C')
+    T_i,variable_counter = is_valid('ion temperature',[GreaterThan(0)],variable_counter,'Kelvin')
+    T_e,variable_counter = is_valid('electron temperature',[GreaterThan(0)],variable_counter,'Kelvin')   
+    n_e,variable_counter = is_valid('electron density',[GreaterThan(0)],variable_counter,'electrons per meter cubed')
+    a,variable_counter = is_valid('dust radius',[GreaterThanEqualTo(0)],variable_counter,'meters')
+    v,variable_counter = is_valid('plasma flow speed',[GreaterThanEqualTo(0)],variable_counter,'meters per second')
 
 if variable_counter == 0:
     if choice == False:
@@ -348,7 +349,6 @@ if variable_counter == 0:
             upsilon = v / np.sqrt(2*k_B*T_i/m_i)
         else:
             upsilon = 0
-
 
     Phi = get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter)
     #Return the normalised potential
