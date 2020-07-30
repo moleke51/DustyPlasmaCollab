@@ -82,7 +82,7 @@ def Coulomb(rho,alpha,Phi_a):
 Theta = 0
 mu = 43
 z = 1
-alpha = 0.01
+alpha = 100000
 upsilon = 0
 gamma = 10000
 Phi_a = potential_finder(Theta,mu,z,alpha,upsilon)
@@ -115,8 +115,8 @@ for n in range(N):
     X = np.append(X,x)    
     Y = np.append(Y,y)       
 
-fit, cov = spo.curve_fit(DH,X,Y,(alpha,Phi_a))
-print(alpha,Phi_a,fit)
+#fit, cov = spo.curve_fit(DH,X,Y,(alpha,Phi_a))
+print(alpha,Phi_a)
 plt.plot(X,Y,color = 'Blue',label = 'ABR')
 plt.plot(X,DH(X,alpha*np.ones(len(X)),Phi_a*np.ones(len(X))),color = 'Red',label = 'DH')
 plt.plot(X,Coulomb(X,alpha*np.ones(len(X)),Phi_a*np.ones(len(X))),color = 'Green',label = 'Coulomb')
