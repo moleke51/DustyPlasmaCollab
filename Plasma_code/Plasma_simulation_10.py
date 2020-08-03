@@ -33,10 +33,9 @@ import scipy.special as sps
 import matplotlib.pyplot as plt
 import periodictable as pt
 from scipy import integrate
-import Model as mdl
-#==============================KEY WORDS================================#
-masteroverride = 'normalise' 
-override = 'override'
+import os
+import sys
+sys.path.insert(1, 'Plasma_code/Models/')
 #==============================CONSTANTS================================#
 #We define some of the universal constants
 e = 1.60e-19 #[C] The charge on an electron
@@ -46,13 +45,13 @@ m_e = 9.11e-31 #[kg] The mass of an electron
 u = 1.66e-27 #[kg] The mass of a nucleon 
 #==============================FUNCTIONS===============================#
 #Define the Debye-Huckle potential.
-def DH_potential_to_charge(dustradius,Phi_a,lambda_d):
-    x = 4*np.pi*(epsilon_0)*dustradius*Phi_a*np.exp((dustradius)/(lambda_d))
+def DH_potential_to_charge(a,Phi_a,lambda_d):
+    x = 4*np.pi*(epsilon_0)*a*Phi_a*np.exp((a)/(lambda_d))
     return x
 
 #It should be noted that the Debye-Huckle potential reduces into the point charge potential when a<<lambda_d
-def Spherical_potential_to_charge(dustradius,Phi_a):
-    x = 4*np.pi*(epsilon_0)*dustradius*Phi_a
+def Spherical_potential_to_charge(a,Phi_a):
+    x = 4*np.pi*(epsilon_0)*a*Phi_a
     return x
 
 #This allows the chemical symbols or element names to be entered in either upper or lower case.
@@ -209,9 +208,37 @@ def is_valid(name,requirements,var_counter,units = None):
     except TypeError:
         print(f'{name} must be a number.')
         return is_valid(name,requirements,var_counter,units = None)
-         
+
+class Model:
+    def __init__(self,filename,Theta,mu,z,alpha,upsilon):
+        self._name = filename[:-3]
+        self._Theta = float(Theta)
+        self._mu = float(mu)
+        self._z = float(z)
+        self._alpha = float(alpha)
+        self._upsilon = float(upsilon)
+    def __repr__(self):
+        return f'Model: {self._name}, at Theta = {self._Theta}, mu = {self._mu}, z = {self._z}, alpha = {self._alpha} and upsilon = {self._upsilon}'
+    def get_name(self):
+        return self._name
+    def get_colour(self):
+        return getattr(__import__(self._name),'colour')()
+    def priority(self):
+        return getattr(__import__(self._name), 'priority')(self._Theta,self._alpha,self._upsilon)
+    def potential_finder(self):
+        return getattr(__import__(self._name), 'potential_finder')(self._Theta,self._mu,self._z,self._alpha,self._upsilon)
+    
+def modelpicker(path,Theta,mu,z,alpha,upsilon):
+    FileList = os.listdir(path)
+    modellist = []
+    for File in FileList:
+        if ".py" in File:
+            m = Model(File,Theta,mu,z,alpha,upsilon)
+            modellist.append(m)
+    return modellist
+
 def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model = None,previous_phi = None):
-    modellist = mdl.modelpicker('Plasma_code/Models/',Theta,mu,z,alpha,upsilon)
+    modellist = modelpicker('Plasma_code/Models/',Theta,mu,z,alpha,upsilon)
     priority = 0
     for model in modellist:
         __import__(model.get_name())
@@ -309,8 +336,7 @@ if choice == 'y':
     Theta,variable_counter = is_valid('Theta',[GreaterThanEqualTo(0)],variable_counter)
     alpha,variable_counter = is_valid('alpha',[GreaterThanEqualTo(0)],variable_counter)
     upsilon,variable_counter = is_valid('upsilon',[],variable_counter)
-    
-    
+     
 else:
     choice = False
     species = speciesinput()
