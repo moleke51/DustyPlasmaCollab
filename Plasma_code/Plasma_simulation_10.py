@@ -211,7 +211,7 @@ def is_valid(name,requirements,var_counter,units = None):
 
 class Model:
     def __init__(self,filename,Theta,mu,z,alpha,upsilon):
-        self._name = filename.strip('.py')
+        self._name = filename[:-3]
         self._Theta = float(Theta)
         self._mu = float(mu)
         self._z = float(z)
@@ -236,7 +236,6 @@ def modelpicker(path,Theta,mu,z,alpha,upsilon):
             m = Model(File,Theta,mu,z,alpha,upsilon)
             modellist.append(m)
     return modellist
-
 
 def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model = None,previous_phi = None):
     modellist = modelpicker('Plasma_code/Models/',Theta,mu,z,alpha,upsilon)
@@ -337,8 +336,7 @@ if choice == 'y':
     Theta,variable_counter = is_valid('Theta',[GreaterThanEqualTo(0)],variable_counter)
     alpha,variable_counter = is_valid('alpha',[GreaterThanEqualTo(0)],variable_counter)
     upsilon,variable_counter = is_valid('upsilon',[],variable_counter)
-    
-    
+     
 else:
     choice = False
     species = speciesinput()
