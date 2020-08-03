@@ -30,7 +30,7 @@ def MOML_function(Phi,Theta,mu,z,gamma): #gamma = 5/3 for static plasmas
     return (np.sqrt(Theta)/mu)*(1 - (1/Theta)*(Phi - 0.5*(np.log(2*np.pi*(1+gamma*Theta))-np.log(mu**2)))) - np.exp(Phi)
 
 def planar_presheath(Theta,mu,z,gamma):
-    return -0.5*np.log((2*np.pi*(1+gamma*Theta)/(mu**2))) + 0.5
+    return 0.5*np.log((2*np.pi*(1+gamma*Theta)/(mu**2))) - 0.5
 
 Theta = np.logspace(-3,3,101)
 #Theta = np.logspace(-1,0,101)
@@ -48,15 +48,26 @@ for i in range(len(Theta)):
     Phi_2[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,5/3))
     Phi_3[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,3))
 
-Phi_pp1 = -1*planar_presheath(Theta,mu,z,1)
-Phi_pp2 = -1*planar_presheath(Theta,mu,z,5/3)
-Phi_pp3 = -1*planar_presheath(Theta,mu,z,3)
+Phi_pp1 = 1*planar_presheath(Theta,mu,z,1)
+Phi_pp2 = 1*planar_presheath(Theta,mu,z,5/3)
+Phi_pp3 = 1*planar_presheath(Theta,mu,z,3)
+
+#Cold ion wall limit
+Phi_cw = planar_presheath(0,mu,z,1)*np.ones(len(Theta))
 
 #Finding minimum of MOML for gamma = 1
-min_index_1 = np.argmin(Phi_1)
-print(f"Gamma = 1, Theta_min = {Theta[min_index_1]} and Phi_min = {Phi_1[min_index_1]}")
-Theta_min_1 = Theta[min_index_1]
-Phi_min_1 = Phi_1[min_index_1]
+min_point_1 = np.argmin(Phi_1)
+print(f"For MOML prediction: Gamma = 1, Theta_min = {Theta[min_point_1]} and Phi_min = {Phi_1[min_point_1]}")
+
+#Find point that planar pre-sheath diverges from the cold ion value
+index_list_1 = []
+for i in range(len(Phi_1)):
+    if (np.absolute(Phi_pp1[i] - Phi_cw[i]) < 0.01):
+        index_list_1.append(i)
+
+max_point_1 = np.max(index_list_1)
+print(f"For PP prediction: Gamma = 1, Theta_min = {Theta[max_point_1]} and Phi_min = {Phi_pp1[max_point_1]}")
+
 
 '''
 #Finding minimum of MOML for gamma = 5/3
@@ -81,7 +92,9 @@ plt.plot(Theta,Phi_1,color = "Red", label = "Gamma = 1")
 plt.plot(Theta,Phi_pp1,':',color = "DarkRed", label = "PP, gamma = 1")
 #plt.plot(Theta,Phi_pp2,'-.',color = "DarkBlue", label = "PP, gamma = 5/3")
 #plt.plot(Theta,Phi_pp3,'--',color = "DarkGreen", label = "PP, gamma = 3")
-plt.plot(Theta_min_1,Phi_min_1,'o',color = "Black", label = "Minimum of MOML")
+plt.plot(Theta[min_point_1],Phi_1[min_point_1],'o',color = "Black", label = "Minimum of MOML")
+plt.plot(Theta[max_point_1],Phi_pp1[max_point_1],'o',color = "Black", label = "Max chosen value for PP")
+plt.plot(Theta,Phi_cw,'--',color = "DarkBlue", label = "Cold ion wall limit")
 plt.xlabel("Theta")
 plt.ylabel("Normalised dust potential")
 plt.legend()
