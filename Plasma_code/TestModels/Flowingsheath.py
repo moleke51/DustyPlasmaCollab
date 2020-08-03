@@ -31,6 +31,8 @@ def MOML_function(Phi,Theta,mu,z,gamma): #gamma = 5/3 for static plasmas
 
 def FlowingSheathMOML(Theta,mu,gamma,kappa):
     return -0.5*(1+Theta*(gamma+3-2*kappa)) + 0.5*(np.log(2*np.pi*(1+gamma*Theta))-np.log(mu**2))
+def FlowingPresheath(Theta,mu,gamma,kappa):
+    return -0.5*(1+Theta*(gamma+3-2*kappa))
 '''
 Theta = np.logspace(-5,0,101)
 #Theta = np.logspace(-1,0,101)
@@ -60,7 +62,11 @@ plt.legend()
 plt.grid()
 plt.xscale("log")
 plt.show()
-'''
+
 a = 0
 while a == 0:
-    print(FlowingSheathMOML(float(input('Select theta value: ')),43,5/3,1))
+    Theta = float(input('Select theta value: '))
+    #print(FlowingSheathMOML(float(input('Select theta value: ')),43,5/3,2))
+    print(bisect(MOML_function,-10,10,args = (Theta,43,1,5/3))+FlowingPresheath(Theta,43,5/3,2))
+
+'''
