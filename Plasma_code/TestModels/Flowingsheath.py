@@ -31,31 +31,45 @@ def MOML_function(Phi,Theta,mu,z,gamma): #gamma = 5/3 for static plasmas
 
 def FlowingSheathMOML(Theta,mu,gamma,kappa):
     return -0.5*(1+Theta*(gamma+3-2*kappa)) + 0.5*(np.log(2*np.pi*(1+gamma*Theta))-np.log(mu**2))
+<<<<<<< HEAD
 def FlowingPresheath(Theta,mu,gamma,kappa):
     return -0.5*(1+Theta*(gamma+3-2*kappa))
 '''
 Theta = np.logspace(-5,0,101)
 #Theta = np.logspace(-1,0,101)
+=======
+
+Theta = np.logspace(-5,1,100001)
+>>>>>>> de540ba679665a88a1fdcfd0fd1a962c8d9b427a
 mu = 43
 z = 1
-Phi_1 = np.zeros(len(Theta)) #gamma = 1
-Phi_2 = np.zeros(len(Theta)) #gamma = 5/3
-Phi_3 = np.zeros(len(Theta)) #gamma = 3
-
-
+#Phi_1 = np.zeros(len(Theta)) #gamma = 1
+Phi = np.zeros(len(Theta)) #gamma = 5/3
+#Phi_3 = np.zeros(len(Theta)) #gamma = 3
 for i in range(len(Theta)):
-    Phi_1[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,1))
-    Phi_2[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,5/3))
-    Phi_3[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,3))
+    #Phi_1[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,1))
+    Phi[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,5/3))
+    #Phi_3[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,3))
 
+#Find the points where MOML and FlowingSheath are the closest, within 0.01%
+index = []
+Phi_intersect = []
+Phi_flow = FlowingSheathMOML(Theta,43*np.ones(len(Theta)),(5/3)*np.ones(len(Theta)),2*np.ones(len(Theta)))
+for i in range(len(Theta)):
+    if (np.absolute(Phi_flow[i] - Phi[i]) < 0.0001):
+        index.append(i)
+        Phi_intersect.append(Phi_flow[i])
 
-Phi_flow = FlowingSheathMOML(Theta,43*np.ones(len(Theta)),(5/3)*np.ones(len(Theta)))
+#Find the biggest and smallest points 
+Phi_intersect_index1 = np.argmin(Phi_intersect)
+Phi_intersect_index2 = np.argmax(Phi_intersect)    
 
 #plt.plot(Theta,Phi_1,color = "Red", label = "Gamma = 1")
-plt.plot(Theta,Phi_2,color = "Black", label = "Gamma = 5/3")
+plt.plot(Theta,Phi,color = "Black", label = "Gamma = 5/3")
 #plt.plot(Theta,Phi_3,color = "Green", label = "Gamma = 3")
-plt.plot(Theta,Phi_flow,color = 'red',label = 'Flowing sheath')
-
+plt.plot(Theta,Phi_flow,color = 'red',label = 'Flowing sheath, gamma = 5/3, kappa = 2')
+plt.plot(Theta[index[Phi_intersect_index1]],Phi_flow[index[Phi_intersect_index1]],"o",color = "Green")
+plt.plot(Theta[index[Phi_intersect_index2]],Phi_flow[index[Phi_intersect_index2]],"o",color = "Green")
 plt.xlabel("Theta")
 plt.ylabel("Normalised dust potential")
 plt.legend()
@@ -63,6 +77,7 @@ plt.grid()
 plt.xscale("log")
 plt.show()
 
+<<<<<<< HEAD
 a = 0
 while a == 0:
     Theta = float(input('Select theta value: '))
@@ -70,3 +85,10 @@ while a == 0:
     print(bisect(MOML_function,-10,10,args = (Theta,43,1,5/3))+FlowingPresheath(Theta,43,5/3,2))
 
 '''
+=======
+'''
+a = 0
+while a == 0:
+    print(FlowingSheathMOML(float(input('Select theta value: ')),43,5/3,2))
+    '''
+>>>>>>> de540ba679665a88a1fdcfd0fd1a962c8d9b427a

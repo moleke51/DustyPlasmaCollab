@@ -34,22 +34,18 @@ def sheath_pot(Theta,gamma): #gamma = 5/3
 #def RI(Theta,gamma = 5/3):
 #    return (sheath_pot(Theta,gamma) - presheath_drop(Theta,gamma))
 
-def fit(Theta,Phi,mu,z,gamma,A):
-    gamma = 5/3
-    mu = 43
-    z = 1
-    Phi_sheath = 0.5*np.log(2*np.pi*(1+gamma*Theta))-np.log(z/mu)
-    rho_s = (np.sqrt(2)/3)*(2*Phi_sheath)**(3/4)
-    return -A/rho_s
-    
-
 Theta = np.logspace(-9,2,1000)
 gamma = 5/3
 mu = 43
 z = 1
 Phi_s = sheath_pot(Theta,gamma)
-fit,cov = spo.curve_fit(fit,Theta,Phi_s,0.25)
-print(fit)
+
+indices = []
+for i in range(len(Phi_s)):
+    if (np.absolute(Phi_s[i]) <= 0.5):
+        indices.append(i)
+max_index = np.max(indices)
+
 #Phi_ps = presheath_drop(Theta,gamma)
 
 #Theta1 = fsolve(RI,0)
@@ -57,6 +53,7 @@ print(fit)
 #print(Theta1, Theta2)
 
 plt.plot(Theta,Phi_s,color = 'Black',label = "MOML prediction")
+plt.plot(Theta[max_index],Phi_s[max_index],'o')
 #plt.plot(Theta,Phi_ps,'--',color = 'Red', label = "Derived prediction")
 #plt.plot(Theta1,presheath_drop(Theta1,5/3),'x',color = "Blue", label = f"Theta1 = {Theta1}")
 #plt.plot(Theta2,presheath_drop(Theta2,5/3),'x',color = "Blue", label = f"Theta2 = {Theta2}")
@@ -64,6 +61,6 @@ plt.grid()
 plt.title('The potential drop across the presheath')
 plt.xlabel('$\Theta$')
 plt.ylabel('$\Phi$')
-#plt.xscale('log')
+plt.xscale('log')
 plt.legend()
 plt.show()
