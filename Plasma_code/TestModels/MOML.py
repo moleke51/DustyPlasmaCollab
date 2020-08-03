@@ -14,6 +14,8 @@ def colour():
 def MOML_function(Phi,Theta,mu,z,alpha,upsilon): #gamma = 5/3 for static plasmas
     return (np.sqrt(Theta)/mu)*(1 - (1/Theta)*(Phi - 0.5*(np.log(2*np.pi*(1+(5/3)*Theta))-np.log(mu**2)))) - np.exp(Phi)
 
+
+
 #Solve MOML equation for Phi
 def potential_finder(Theta,mu,z,alpha,upsilon):
     Phi = bisect(MOML_function,-10,10,args = (Theta,mu,z,alpha,upsilon))
@@ -36,4 +38,3 @@ def priority(Theta,alpha,upsilon):
         P_u = 1
     return (P_t + P_a + P_u)             
 
-print(planar_presheath(0,43,1,100,0))
