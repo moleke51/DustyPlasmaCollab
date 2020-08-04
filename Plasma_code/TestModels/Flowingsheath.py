@@ -3,7 +3,7 @@ import scipy as sp
 import matplotlib.pyplot as plt 
 from scipy.optimize import fsolve,bisect
 import scipy.special as sps
-
+pi = np.pi
 def realLambertW(x):
     if type(x) is float or type(x) is int or type(x) is np.float64:
         w = sps.lambertw(x)
@@ -31,16 +31,8 @@ def MOML_function(Phi,Theta,mu,z,gamma): #gamma = 5/3 for static plasmas
 
 def FlowingSheathMOML(Theta,mu,gamma,kappa):
     return -0.5*(1+Theta*(gamma+3-2*kappa)) + 0.5*(np.log(2*np.pi*(1+gamma*Theta))-np.log(mu**2))
-<<<<<<< HEAD
-def FlowingPresheath(Theta,mu,gamma,kappa):
-    return -0.5*(1+Theta*(gamma+3-2*kappa))
 '''
-Theta = np.logspace(-5,0,101)
-#Theta = np.logspace(-1,0,101)
-=======
-
 Theta = np.logspace(-5,1,100001)
->>>>>>> de540ba679665a88a1fdcfd0fd1a962c8d9b427a
 mu = 43
 z = 1
 #Phi_1 = np.zeros(len(Theta)) #gamma = 1
@@ -77,18 +69,11 @@ plt.grid()
 plt.xscale("log")
 plt.show()
 
-<<<<<<< HEAD
-a = 0
-while a == 0:
-    Theta = float(input('Select theta value: '))
-    #print(FlowingSheathMOML(float(input('Select theta value: ')),43,5/3,2))
-    print(bisect(MOML_function,-10,10,args = (Theta,43,1,5/3))+FlowingPresheath(Theta,43,5/3,2))
 
-'''
-=======
-'''
 a = 0
 while a == 0:
     print(FlowingSheathMOML(float(input('Select theta value: ')),43,5/3,2))
-    '''
->>>>>>> de540ba679665a88a1fdcfd0fd1a962c8d9b427a
+'''
+def ThetaIntersect(Theta,mu,gamma,kappa):
+    return realLambertW(np.sqrt(2*pi*Theta*(1+gamma*Theta))*np.exp(Theta)) - 0.5*(1+Theta*(gamma+5-2*kappa))
+print(fsolve(ThetaIntersect,10,args = (43,5/3,2)))
