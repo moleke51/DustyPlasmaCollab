@@ -35,7 +35,7 @@ import periodictable as pt
 from scipy import integrate
 import os
 import sys
-sys.path.insert(1, 'Plasma_code/Models/')
+sys.path.insert(1, 'DustyPlasmaCollab/Plasma_code/Models/')
 #==============================CONSTANTS================================#
 #We define some of the universal constants
 e = 1.60e-19 #[C] The charge on an electron
@@ -238,7 +238,7 @@ def modelpicker(path,Theta,mu,z,alpha,upsilon):
     return modellist
 
 def get_Norm_Potential(Theta,mu,z,alpha,upsilon,variable_counter,previous_model = None,previous_phi = None):
-    modellist = modelpicker('Plasma_code/Models/',Theta,mu,z,alpha,upsilon)
+    modellist = modelpicker('DustyPlasmaCollab/Plasma_code/Models/',Theta,mu,z,alpha,upsilon)
     priority = 0
     for model in modellist:
         __import__(model.get_name())
