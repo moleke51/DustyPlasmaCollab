@@ -8,6 +8,9 @@ source environment_name/bin/activate
 To add packages type:
 pip install package_name
 
+To display the installed packages type: 
+pip list
+
 To use the environment the environment should be placed in the project folder. Files and folders should not be placed in the environment folder
 
 To export the packages that you're using you can make a requirements.txt file. Type: 
