@@ -3,7 +3,7 @@ import scipy as sp
 import matplotlib.pyplot as plt 
 from scipy.optimize import fsolve,bisect
 import scipy.special as sps
-
+'''
 def realLambertW(x):
     if type(x) is float or type(x) is int or type(x) is np.float64:
         w = sps.lambertw(x)
@@ -32,7 +32,7 @@ def MOML_function(Phi,Theta,mu,z,gamma): #gamma = 5/3 for static plasmas
 def FlowingSheathMOML(Theta,mu,gamma,kappa):
     return -0.5*(1+Theta*(gamma+3-2*kappa)) + 0.5*(np.log(2*np.pi*(1+gamma*Theta))-np.log(mu**2))
 
-Theta = np.logspace(-5,1,100001)
+Theta = np.logspace(-5,1,10001)
 mu = 43
 z = 1
 #Phi_1 = np.zeros(len(Theta)) #gamma = 1
@@ -43,10 +43,14 @@ for i in range(len(Theta)):
     Phi[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,5/3))
     #Phi_3[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,3))
 
+
 #Find the points where MOML and FlowingSheath are the closest, within 0.01%
-index = []
-Phi_intersect = []
-Phi_flow = FlowingSheathMOML(Theta,43*np.ones(len(Theta)),(5/3)*np.ones(len(Theta)),2*np.ones(len(Theta)))
+#index = []
+#Phi_intersect = []
+Phi_flow = FlowingSheathMOML(Theta,43*np.ones(len(Theta)),(5/3)*np.ones(len(Theta)),(2)*np.ones(len(Theta)))
+
+'''
+'''
 for i in range(len(Theta)):
     if (np.absolute(Phi_flow[i] - Phi[i]) < 0.0001):
         index.append(i)
@@ -55,13 +59,14 @@ for i in range(len(Theta)):
 #Find the biggest and smallest points 
 Phi_intersect_index1 = np.argmin(Phi_intersect)
 Phi_intersect_index2 = np.argmax(Phi_intersect)    
-
+'''
+'''
 #plt.plot(Theta,Phi_1,color = "Red", label = "Gamma = 1")
 plt.plot(Theta,Phi,color = "Black", label = "Gamma = 5/3")
 #plt.plot(Theta,Phi_3,color = "Green", label = "Gamma = 3")
 plt.plot(Theta,Phi_flow,color = 'red',label = 'Flowing sheath, gamma = 5/3, kappa = 2')
-plt.plot(Theta[index[Phi_intersect_index1]],Phi_flow[index[Phi_intersect_index1]],"o",color = "Green")
-plt.plot(Theta[index[Phi_intersect_index2]],Phi_flow[index[Phi_intersect_index2]],"o",color = "Green")
+#plt.plot(Theta[index[Phi_intersect_index1]],Phi_flow[index[Phi_intersect_index1]],"o",color = "Green")
+#plt.plot(Theta[index[Phi_intersect_index2]],Phi_flow[index[Phi_intersect_index2]],"o",color = "Green")
 plt.xlabel("Theta")
 plt.ylabel("Normalised dust potential")
 plt.legend()
@@ -70,7 +75,18 @@ plt.xscale("log")
 plt.show()
 
 '''
+'''
 a = 0
 while a == 0:
     print(FlowingSheathMOML(float(input('Select theta value: ')),43,5/3,2))
     '''
+
+Theta = 0
+mu = 43
+gamma = 5/3
+
+def func(Theta,mu,gamma,Phi):
+    return 2*Phi + 4*(1/np.sqrt(2*np.pi))*mu*np.exp(Phi)*np.sqrt(1+gamma*Theta) - (1+gamma*Theta)
+
+Phi = bisect(func,-10,10,args = (Theta,mu,gamma))
+print(Phi)
