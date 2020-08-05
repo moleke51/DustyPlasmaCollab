@@ -14,7 +14,7 @@ class GreaterThan:
     def error_message(self):
         return f'greater than {self._x}'
 
-class Get_T_e:
+#class Get_T_e:
     
 
 T_e_dict = {
