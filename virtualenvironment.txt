@@ -1,0 +1,30 @@
+Open desired directory and type:
+python -m venv environment_name
+Conventionally the environment is called venv
+
+To activate the environment type:
+source environment_name/bin/activate
+
+To add packages type:
+pip install package_name
+
+To display the installed packages type: 
+pip list
+
+To use the environment the environment should be placed in the project folder. Files and folders should not be placed in the environment folder
+
+To export the packages that you're using you can make a requirements.txt file. Type: 
+pip freeze > requirements.txt
+
+To create a new environment with the same packages type:
+pip install -r requirements.txt
+
+To create an environment with the same packages as the global environment type:
+python -m venv environment_name --system-site-packages
+
+To deactivate the environment type:
+deactivate
+
+To remove an environment just delete the folder
+
+Info found at https://www.youtube.com/watch?v=Kg1Yvry_Ydk
