@@ -2,12 +2,21 @@ import scipy as sp
 import numpy as np
 import scipy.special as sps
 from scipy.optimize import fsolve,bisect
+from termcolor import colored
 
 def get_name():
     return "MOML"
 
 def colour():
     return 'red'
+
+def get_info():
+    string = ("Base assumptions: Spherical symmetry; no collisions; no magnetic field; no external electric field; no electron emission of any kind; quasi-neutrality in bulk plasma.\n"
+              "Model assumptions: Conservation of particle energy; conservation of particle angular momentum; current at sheath edge is the same as current at dust surface.\n"
+              "Vality: Static plasma; any " + "\u0398" + "; large " + "\u03B1" + " (" + "\u03B1" " greater than or equal to 100).\n"
+              "References: C. T. N. Willis, “Dust in stationary and flowing plasmas,” Physics PhD Thesis, Imperial College London, March 2012;\n" +
+              "D. M. Thomas, “Theory and simulation of the charging of dust in plasmas,” Physics PhD Thesis, Imperial College London, March 2016.")
+    return print(colored(string,'blue'))
 
 #MOML (Modified OML) model for normalised dust surface potential - eqn 2.130 in Thomas' thesis
 #Define MOML equation to solve 
@@ -33,4 +42,3 @@ def priority(Theta,alpha,upsilon):
     else:
         P_u = 1
     return (P_t + P_a + P_u)             
-

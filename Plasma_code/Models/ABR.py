@@ -3,6 +3,7 @@ import scipy as sp
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import fsolve,bisect
+from termcolor import colored
 
 
 def get_name():
@@ -10,6 +11,12 @@ def get_name():
 
 def colour():
     return 'blue'
+
+def get_info():
+    string = ("Model assumptions:\n" + "Spherical symmetry\n" + "no collisions; no magnetic field; no external electric field; no electron emission of any kind; quasi-neutrality in bulk plasma; " + "\n" + "zero ion kinetic energy at infinity; perfectly absorbing surface; beyond a certain distance," + " \u03C1_b" + ", quasi-neutrality applies.\n"
+              "Vality: Static plasma; very small " + "\u0398" + " (" + "\u0398" " < 10^4); any " + "\u03B1" + ".\n"
+              "Reference: K. R. V. and A. J. E., “The floating potential of spherical probes and dust grains. part 1. radial motion theory,” Journal of Plasma Physics, vol. 67.4, pp. 243–50, 2002.")
+    return print(colored(string,'yellow'))
     
 #Define the normalised current J from equation ABR 12
 def norm_J_current(alpha,Phi,mu):
@@ -92,3 +99,4 @@ def priority(Theta,alpha,upsilon):
         P_u = 1
     return (P_t + P_a + P_u)
 
+get_info()

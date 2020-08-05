@@ -77,9 +77,3 @@ plt.show()
 a = 0
 while a == 0:
     print(FlowingSheathMOML(float(input('Select theta value: ')),43,5/3,2))
-
-'''
-def ThetaIntersect(Theta,mu,gamma,kappa):
-    return realLambertW(np.sqrt(2*pi*Theta*(1+gamma*Theta))*np.exp(Theta)) - 0.5*(1+Theta*(gamma+5-2*kappa))
-print(fsolve(ThetaIntersect,10,args = (43,5/3,2)))
-'''

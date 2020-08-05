@@ -2,12 +2,21 @@ import scipy as sp
 import numpy as np
 import scipy.special as sps
 from scipy.optimize import fsolve,bisect
+from termcolor import colored
 
 def get_name():
     return "SOML"
 
 def colour():
     return 'violet'
+
+def get_info():
+    string = ("Base assumptions: Spherical symmetry; no collisions; no magnetic field; no external electric field; no electron emission of any kind; quasi-neutrality in bulk plasma.\n"
+              "Model assumptions: Conservation of particle energy; conservation of particle angular momentum; limiting trajectory is the grazing incidence; flowing Maxwell-Boltzmann" + "\n" + "velocity distribution for ions.\n"
+              "Vality: Flowing plasma; any " + "\u0398" + "; small " + "\u03B1" + " (" + "\u03B1" " less than or equal to 1.25*" + "\u0398" + "^(0.4)).\n"
+              "References: C. T. N. Willis, “Dust in stationary and flowing plasmas,” Physics PhD Thesis, Imperial College London, March 2012;\n" +
+              "D. M. Thomas, “Theory and simulation of the charging of dust in plasmas,” Physics PhD Thesis, Imperial College London, March 2016.")
+    return print(colored(string,'blue'))
 
 
 #SOML (Shifted OML) model for normalised dust surface potential - eqn 2.138 in Thomas' thesis
