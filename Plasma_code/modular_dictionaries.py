@@ -318,7 +318,7 @@ class PotentialCalculator:
                 print(_vardict.get('Norm_value'))
                                
         
-       
+
 pc = PotentialCalculator(dict_list)
 pc.initialise()
 

@@ -11,12 +11,11 @@ def colour():
     return 'red'
 
 def get_info():
-    string = ("Base assumptions: Spherical symmetry; no collisions; no magnetic field; no external electric field; no electron emission of any kind; quasi-neutrality in bulk plasma.\n"
-              "Model assumptions: Conservation of particle energy; conservation of particle angular momentum; current at sheath edge is the same as current at dust surface.\n"
-              "Vality: Static plasma; any " + "\u0398" + "; large " + "\u03B1" + " (" + "\u03B1" " greater than or equal to 100).\n"
-              "References: C. T. N. Willis, “Dust in stationary and flowing plasmas,” Physics PhD Thesis, Imperial College London, March 2012;\n" +
-              "D. M. Thomas, “Theory and simulation of the charging of dust in plasmas,” Physics PhD Thesis, Imperial College London, March 2016.")
-    return print(colored(string,'blue'))
+    assumptions_list = ["Model assumptions:\n","Spherical symmetry\n","No collisions\n","No magnetic field\n","No external electric field\n","No electron emission of any kind\n","Quasi-neutrality in bulk plasma\n","Conservation of particle energy\n","Conservation of particle angular momentum\n","Current at sheath edge is the same as current at dust surface\n"]
+    validity_list = ["Validity:\n","Static plasma\n","Large dust\n","Any ion temperature\n"]
+    reference_list = ["References:\n","C. T. N. Willis, “Dust in stationary and flowing plasmas,” Physics PhD Thesis, Imperial College London, March 2012\n","D. M. Thomas, “Theory and simulation of the charging of dust in plasmas,” Physics PhD Thesis, Imperial College London, March 2016\n"]
+    string = " ".join(assumptions_list) + " ".join(validity_list) + " ".join(reference_list)
+    return print(colored(string,'yellow'))
 
 #MOML (Modified OML) model for normalised dust surface potential - eqn 2.130 in Thomas' thesis
 #Define MOML equation to solve 
@@ -42,3 +41,4 @@ def priority(Theta,alpha,upsilon):
     else:
         P_u = 1
     return (P_t + P_a + P_u)             
+
