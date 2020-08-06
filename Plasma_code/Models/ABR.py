@@ -17,7 +17,7 @@ def get_info():
               "Vality: Static plasma; very small " + "\u0398" + " (" + "\u0398" " < 10^4); any " + "\u03B1" + ".\n"
               "Reference: K. R. V. and A. J. E., “The floating potential of spherical probes and dust grains. part 1. radial motion theory,” Journal of Plasma Physics, vol. 67.4, pp. 243–50, 2002.")
     return print(colored(string,'yellow'))
-    
+  
 #Define the normalised current J from equation ABR 12
 def norm_J_current(alpha,Phi,mu):
     j = (alpha**2)*(mu/((4*np.pi)**0.5))*np.exp(-Phi)
@@ -74,7 +74,15 @@ def delta_J(J,alpha,mu,z,gamma = 10000):
 def retrive_Phi_a(J,mu,alpha):
     return 2*np.log(alpha) + np.log(mu) - np.log(J) - 0.5*np.log(4*np.pi)
 
-def potential_finder(Theta,mu,z,alpha,upsilon,gamma=10000):
+def potential_finder(dictionarylist,gamma=10000):
+    for _vardict in dictionarylist:
+        if _vardict.get('Norm_var_name') == 'alpha':
+            alpha = _vardict.get('Norm_value')
+        if _vardict.get('Norm_var_name') == 'z':
+            z = _vardict.get('Norm_value')
+        if _vardict.get('Norm_var_name') == 'mu':
+            mu = _vardict.get('Norm_value')
+
     #Guess Phi_a (Its likely to be between 0 and 10)
     if alpha != 0 :
         if alpha < 1e-5 and alpha > 0:
@@ -87,7 +95,24 @@ def potential_finder(Theta,mu,z,alpha,upsilon,gamma=10000):
     else:
         return 0 #As argued by Kennedy and Allen
 
-def priority(Theta,alpha,upsilon):
+def priority(dictionarylist):
+
+    for _vardict in dictionarylist:
+        if _vardict.get('Norm_var_name') != None:
+            if _vardict.get('Norm_var_name') == 'alpha':
+                alpha = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'z':
+                z = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'mu':
+                mu = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'upsilon':
+                upsilon = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'Theta':
+                Theta = _vardict.get('Norm_value')
+            else:
+                if _vardict.get('Norm_value') != _vardict.get('default value'):
+                    return 0
+
     if Theta > 1e-4:
         P_t = 0
     else:
@@ -99,4 +124,4 @@ def priority(Theta,alpha,upsilon):
         P_u = 1
     return (P_t + P_a + P_u)
 
-get_info()
+#get_info()

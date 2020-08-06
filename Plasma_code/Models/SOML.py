@@ -26,11 +26,39 @@ def SOML_function(Phi,Theta,mu,z,alpha,upsilon): #gamma = 3 for flowing plasmas
     s_2 = (np.sqrt(np.pi)* sps.erf(upsilon))/(2*upsilon)
     return (np.sqrt(Theta)/mu)*(s_1 - (s_2*Phi)/Theta) - np.exp(Phi)
 
-def potential_finder(Theta,mu,z,alpha,upsilon): 
+def potential_finder(dictionarylist): 
+    for _vardict in dictionarylist:
+        if _vardict.get('Norm_var_name') != None:
+            if _vardict.get('Norm_var_name') == 'alpha':
+                alpha = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'z':
+                z = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'mu':
+                mu = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'upsilon':
+                upsilon = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'Theta':
+                Theta = _vardict.get('Norm_value')
+            
     Phi = bisect(SOML_function,-10,10, args = (Theta,mu,z,alpha,upsilon))
     return np.absolute(Phi) 
 
-def priority(Theta,alpha,upsilon):
+def priority(dictionarylist):
+    for _vardict in dictionarylist:
+        if _vardict.get('Norm_var_name') != None:
+            if _vardict.get('Norm_var_name') == 'alpha':
+                alpha = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'z':
+                z = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'mu':
+                mu = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'upsilon':
+                upsilon = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'Theta':
+                Theta = _vardict.get('Norm_value')
+            else:
+                if _vardict.get('Norm_value') != _vardict.get('default value'):
+                    return 0
     if Theta >= 1e-4:
         P_t = 1
     else:

@@ -24,11 +24,39 @@ def MOML_function(Phi,Theta,mu,z,alpha,upsilon): #gamma = 5/3 for static plasmas
     return (np.sqrt(Theta)/mu)*(1 - (1/Theta)*(Phi - 0.5*(np.log(2*np.pi*(1+(5/3)*Theta))-np.log(mu**2)))) - np.exp(Phi)
 
 #Solve MOML equation for Phi
-def potential_finder(Theta,mu,z,alpha,upsilon):
+def potential_finder(dictionarylist):
+    for _vardict in dictionarylist:
+        if _vardict.get('Norm_var_name') != None:
+            if _vardict.get('Norm_var_name') == 'alpha':
+                alpha = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'z':
+                z = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'mu':
+                mu = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'upsilon':
+                upsilon = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'Theta':
+                Theta = _vardict.get('Norm_value')
+            
     Phi = bisect(MOML_function,-10,10,args = (Theta,mu,z,alpha,upsilon))
     return np.absolute(Phi)
 
-def priority(Theta,alpha,upsilon):
+def priority(dictionarylist):
+    for _vardict in dictionarylist:
+        if _vardict.get('Norm_var_name') != None:
+            if _vardict.get('Norm_var_name') == 'alpha':
+                alpha = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'z':
+                z = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'mu':
+                mu = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'upsilon':
+                upsilon = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'Theta':
+                Theta = _vardict.get('Norm_value')
+            else:
+                if _vardict.get('Norm_value') != _vardict.get('default value'):
+                    return 0
     if Theta >= 1e-4:
         P_t = 1
     else:

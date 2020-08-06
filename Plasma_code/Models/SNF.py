@@ -25,7 +25,20 @@ def Linear_function(phi_OML,phi_TS,alpha_OML,alpha_TS,alpha):
     x = ((phi_TS - phi_OML)/(np.log(alpha_TS) - np.log(alpha_OML)))*np.log((alpha)/(alpha_TS)) + phi_TS
     return x 
 
-def potential_finder(Theta,mu,z,alpha,upsilon): #gamma = 5/3 for static plasmas
+def potential_finder(dictionarylist): #gamma = 5/3 for static plasmas
+    for _vardict in dictionarylist:
+        if _vardict.get('Norm_var_name') != None:
+            if _vardict.get('Norm_var_name') == 'alpha':
+                alpha = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'z':
+                z = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'mu':
+                mu = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'upsilon':
+                upsilon = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'Theta':
+                Theta = _vardict.get('Norm_value')
+            
     alpha_OML = 1.25*(Theta)**0.4
     alpha_TS = 50
     Phi_MOML = moml.potential_finder(Theta,mu,z,alpha,upsilon)
@@ -33,7 +46,22 @@ def potential_finder(Theta,mu,z,alpha,upsilon): #gamma = 5/3 for static plasmas
     Phi = Linear_function(Phi_OML,Phi_MOML,alpha_OML,alpha_TS,alpha)
     return np.absolute(Phi) #returned phi is positive
 
-def priority(Theta,alpha,upsilon):
+def priority(dictionarylist):
+    for _vardict in dictionarylist:
+        if _vardict.get('Norm_var_name') != None:
+            if _vardict.get('Norm_var_name') == 'alpha':
+                alpha = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'z':
+                z = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'mu':
+                mu = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'upsilon':
+                upsilon = _vardict.get('Norm_value')
+            elif _vardict.get('Norm_var_name') == 'Theta':
+                Theta = _vardict.get('Norm_value')
+            else:
+                if _vardict.get('Norm_value') != _vardict.get('default value'):
+                    return 0
     if Theta >= 1e-4:
         P_t = 1
     else:
