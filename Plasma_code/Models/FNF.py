@@ -12,14 +12,11 @@ def colour():
     return 'purple'
 
 def get_info():
-    string = ("Base assumptions: Spherical symmetry; no collisions; no magnetic field; no external electric field; no electron emission of any kind; quasi-neutrality in bulk plasma.\n"
-              "Model assumptions: Conservation of particle energy; conservation of particle angular momentum.\n"
-              "Vality: Flowing plasma; any " + "\u0398" + "; intermediate " + "\u03B1" + " (" + "\u03B1" " between 1.25*" + "\u0398" + "^(0.4) and 100).\n"
-              "References: C. T. N. Willis, “Dust in stationary and flowing plasmas,” Physics PhD Thesis, Imperial College London, March 2012;\n" +
-              "D. M. Thomas, “Theory and simulation of the charging of dust in plasmas,” Physics PhD Thesis, Imperial College London, March 2016.")
-    return print(colored(string,'blue'))
-
-
+    assumptions_list = ["Model assumptions:\n","Spherical symmetry\n","No collisions\n","No magnetic field\n","No external electric field\n","No electron emission of any kind\n","Quasi-neutrality in bulk plasma\n"]
+    validity_list = ["Validity:\n","Flowing plasma\n","Intermediate sized dust\n","Any ion temperature\n"]
+    reference_list = ["References:\n","C. T. N. Willis, “Dust in stationary and flowing plasmas,” Physics PhD Thesis, Imperial College London, March 2012\n","D. M. Thomas, “Theory and simulation of the charging of dust in plasmas,” Physics PhD Thesis, Imperial College London, March 2016\n"]
+    string = " ".join(assumptions_list) + " ".join(validity_list) + " ".join(reference_list)
+    return print(colored(string,'yellow'))
 
 #Linear model for normalised dust surface potential - eqn 4.3 in Willis' thesis
 def Linear_function(phi_SOML,phi_TS,alpha_SOML,alpha_TS,alpha):
@@ -77,5 +74,3 @@ def priority(dictionarylist):
     else:
         P_u = 0
     return (P_t + P_a + P_u)   
-
-
