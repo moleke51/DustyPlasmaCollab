@@ -3,7 +3,7 @@ import numpy as np
 import scipy.special as sps
 import OML as oml
 import MOML as moml
-from termcolor import colored
+
 
 def get_name():
     return "SNF"
@@ -16,7 +16,7 @@ def get_info():
     validity_list = ["Validity:\n","Static plasma\n","Intermediate sized dust\n","Any ion temperature\n"]
     reference_list = ["References:\n","C. T. N. Willis, “Dust in stationary and flowing plasmas,” Physics PhD Thesis, Imperial College London, March 2012\n","D. M. Thomas, “Theory and simulation of the charging of dust in plasmas,” Physics PhD Thesis, Imperial College London, March 2016\n"]
     string = " ".join(assumptions_list) + " ".join(validity_list) + " ".join(reference_list)
-    return colored(string,'yellow')
+    return string
 
 #Linear model for normalised dust surface potential - eqn 4.3 in Willis' thesis
 def Linear_function(phi_OML,phi_TS,alpha_OML,alpha_TS,alpha):
@@ -39,8 +39,8 @@ def potential_finder(dictionarylist): #gamma = 5/3 for static plasmas
             
     alpha_OML = 1.25*(Theta)**0.4
     alpha_TS = 50
-    Phi_MOML = moml.potential_finder(Theta,mu,z,alpha,upsilon)
-    Phi_OML = oml.potential_finder(Theta,mu,z,alpha,upsilon)
+    Phi_MOML = moml.potential_finder(dictionarylist)
+    Phi_OML = oml.potential_finder(dictionarylist)
     Phi = Linear_function(Phi_OML,Phi_MOML,alpha_OML,alpha_TS,alpha)
     return np.absolute(Phi) #returned phi is positive
 

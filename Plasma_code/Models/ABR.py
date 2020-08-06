@@ -3,7 +3,7 @@ import scipy as sp
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import fsolve,bisect
-from termcolor import colored
+
 
 
 def get_name():
@@ -17,7 +17,7 @@ def get_info():
     validity_list = ["Validity:\n","Static plasma\n","Any dust size\n","Zero ion temperature\n"]
     reference_list = ["References:\n","K. R. V. and A. J. E., “The floating potential of spherical probes and dust grains. part 1. radial motion theory,” Journal of Plasma Physics, vol. 67.4, pp. 243–50, 2002."]
     string = " ".join(assumptions_list) + " ".join(validity_list) + " ".join(reference_list)
-    return colored(string,'yellow')
+    return string
   
 #Define the normalised current J from equation ABR 12
 def norm_J_current(alpha,Phi,mu):

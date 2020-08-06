@@ -2,7 +2,7 @@ import scipy as sp
 import numpy as np
 import scipy.special as sps
 from scipy.optimize import fsolve,bisect
-from termcolor import colored
+
 
 def get_name():
     return "OML"
@@ -15,7 +15,7 @@ def get_info():
     validity_list = ["Validity:\n","Static plasma\n","Small dust\n","Any ion temperature\n"]
     reference_list = ["References:\n","C. T. N. Willis, “Dust in stationary and flowing plasmas,” Physics PhD Thesis, Imperial College London, March 2012\n","D. M. Thomas, “Theory and simulation of the charging of dust in plasmas,” Physics PhD Thesis, Imperial College London, March 2016\n","K. R. V. and A. J. E., “The floating potential of spherical probes and dust grains. ii: Orbital motion theory,” Journal of Plasma Physics, vol. 69.6, pp. 485–506, 2002"]
     string = " ".join(assumptions_list) + " ".join(validity_list) + " ".join(reference_list)
-    return colored(string,'yellow')
+    return string
 
 #OML model for normalised dust surface potential - eqn 2.107 in Thomas' thesis
 #Define OML equation to solve 

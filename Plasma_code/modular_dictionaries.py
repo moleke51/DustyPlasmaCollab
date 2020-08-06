@@ -5,6 +5,7 @@ import scipy.special as sps
 import matplotlib.pyplot as plt
 import periodictable as pt
 from scipy import integrate
+from termcolor import colored
 import os
 import sys
 sys.path.insert(1, 'DustyPlasmaCollab/Plasma_code/Models/')
@@ -16,6 +17,7 @@ k_B = 1.38e-23 #[m^2][kg][s^-2][K^-1] The Boltzmann constant
 m_e = 9.11e-31 #[kg] The mass of an electron
 u = 1.66e-27 #[kg] The mass of a nucleon
 numgraphpoints = 10000
+colour = 'red'
 #This allows the chemical symbols or element names to be entered in either upper or lower case.
 def speciesinput():
     word = input("Enter the plasma ion species; ")
@@ -230,7 +232,7 @@ v_dict = {
 
 
 
-dict_list = [T_e_dict,T_i_dict,z_dict,m_i_dict,n_e_dict,a_dict,v_dict]
+dict_list = [T_i_dict,T_e_dict,z_dict,m_i_dict,n_e_dict,a_dict,v_dict]
 
 
 def eval_input(x):
@@ -334,12 +336,22 @@ class Model:
         return self._name
     def get_colour(self):
         return getattr(__import__(self._name),'colour')()
+    def get_info(self):
+        return getattr(__import__(self._name),'get_info')()
     def priority(self):
         return getattr(__import__(self._name), 'priority')(self._dictlist)
     def potential_finder(self):
         return getattr(__import__(self._name), 'potential_finder')(self._dictlist)
     
+#Define the Debye-Huckle potential.
+def DH_potential_to_charge(a,Phi_a,lambda_d):
+    x = 4*np.pi*(epsilon_0)*a*Phi_a*np.exp((a)/(lambda_d))
+    return x
 
+#It should be noted that the Debye-Huckle potential reduces into the point charge potential when a<<lambda_d
+def Spherical_potential_to_charge(a,Phi_a):
+    x = 4*np.pi*(epsilon_0)*a*Phi_a
+    return x
 class PotentialCalculator:
 
     '''
@@ -425,16 +437,98 @@ class PotentialCalculator:
                     modelindex = modellist.index(model)
         
         
-            print(modellist[modelindex])
-            return modellist[modelindex].potential_finder()
+            print(colored(modellist[modelindex].__repr__(),colour))
+            _Phi = modellist[modelindex].potential_finder()
+            if self._dimensionless == True:
+                print(f'The normalised potential is: {_Phi}')
+            else:
+                for _vardict in self._dictlist:
+                    if _vardict.get('var_name') == 'Dust radius':
+                        _a =  _vardict.get('Value')
+                        _alpha = _vardict.get('Norm_value')
+                        _lambda_d = _a/_alpha
+                    if _vardict.get('var_name') == 'Electron temperature':
+                        _T_e =  _vardict.get('Value')
+                        _k_B = k_B
+                        _e = e
+                        _phi = (_Phi * k_B * _T_e)/(e) 
+                _Q = DH_potential_to_charge(_a,_phi,_lambda_d)
+            
+                print(f'The dust grain surface potential is {_phi} V')
+                print(f'The charge on the dust grain is {_Q} C')
+                print(f'The relative charge of the dust grain is {_Q/_e}')
+
+            _info = modellist[modelindex].get_info()
+            print(colored(info,colour))
         else:
-            print('Incomplete')
-        '''
-        else:
-            return(modellist[modelindex].potential_finder(), modellist[modelindex].get_name(),modellist[modelindex].get_colour())
-        '''
+            if self._dimensionless == True:
+                val = 'Norm_value'
+            else:
+                val = 'Value'
+            _Phiarray = np.ones(len(self._dictlist[0].get(val)))
+            _modelname = []
+            for i in range(len(self._dictlist[0].get(val))):
+                _newdictlist = []
+                for _vardict in self._dictlist:
+                    _newdict = _vardict.copy()
+                    if type(_vardict.get('Norm_value')) != type(None):
+                        _newdict.update({'Norm_value' : _vardict.get('Norm_value')[i]})
+                        _newdictlist.append(_newdict)
+                
+                modellist = []
+                for File in FileList:
+                    if ".py" in File:
+                        m = Model(File,_newdictlist,self._dimensionless)
+                        modellist.append(m)
+                
+                priority = 0
+                for model in modellist:
+                    __import__(model.get_name())
+                    if model.priority() > priority:
+                        
+                        priority = model.priority()
+                        modelindex = modellist.index(model)
+            
+                #print(modellist)
+                #print(colored(modellist[modelindex].__repr__(),colour))
+                _Phiarray[i] =  modellist[modelindex].potential_finder()#,modellist[modelindex].get_info()
+                _modelname.append(modellist[modelindex].get_name())
+            #print(_Phiarray)
+
+            
+            plt.xlabel(self._variabletracker)
+            if self._dimensionless == True:
+                for _vardict in self._dictlist:
+                    if _vardict.get('Norm_var_name') == self._variabletracker:
+                        _X = _vardict.get('Norm_value')
+                plt.plot(_X,_Phiarray)
+                plt.ylabel('Normalised potential')
+                
+            else:
+                for _vardict in self._dictlist:
+                    if _vardict.get('var_name') == self._variabletracker:
+                        _X = _vardict.get('Value')
+                    if _vardict.get('var_name') == 'Dust radius':
+                        _a =  _vardict.get('Value')
+                        _alpha = _vardict.get('Norm_value')
+                        _lambda_d = _a/_alpha
+                    if _vardict.get('var_name') == 'Electron temperature':
+                        _T_e =  _vardict.get('Value')
+                        _k_B = k_B*np.ones(len(_T_e))
+                        _e = e*np.ones(len(_T_e))
+                        _phiarray = (_Phiarray * k_B * _T_e)/(e) 
+                _Q = DH_potential_to_charge(_a,_phiarray,_lambda_d)
+                plt.plot(_X,_phiarray)
+                plt.ylabel('Potential [V]')
+            plt.grid()
+            plt.show()
+                
+            #return _Phiarray,_modelname           
+        
        
 pc = PotentialCalculator(dict_list)
-print(pc.get_Norm_Potential())
+pc.get_Norm_Potential()
+#print(colored(f'The normalised potential is: {Phi}',colour))
+#print(colored(info,colour))
 
 

@@ -2,7 +2,7 @@ import scipy as sp
 import numpy as np
 import scipy.special as sps
 from scipy.optimize import fsolve,bisect
-from termcolor import colored
+
 
 def get_name():
     return "SMOML"
@@ -15,7 +15,7 @@ def get_info():
     validity_list = ["Validity:\n","Flowing plasma\n","Large dust\n","Any ion temperature\n"]
     reference_list = ["References:\n","C. T. N. Willis, “Dust in stationary and flowing plasmas,” Physics PhD Thesis, Imperial College London, March 2012\n","D. M. Thomas, “Theory and simulation of the charging of dust in plasmas,” Physics PhD Thesis, Imperial College London, March 2016\n"]
     string = " ".join(assumptions_list) + " ".join(validity_list) + " ".join(reference_list)
-    return colored(string,'yellow')
+    return string
 
 #SMOML (Shifted Modified OML) model for normalised dust surface potential - eqn 2.140 in Thomas' thesis
 #Define SMOML equation to solve
@@ -71,3 +71,7 @@ def priority(dictionarylist):
     else:
         P_u = 0
     return (P_t + P_a + P_u)    
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5c0b3ca3176789dfdceb5ddc287737aa148813c6
