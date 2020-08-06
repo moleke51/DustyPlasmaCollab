@@ -15,9 +15,9 @@ def colour():
 def get_info():
     assumptions_list = ["Model assumptions:\n","Spherical symmetry\n","No collisions\n","No magnetic field\n","No external electric field\n","No electron emission of any kind\n","Quasi-neutrality in bulk plasma\n","Zero ion kinetic energy at infinity\n","Perfectly absorbing surface\n","Beyond a certain distance quasi-neutrality applies\n"]
     validity_list = ["Validity:\n","Static plasma\n","Any dust size\n","Zero ion temperature\n"]
-    reference_list = ["References:\n","K. R. V. and A. J. E., “The floating potential of spherical probes and dust grains. part 1. radial motion theory,” Journal of Plasma Physics,\n vol. 67.4, pp. 243–50, 2002."]
+    reference_list = ["References:\n","K. R. V. and A. J. E., “The floating potential of spherical probes and dust grains. part 1. radial motion theory,” Journal of Plasma Physics, vol. 67.4, pp. 243–50, 2002."]
     string = " ".join(assumptions_list) + " ".join(validity_list) + " ".join(reference_list)
-    return print(colored(string,'yellow'))
+    return colored(string,'yellow')
   
 #Define the normalised current J from equation ABR 12
 def norm_J_current(alpha,Phi,mu):
