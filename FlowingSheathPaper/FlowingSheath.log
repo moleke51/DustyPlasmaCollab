@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  7 AUG 2020 12:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  7 AUG 2020 16:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -245,25 +245,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<Output/ABRgraph.jpeg, id=22, 462.528pt x 346.896pt>
+<Output/ABRgraph.jpeg, id=21, 462.528pt x 346.896pt>
 File: Output/ABRgraph.jpeg Graphic file (type jpg)
 <use Output/ABRgraph.jpeg>
-Package pdftex.def Info: Output/ABRgraph.jpeg  used on input line 153.
+Package pdftex.def Info: Output/ABRgraph.jpeg  used on input line 203.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
- (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.bbl [3 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/ABRgraph.jpeg>]) [4] [5] (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.aux) ) 
+ [3] [4 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/ABRgraph.jpeg>]
+<Output/MOMLgamma.jpeg, id=31, 578.16pt x 361.35pt>
+File: Output/MOMLgamma.jpeg Graphic file (type jpg)
+<use Output/MOMLgamma.jpeg>
+Package pdftex.def Info: Output/MOMLgamma.jpeg  used on input line 284.
+(pdftex.def)             Requested size: 345.0pt x 215.6207pt.
+ [5]
+<Output/MOMLgraph.jpeg, id=35, 578.16pt x 361.35pt>
+File: Output/MOMLgraph.jpeg Graphic file (type jpg)
+<use Output/MOMLgraph.jpeg>
+Package pdftex.def Info: Output/MOMLgraph.jpeg  used on input line 292.
+(pdftex.def)             Requested size: 345.0pt x 215.6207pt.
+ (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.bbl [6 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLgamma.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLgraph.jpeg>]) [7] [8] (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.aux) ) 
 Here is how much of TeX's memory you used:
- 4586 strings out of 480906
- 65420 string characters out of 5908284
- 315423 words of memory out of 5000000
- 20095 multiletter control sequences out of 15000+600000
+ 4608 strings out of 480906
+ 65810 string characters out of 5908284
+ 315499 words of memory out of 5000000
+ 20115 multiletter control sequences out of 15000+600000
  544286 words of font info for 64 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  51i,7n,41p,883b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.pdf (5 pages, 243027 bytes).
+Output written on /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.pdf (8 pages, 329973 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

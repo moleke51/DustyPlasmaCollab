@@ -42,6 +42,62 @@
 
 \section{Introduction}
 
+\section{Background}
+
+In the case of a large dust grain with a negative equilibrium charge, we can establish regions within an infinite plasma with well-defined
+transitions. We firstly have the dust grain itself, followed
+by a positive region of space, called the sheath, usually a few electron Debye lengths
+in size. The electron Debye length is a characteristic length over which quasi-neutrality breaks down, 
+defined as
+
+\begin{equation}\label{eq:Debye}
+\lambda_D = \sqrt{\frac{\varepsilon_{0} k_{B} T_{e}}{n_{0} e^2}},
+\end{equation}
+
+\smallskip
+
+\noindent where $k_B$ is the Boltzmann constant, $T_e$ is the electron temperature, $e$ is the 
+electron charge, $n_0$ is the electron number density at infinity and $\varepsilon_{0}$ is the
+permittivity of free space. Following the sheath, we have the infinite pre-sheath where quasi-neutrality holds;
+quasi-neutrality is mathematically written as an approximate equality between the ion and electron
+densities, $Zn_i \approx n_e$.
+
+\medskip
+
+Positive ions are continuously collected by the negative dust, so there must be
+a net influx of ions into the sheath to maintain the equilibrium. This established the Bohm
+criterion, where the speed of ions required to enter the sheath must be 
+greater then of equal to the Bohm speed. For the cold ion case, the Bohm speed is defined as
+
+\smallskip 
+
+\begin{equation}\label{eq:ColdBohm}
+c_{s}^{cold} = \sqrt{\frac{k_{B}T_{e}}{m_{i}}},
+\end{equation}
+
+\noindent where $m_i$ is the ion mass and $c_{s}^{cold}$ is known as the cold ion Bohm speed. 
+However, if we consider ions with a finite temperature, the required Bohm speed becomes 
+
+\begin{equation}\label{eq:HotBohm}
+c_{s}^{hot} = \sqrt{\frac{k_{B}(T_{e} + \gamma T_{i})}{m_{i}}},
+\end{equation}
+
+\smallskip
+
+\noindent where $T_i$ is the ion temperature, $\gamma$ is the adiabatic index
+and $c_{s}^{hot}$ is known as the hot ion Bohm speed \cite{Stangeby1986} \cite{Willis} .
+
+\medskip
+
+For a large dust grain, we may consider the planar sheath limit \cite{Willis}. 
+Hence, the potential drop across the sheath for $T_i \neq 0$ is given as
+
+\begin{equation}\label{eq:SheathDrop}
+\phi_s = \frac{k_B T_e}{2e}\ln{\left[\frac{2\pi Z^2}{\mu^2}(1 + \gamma \Theta)\right]},
+\end{equation}
+
+\noindent where $Z$ is the relative ion charge, $\mu = \sqrt{\frac{m_i}{m_e}}$ and $\Theta = \frac{T_i}{T_e}$ \cite{Stangeby1986}.
+
 \section{Radial motion theory (ABR)}
 
 \smallskip
@@ -52,8 +108,7 @@ by a dust grain immersed in an infinite and stationary plasma \cite{ABR}.
 \medskip
 
 Consider a spherical dust grain, of arbitrary radius $a$, immersed in this infinite plasma. Far from the surface we assume that the electron
-and ion densities are equal, denoted $n_e$ and $n_i$ respectively; this is known as quasi-neutrality, which is mathematically written as
-$Zn_i \approx n_e$. As electrons are faster than ions, it can be shown that such a dust grain will become negatively 
+and ion densities are equal, denoted $n_e$ and $n_i$ respectively; this is known as quasi-neutrality. As electrons are faster than ions, it can be shown that such a dust grain will become negatively 
 charged \cite{Thomas}, thus ions will experience an attractive force due to the potential on the dust surface, 
 $\phi_a$. We assume that ions at infinity have no kinetic energy, hence, they move radially
 towards the dust grain. Therefore, it is appropriate to say that an ion at a distance 
@@ -63,8 +118,7 @@ $r$ from the dust center has radial speed $v_i$. Using energy conservation, one 
 \frac{1}{2} m_i v_i^2 = -Ze\phi(r),
 \end{equation}
 
-\noindent where $m_i$ is the ion mass, $Z$ is the relative ion charge, $e$ is the electron charge and
-$\phi(r)$ is the potential at $r$, which vanishes as $r \to \infty$ \cite{ABR}.
+\noindent where $\phi(r)$ is the potential at $r$, which vanishes as $r \to \infty$ \cite{ABR}.
 
 \medskip
 
@@ -79,11 +133,12 @@ As the potential is negative, few electrons reach the dust grain, hence, the ele
 distribution:
 
 \begin{equation}\label{eq:ABRed}
-n_e(r) = n_0 \exp{\left(\frac{e\phi_a}{k_B T_e}\right)},
+n_e(r) = n_0 \exp{\left(\frac{e\phi(r)}{k_B T_e}\right)},
 \end{equation}
 
-\noindent where $n_0$ is the electron density at infinity, $k_B$ is the Boltzmann constant and $T_e$ is the electron temperature.
-We further assume that only inbound electrons contribute to the electron current at the surface of the dust
+\smallskip
+
+we further assume that only inbound electrons contribute to the electron current at the surface of the dust
 grain, given as
 
 \begin{equation}\label{eq:ABRIe}
@@ -101,14 +156,9 @@ sign for simplicity:
 {\Phi = - \frac{e\phi}{k_B T_e}}, \ {\rho = \frac{r}{\lambda_D}},\ {\alpha = \frac{a}{\lambda_D}},\ {J = \frac{I_i}{4 \pi \lambda_D^2 n_0 e \sqrt{\frac{2k_B T_e}{m_i}}}},
 \end{equation}
     
-\noindent where $\lambda_D$ is the electron Debye length, which is 
-a characteristic length over which quasi-neutrality breaks down,
+\noindent where $\lambda_D$ is the electron Debye length, 
 
-\begin{equation}\label{eq:Debye}
-\lambda_D = \sqrt{\frac{\varepsilon_{0} k_{B} T_{e}}{n_{0} e^2}}.
-\end{equation}
-
-\smallskip
+\medskip
 
 Poisson's law allows for the formation of a differential equation which relates
 the spatial variation of the potential to the difference in electron and 
@@ -118,7 +168,7 @@ ion densities,
 \frac{d}{d\rho} \left(\rho^2 \frac{d\Phi}{d\rho}\right) = J Z^{-\frac{1}{2}}\Phi^{-\frac{1}{2}}  - \rho^2 \exp{(-\Phi)}.
 \end{equation}
 
-\smallskip
+\medskip
 
 \noindent This equation may be solved using the boundary conditions;
 
@@ -138,14 +188,14 @@ ion densities,
 \frac{J}{\alpha^2} = \frac{\mu}{\sqrt{4\pi}} \exp{\left(-\Phi_a\right)},
 \end{equation}
 
-\smallskip
+\medskip
 
 \noindent which are formed by assuming that there exists a certain distance $\rho_b$, past which, quasi-neutrality applies. 
-The potential at $\rho_b$ is given by $\Phi_b$ and $\Gamma$ is a number much greater than unity \cite{ABR}.
+The potential at $\rho_b$ is given by $\Phi_b$, and $\Gamma$ is a number much greater than unity \cite{ABR}.
 In order to find a value for the surface potential we must solve (\ref{eq:ABR9}), this may be 
 achieved using a 4th order Runge-Kutta. We choose $\Gamma = 10000$ and find the roots of 
 (\ref{eq:ABR13}) allowing us to determine the necessary boundary conditions 
-using (\ref{eq:ABR10}) and (\ref{eq:ABR11}). Hence, solving the differential equation numerically yields 
+using (\ref{eq:ABR10}) and (\ref{eq:ABR11}). Hence, solving the differential equation numerically, yields 
 the following graph of normalised dust potential as a function of normalised dust radius.
 
 \begin{figure}[H]
@@ -155,20 +205,96 @@ the following graph of normalised dust potential as a function of normalised dus
 \label{ABR} 
 \end{figure}
 
-Thomas \cite{Thomas} discusses that in the limit of $\alpha \to \infty$ the ABR potential approaches
-the cold planar wall limit, given as the following 
+Thomas discusses that in the limit of $\alpha \to \infty$ the ABR potential approaches
+the cold planar wall limit \cite{Thomas}, given as the following 
 
 \begin{equation}\label{eq:ABRLim}
 \lim_{\alpha \to \infty} \Phi_a = \frac{1}{2}\ln{\left(2 \pi \right)} - \frac{1}{2} - \ln{\left(\mu \right)},
 \end{equation}
 
-\noindent where the $-\frac{1}{2}$ is due to the potential drop across a cold ion pre-sheath, $\Theta = 0$,
-as discussed by Stangeby \cite{Stangeby1986}. Furthermore, one can clearly see that in the limit
-of $\alpha \to 0$ the ABR prediction tends to zero also, which makes physical sense \cite{ABR}.
+\smallskip
 
-
+\noindent where $Z = 1$ and the $-\frac{1}{2}$ is due to the potential drop across the cold ion pre-sheath,
+as discussed by Stangeby \cite{Stangeby1986} \cite{Stangeby2000}. Furthermore, one can clearly see that in the limit
+of $\alpha \to 0$ the ABR prediction tends to zero also \cite{ABR}.
 
 \section{Modified orbital motion limited (MOML)}
+
+\smallskip
+
+Orbital motion limited (OML) is known to model the potential on a small spherical
+dust grain immersed in an infinite and collisionless plasma, it does so by considering
+energy and angular momentum conservations of ions along side a critical grazing incidence.
+OML considers an equilibrium of ion and electron currents at the dust 
+surface, $I_i = I_e$, while simultaneously invoking quasi-neutrality.
+Hence, the standard result acquired from OML is 
+the following
+
+\begin{equation}\label{eq:OMLeqn}
+\frac{\sqrt{\Theta}}{\mu} \left(1 - \frac{Z}{\Theta}\Phi_a \right) \approx \exp{\left(\Phi_a\right)}.
+\end{equation}
+
+\medskip
+
+Using available OM data, Willis discusses that any error in OML is negligible for small dust grains,
+he further proposes an upper radius limit for OML which is $\Theta$ dependant \cite{Willis}. Furthermore, it should be noted that
+OML guarantees the existence of absorption radii, $r_{A} > a$, such that any 
+ion within $r_{A}$ approaching the dust grain will be collected \cite{Thomas}. 
+
+\medskip
+
+In order to model a large dust grain, we must slightly change our approach to the problem.
+We now apply OML to the boundary between the sheath and pre-sheath, this establishes
+the assumption that as $\alpha \to \infty$ any ion that enters the sheath will be 
+collected by the dust grain. For such dust grains, of large radii, the majority of absorption
+radii occur within the sheath, hence, applying OML in this was eliminates most of the inaccuracies introduced 
+by absorption radii and ensures the validity of MOML. However, it will be shown later that the validity of MOML in fact breaks down for small
+on $\Theta$ \cite{Thomas}. 
+
+\medskip
+
+Replacing $\Phi_a$ on the left hand side in (\ref{eq:OMLeqn}) with $\Phi_s$ physically amounts to
+saying that as $\alpha \to \infty$, all ions that enter the sheath are absorbed. Considering an equilibrium of
+electron and ion currents at the sheath edge while simultaneously invoking quasi-neutrality 
+and the expression for the hot ion Bohm speed, (\ref{eq:HotBohm}), one acquires the following 
+relationship between $\Phi_s$ and $\Phi_a$
+
+\begin{equation}\label{eq:PhiS}
+\Phi_s \approx \Phi_a - \frac{1}{2}\ln{\left[\frac{2\pi Z^2}{\mu^2}(1 + \gamma \Theta)\right]},
+\end{equation}
+
+\noindent where the second term is the normalised sheath potential drop, (\ref{eq:SheathDrop}).
+Substituting (\ref{eq:PhiS}) into the modified (\ref{eq:OMLeqn}) and manipulating in terms of
+the the principle branch of the Lambert W function, $W_0$, yields 
+
+\begin{equation}\label{eq:MOMLsol}
+\Phi_a \approx  \frac{\Theta}{Z} - W_{0}\left(\sqrt{2\pi \Theta (1 + \gamma \Theta)} \exp{\left (\frac{\Theta}{Z}\right)}\right) + \frac{1}{2}\ln{\left[\frac{2\pi Z^2}{\mu^2}(1 + \gamma \Theta)\right]}.
+\end{equation}
+
+Willis compares the MOML solution with simulated data ran by PIC and concludes that 
+$\gamma = \frac{5}{3}$ seems to produce the most appropriate predictions \cite{Willis}. 
+Hence, $\gamma = \frac{5}{3}$ is chosen as the default value for our investigation. It is worth noting
+that from (Fig. \ref{MOMLgamma}) we see that for extreme $\Theta$ values, 
+the choice of $\gamma$ has very little affect on the predicted potential; the same can be said for 
+intermediate values of $\Theta$ as there is very little difference in the predicted potentials for 
+each $\gamma$ value. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/MOMLgamma.jpeg}
+\caption{The MOML prediction for  $\Phi_a$ as a function of $\Theta$, for a hydrogenic ($\mu \approx 43$) and singly ionised ($Z = 1$) plasma with different values of $\gamma$ \cite{Thomas}.}
+\label{MOMLgamma} 
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/MOMLgraph.jpeg}
+\caption{Normalised surface potential as a function of $\Theta$ for singly ionised ($Z = 1$) Hydrogen, Argon and Xenon plasmas according on the MOML prediction, plotted on a log-linear scale. The normalised surface potential progressively becomes more negative as the ion species becomes heavier \cite{Thomas}.}
+\label{MOMLgraph} 
+\end{figure}
+    
+    
 \section{SCEPTIC numerical fit}
 \section{Comparison of MOML and ABR with SCEPTIC data}
 \section{Flowing sheath approximation}
