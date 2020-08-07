@@ -43,35 +43,31 @@ def potential_finder(dictionarylist): #gamma = 3 for flowing plasmas
     return np.absolute(Phi) #returned phi is positive
 
 def priority(dictionarylist):
+    P = 0
     for _vardict in dictionarylist:
         if _vardict.get('Norm_var_name') != None:
             if _vardict.get('Norm_var_name') == 'alpha':
                 alpha = _vardict.get('Norm_value')
+                if alpha < 100:
+                    return 0
+                P += 1
             elif _vardict.get('Norm_var_name') == 'z':
                 z = _vardict.get('Norm_value')
             elif _vardict.get('Norm_var_name') == 'mu':
                 mu = _vardict.get('Norm_value')
             elif _vardict.get('Norm_var_name') == 'upsilon':
                 upsilon = _vardict.get('Norm_value')
+                if upsilon == 0:
+                    return 0
+                P += 1
             elif _vardict.get('Norm_var_name') == 'Theta':
                 Theta = _vardict.get('Norm_value')
+                if Theta >= 1e-4:
+                    P += 1
+                else:
+                    P += 0.5
             else:
                 if _vardict.get('Norm_value') != _vardict.get('default value'):
                     return 0
-    if Theta >= 1e-4:
-        P_t = 1
-    else:
-        P_t = 0.5
-    if alpha >= 50:
-        P_a = 1
-    else:
-        P_a = 0
-    if upsilon > 0:
-        P_u = 1
-    else:
-        P_u = 0
-    return (P_t + P_a + P_u)    
-<<<<<<< HEAD
-=======
-
->>>>>>> 5c0b3ca3176789dfdceb5ddc287737aa148813c6
+    
+    return P
