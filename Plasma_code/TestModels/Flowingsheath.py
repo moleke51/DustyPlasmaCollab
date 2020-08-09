@@ -30,8 +30,8 @@ def realLambertW(x):
 
 #MOML (Modified OML) model for normalised dust surface potential - eqn 2.130 in Thomas' thesis
 #Define MOML equation to solve 
-def MOML_function(Phi,Theta,mu,z,gamma): #gamma = 5/3 for static plasmas
-    return (np.sqrt(Theta)/mu)*(1 - (1/Theta)*(Phi - 0.5*(np.log(2*np.pi*(1+gamma*Theta))-np.log(mu**2)))) - np.exp(Phi)
+def MOML_function(Phi,Theta,mu,z,alpha): #gamma = 5/3 for static plasmas
+    return (np.sqrt(Theta)/mu)*(1 - (1/Theta)*(Phi - 0.5*(np.log(2*np.pi*(1+(5/3)*Theta))-np.log(mu**2)))) - np.exp(Phi)
 
 def FlowingSheathMOML(Theta,kappa):
     mu = 43
@@ -67,6 +67,7 @@ Phi_moml = np.zeros(len(Theta)) #gamma = 5/3
 for i in range(len(Theta)):
     Phi_moml[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,5/3))
 
+
 #Find best fit kappa
 Phi_fit = ThinSheathFit(Theta)
 kappa,cov_kappa = spo.curve_fit(FlowingSheathMOML,Theta,Phi_fit)
@@ -89,27 +90,24 @@ print(f"Average percentage difference between SCEPTIC fit and flowing sheath is 
 print(f"Average percentage difference between SCEPTIC fit and MOML is {str(Phi_marea)}%")
 
 Phi_fit = ThinSheathFit(Theta)
-plt.figure(1)
-plt.plot(Theta,Phi_moml,color = "Black", label = "MOML, gamma = 5/3")
-plt.plot(Theta,Phi_fit,"--",color = 'Blue',label = 'SCEPTIC Fit')
-plt.plot(Theta,Phi_flow,color = 'red',label = 'Flowing sheath, gamma = 5/3, kappa = 2')
-#plt.plot(Theta[index[Phi_intersect_index1]],Phi_flow[index[Phi_intersect_index1]],"o",color = "Green")
-#plt.plot(Theta[index[Phi_intersect_index2]],Phi_flow[index[Phi_intersect_index2]],"o",color = "Green")
-plt.title("Normalised potential as a function of theta")
-plt.xlabel("Theta")
-plt.ylabel("Normalised dust potential")
-plt.legend(loc = 'upper right')
-plt.grid()
-plt.xscale("log")
+fig, (ax1, ax2) = plt.subplots(2, sharex= True)
+ax1.plot(Theta,Phi_moml,color = "Black", label = "MOML, " + r"$\gamma$" + "= 5/3")
+ax1.plot(Theta,Phi_fit,"--",color = 'Blue',label = 'SCEPTIC Fit')
+ax1.plot(Theta,Phi_flow,color = 'red',label = "Flowing sheath, " + r"$\gamma$" + "= 5/3, " + r"$\kappa$" + " = 2")
+ax1.plot(Theta, -3.34*np.ones(len(Theta)), ':', color = "Purple", label = "ABR value")
+ax1.set(title = "(a)")
+ax1.set(ylabel = "Normalised potential, " + r"$\Phi_a$")
+ax1.legend(loc = 'upper right')
+ax1.grid()
 
-plt.figure(2)
-plt.plot(Theta,Phi_mfit,'--',color = 'Red',label = "MOML")
-plt.plot(Theta,Phi_ffit,color = 'Black',label = "Flowing sheath")
-plt.title("Percentage difference between models and SCEPTIC fit as a function of theta")
-plt.xlabel("Theta")
-plt.ylabel("Percentage difference")
-plt.legend()
-plt.grid()
+
+ax2.plot(Theta,Phi_mfit,'--',color = 'Black',label = "MOML")
+plt.plot(Theta,Phi_ffit,color = 'Red',label = "Flowing sheath")
+plt.xlabel(r"$\Theta$")
+ax2.set(title = "(b)")
+ax2.set(ylabel = "Percentage difference")
+ax2.legend()
+ax2.grid()
 plt.xscale("log")
 
 
