@@ -37,14 +37,14 @@ def potential_finder(dictionarylist): #gamma = 3 for flowing plasmas
             elif _vardict.get('Norm_var_name') == 'Theta':
                 Theta = _vardict.get('Norm_value')
     alpha_OML = 1.25*(Theta)**0.4 #Assume this is the same as the static case
-    alpha_TS = 50
+    alpha_TS = 100
     Phi_SMOML = smoml.potential_finder(dictionarylist)
     Phi_SOML = soml.potential_finder(dictionarylist)
     Phi = Linear_function(Phi_SOML,Phi_SMOML,alpha_OML,alpha_TS,alpha)
     return Phi #returned phi is positive
 
 def priority(dictionarylist):
-
+    P = 0
     for _vardict in dictionarylist:
         if _vardict.get('Norm_var_name') != None:
             if _vardict.get('Norm_var_name') == 'alpha':
@@ -55,22 +55,20 @@ def priority(dictionarylist):
                 mu = _vardict.get('Norm_value')
             elif _vardict.get('Norm_var_name') == 'upsilon':
                 upsilon = _vardict.get('Norm_value')
+                if upsilon > 0:
+                    P += 1
+                else:
+                    return 0
             elif _vardict.get('Norm_var_name') == 'Theta':
                 Theta = _vardict.get('Norm_value')
+                if Theta >= 1e-4:
+                    P += 1
+                else:
+                    P += 0.5
             else:
                 if _vardict.get('Norm_value') != _vardict.get('default value'):
                     return 0
-    
-    if Theta >= 1e-4:
-        P_t = 1
-    else:
-        P_t = 0.5
-    if alpha < 50 and alpha > 1.25*Theta**(0.4):
-        P_a = 1
-    else:
-        P_a = 0
-    if upsilon > 0:
-        P_u = 1
-    else:
-        P_u = 0
-    return (P_t + P_a + P_u)   
+                P += 1
+    if alpha < 100 and alpha > 1.25*Theta**(0.4):
+        P += 1
+    return P  

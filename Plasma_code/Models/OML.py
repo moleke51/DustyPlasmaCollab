@@ -41,6 +41,7 @@ def potential_finder(dictionarylist):
     return np.absolute(Phi)
 
 def priority(dictionarylist):
+    P = 0
     for _vardict in dictionarylist:
         if _vardict.get('Norm_var_name') != None:
             if _vardict.get('Norm_var_name') == 'alpha':
@@ -49,25 +50,19 @@ def priority(dictionarylist):
                 z = _vardict.get('Norm_value')
             elif _vardict.get('Norm_var_name') == 'mu':
                 mu = _vardict.get('Norm_value')
-            elif _vardict.get('Norm_var_name') == 'upsilon':
-                upsilon = _vardict.get('Norm_value')
             elif _vardict.get('Norm_var_name') == 'Theta':
                 Theta = _vardict.get('Norm_value')
+                if Theta >= 1e-4:
+                    P += 1
+                else:
+                    P += 0.5
             else:
                 if _vardict.get('Norm_value') != _vardict.get('default value'):
                     return 0
-    if Theta >= 1e-4:
-        P_t = 1
-    else:
-        P_t = 0.5
     if alpha > 1.25*Theta**(0.4):
-        P_a = 0
-    else:
-        P_a = 1
-    if upsilon > 0:
-        P_u = 0
-    else:
-        P_u = 1
-    return (P_t + P_a + P_u)
+        P = -1
+        return 0
+    P +=1
+    return P
 
   

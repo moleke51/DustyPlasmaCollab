@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex FlowingSheath"] 1596984991 "FlowingSheath.aux" "FlowingSheath.bbl" "FlowingSheath" 1596985454
+["bibtex FlowingSheath"] 1596984991 "FlowingSheath.aux" "FlowingSheath.bbl" "FlowingSheath" 1596985478
   "./IEEEtran.bst" 1168503386 59215 bc5380b3434a66b895bbc75d3d380540 ""
   "DustyLib.bib" 1596801376 6405 a14d426565d009d7e036dbd468141e03 ""
-  "FlowingSheath.aux" 1596985429 5669 1063eb9d7ab79ada50156995f6626506 "pdflatex"
+  "FlowingSheath.aux" 1596985478 5669 1063eb9d7ab79ada50156995f6626506 "pdflatex"
   (generated)
   "FlowingSheath.bbl"
   "FlowingSheath.blg"
-["pdflatex"] 1596985428 "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.tex" "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.pdf" "FlowingSheath" 1596985454
-  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.aux" 1596985429 5669 1063eb9d7ab79ada50156995f6626506 ""
-  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.tex" 1596985453 27335 6f6bb4c12b6c4e51c5fc2c33d7529cfa ""
+["pdflatex"] 1596985476 "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.tex" "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.pdf" "FlowingSheath" 1596985478
+  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.aux" 1596985478 5669 1063eb9d7ab79ada50156995f6626506 ""
+  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.tex" 1596985476 27353 f1652439c605c8bf5650f95c279856aa ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -50,6 +50,7 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1248133631 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
@@ -101,9 +102,9 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1596738798 4873736 58e4ef1643f1b71b8b12fbd5eeecf314 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1596738914 2441111 c1554bfd0cfc10da81682f1f259a65ee ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "FlowingSheath.aux" 1596985429 5669 1063eb9d7ab79ada50156995f6626506 "pdflatex"
+  "FlowingSheath.aux" 1596985478 5669 1063eb9d7ab79ada50156995f6626506 "pdflatex"
   "FlowingSheath.bbl" 1596984991 2402 d33d02a2e32127164913d21629978cdf "bibtex FlowingSheath"
-  "FlowingSheath.tex" 1596985453 27335 6f6bb4c12b6c4e51c5fc2c33d7529cfa ""
+  "FlowingSheath.tex" 1596985476 27353 f1652439c605c8bf5650f95c279856aa ""
   "Output/ABRgraph.jpeg" 1568632125 121852 fa67a99466c952fd44d1a23762883a10 ""
   "Output/FSpotential.jpeg" 1596978475 108094 1afd1e27364b79122cc9cf849ab8f6b5 ""
   "Output/MOMLgamma.jpeg" 1567609244 51564 c167809a10d30ae6780fa8897b63c013 ""
@@ -112,8 +113,8 @@
   "Output/MOMLvsFS.jpeg" 1596981735 202713 f77b2d72544f2df72f1ea9d9f654cb71 ""
   "Output/ModelComparions.jpeg" 1596981923 154185 791bb4f75bb1b48843cda1ad8847865d ""
   (generated)
+  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.log"
   "FlowingSheath.log"
   "FlowingSheath.aux"
   "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.pdf"
-  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.log"
   "FlowingSheath.pdf"

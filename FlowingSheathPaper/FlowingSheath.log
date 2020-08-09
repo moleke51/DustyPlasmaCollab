@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  9 AUG 2020 16:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  9 AUG 2020 16:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -268,25 +268,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<Output/ABRgraph.jpeg, id=21, 462.528pt x 346.896pt>
+<Output/ABRgraph.jpeg, id=22, 462.528pt x 346.896pt>
 File: Output/ABRgraph.jpeg Graphic file (type jpg)
 <use Output/ABRgraph.jpeg>
 Package pdftex.def Info: Output/ABRgraph.jpeg  used on input line 205.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
  [3] [4 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/ABRgraph.jpeg>]
-<Output/MOMLgamma.jpeg, id=31, 578.16pt x 361.35pt>
+<Output/MOMLgamma.jpeg, id=32, 578.16pt x 361.35pt>
 File: Output/MOMLgamma.jpeg Graphic file (type jpg)
 <use Output/MOMLgamma.jpeg>
 Package pdftex.def Info: Output/MOMLgamma.jpeg  used on input line 289.
 (pdftex.def)             Requested size: 345.0pt x 215.6207pt.
  [5]
-<Output/MOMLgraph.jpeg, id=35, 578.16pt x 361.35pt>
+<Output/MOMLgraph.jpeg, id=36, 578.16pt x 361.35pt>
 File: Output/MOMLgraph.jpeg Graphic file (type jpg)
 <use Output/MOMLgraph.jpeg>
 Package pdftex.def Info: Output/MOMLgraph.jpeg  used on input line 297.
 (pdftex.def)             Requested size: 345.0pt x 215.6207pt.
  [6 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLgamma.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLgraph.jpeg>] [7]
-<Output/MOMLvsABR.jpeg, id=45, 462.528pt x 346.896pt>
+<Output/MOMLvsABR.jpeg, id=46, 462.528pt x 346.896pt>
 File: Output/MOMLvsABR.jpeg Graphic file (type jpg)
 <use Output/MOMLvsABR.jpeg>
 Package pdftex.def Info: Output/MOMLvsABR.jpeg  used on input line 382.
@@ -297,13 +297,13 @@ Overfull \hbox (4.23477pt too wide) detected at line 445
  []
 
 [9]
-<Output/FSpotential.jpeg, id=54, 462.528pt x 346.896pt>
+<Output/FSpotential.jpeg, id=55, 462.528pt x 346.896pt>
 File: Output/FSpotential.jpeg Graphic file (type jpg)
 <use Output/FSpotential.jpeg>
 Package pdftex.def Info: Output/FSpotential.jpeg  used on input line 549.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
  [10]
-<Output/ModelComparions.jpeg, id=58, 462.528pt x 346.896pt>
+<Output/ModelComparions.jpeg, id=59, 462.528pt x 346.896pt>
 File: Output/ModelComparions.jpeg Graphic file (type jpg)
 <use Output/ModelComparions.jpeg>
 Package pdftex.def Info: Output/ModelComparions.jpeg  used on input line 579.
@@ -313,7 +313,7 @@ Overfull \hbox (11.58401pt too wide) detected at line 600
 \OT1/cmr/m/n/10 ^^H[] = []
  []
 
-<Output/MOMLvsFS.jpeg, id=62, 462.528pt x 346.896pt>
+<Output/MOMLvsFS.jpeg, id=63, 462.528pt x 346.896pt>
 File: Output/MOMLvsFS.jpeg Graphic file (type jpg)
 <use Output/MOMLvsFS.jpeg>
 Package pdftex.def Info: Output/MOMLvsFS.jpeg  used on input line 606.
@@ -331,11 +331,11 @@ Here is how much of TeX's memory you used:
  546460 words of font info for 72 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  55i,10n,96p,883b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.pdf (14 pages, 875148 bytes).
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.pdf (14 pages, 885090 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 126 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
