@@ -52,12 +52,6 @@ def potential_finder(dictionarylist):  # gamma = 3 for flowing plasmas
         if _vardict.get("Norm_var_name") is not None:
             if _vardict.get("Norm_var_name") == "alpha":
                 alpha = _vardict.get("Norm_value")
-            elif _vardict.get("Norm_var_name") == "z":
-                z = _vardict.get("Norm_value")
-            elif _vardict.get("Norm_var_name") == "mu":
-                mu = _vardict.get("Norm_value")
-            elif _vardict.get("Norm_var_name") == "upsilon":
-                upsilon = _vardict.get("Norm_value")
             elif _vardict.get("Norm_var_name") == "Theta":
                 Theta = _vardict.get("Norm_value")
     alpha_OML = 1.25 * (Theta) ** 0.4  # Assume this is the same as the static case

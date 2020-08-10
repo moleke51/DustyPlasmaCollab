@@ -1,6 +1,4 @@
-import scipy as sp
 import numpy as np
-import scipy.special as sps
 import OML as oml
 import MOML as moml
 
@@ -50,15 +48,9 @@ def Linear_function(phi_OML, phi_TS, alpha_OML, alpha_TS, alpha):
 
 def potential_finder(dictionarylist):  # gamma = 5/3 for static plasmas
     for _vardict in dictionarylist:
-        if _vardict.get("Norm_var_name") != None:
+        if _vardict.get("Norm_var_name") is not None:
             if _vardict.get("Norm_var_name") == "alpha":
                 alpha = _vardict.get("Norm_value")
-            elif _vardict.get("Norm_var_name") == "z":
-                z = _vardict.get("Norm_value")
-            elif _vardict.get("Norm_var_name") == "mu":
-                mu = _vardict.get("Norm_value")
-            elif _vardict.get("Norm_var_name") == "upsilon":
-                upsilon = _vardict.get("Norm_value")
             elif _vardict.get("Norm_var_name") == "Theta":
                 Theta = _vardict.get("Norm_value")
 
