@@ -49,4 +49,13 @@ P.~Stangeby, \emph{The Plasma Boundary of Magnetic Fusion Devices}, ser. Series
   \url{https://books.google.co.uk/books?id=qOliQgAACAAJ}
 \BIBentrySTDinterwordspacing
 
+\bibitem{ScepticFit}
+\BIBentryALTinterwordspacing
+C.~T.~N. Willis, M.~Coppins, M.~Bacharis, and J.~E. Allen, ``The effect of dust
+  grain size on the floating potential of dust in a collisionless plasma,''
+  \emph{Plasma Sources Science and Technology}, vol.~19, no.~6, p. 065022, nov
+  2010. [Online]. Available:
+  \url{https://doi.org/10.1088%2F0963-0252%2F19%2F6%2F065022}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
