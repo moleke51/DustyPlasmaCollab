@@ -595,15 +595,15 @@ class PotentialCalculator:
                     _modelcolour.append(modellist[modelindex].get_colour())
             _modelchange.append(len(self._dictlist[0].get(val)) + 1)
 
-            if self._dimensionless == True:
+            if self._dimensionless is True:
                 for _vardict in self._dictlist:
                     if _vardict.get("Norm_var_name") == self._variabletracker:
                         _X = _vardict.get("Norm_value")
                         plt.xlabel(self._variabletracker)
                 for i in range(len(_modelname)):
                     plt.plot(
-                        _X[_modelchange[i]: _modelchange[i + 1] - 1],
-                        _Phiarray[_modelchange[i]: _modelchange[i + 1] - 1],
+                        _X[_modelchange[i] : _modelchange[i + 1] - 1],
+                        _Phiarray[_modelchange[i] : _modelchange[i + 1] - 1],
                         color=_modelcolour[i],
                         label=_modelname[i],
                     )
