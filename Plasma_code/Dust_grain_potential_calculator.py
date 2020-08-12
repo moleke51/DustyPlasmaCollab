@@ -5,8 +5,9 @@ import periodictable as pt
 from termcolor import colored
 import os
 import sys
-
-sys.path.insert(1, "DustyPlasmaCollab/Plasma_code/Models/")
+basepath = "DustyPlasmaCollab/Plasma_code/"
+modelpath = basepath + "Models/"
+sys.path.insert(1, modelpath)
 # ==============================CONSTANTS================================ #
 # We define some of the universal constants
 e = 1.60e-19  # [C] The charge on an electron
@@ -181,8 +182,8 @@ class Norm_a(Norm):
     '''The normalisation factor for the dust grain radius'''
     def getnormfactor(self):
         _T_e = self.getvarvalue("Electron temperature")
-        _n_e = self.getvarvalue("Electron density")
-        return np.sqrt(epsilon_0 * k_B * _T_e / (_n_e * (e ** 2)))
+        _n_0 = self.getvarvalue("Electron density at infinity")
+        return np.sqrt(epsilon_0 * k_B * _T_e / (_n_0 * (e ** 2)))
 
 
 class Norm_v(Norm):
@@ -190,6 +191,8 @@ class Norm_v(Norm):
     def getnormfactor(self):
         _T_i = self.getvarvalue("Ion temperature")
         _m_i = self.getvarvalue("Ion mass")
+        if _T_i == 0:
+            return 1
         return np.sqrt(2 * k_B * _T_i / _m_i)
 
 
@@ -204,7 +207,7 @@ T_e_dict = {
 nfTi = Norm_T_i()
 T_i_dict = {
     "var_name": "Ion temperature",
-    "Requirements": [GreaterThan(0)],
+    "Requirements": [GreaterThanEqualTo(0)],
     "Norm_factor": nfTi,
     "Norm_var_name": "Theta",
     "Unit": "Kelvin",
@@ -231,8 +234,8 @@ m_i_dict = {
     "isvariable": False,
 }
 
-n_e_dict = {
-    "var_name": "Electron density",
+n_0_dict = {
+    "var_name": "Electron density at infinity",
     "Requirements": [GreaterThan(0)],
     "Unit": "electrons per meter cubed",
     "Unit_symbol": "m^-3",
@@ -263,7 +266,7 @@ v_dict = {
 }
 
 
-dict_list = [T_i_dict, T_e_dict, z_dict, m_i_dict, n_e_dict, a_dict, v_dict]
+dict_list = [T_i_dict, T_e_dict, z_dict, m_i_dict, n_0_dict, a_dict, v_dict]
 
 
 def eval_input(x):
@@ -524,7 +527,7 @@ class PotentialCalculator:
 
     def get_Potential(self):
         self.initialise()
-        FileList = os.listdir("DustyPlasmaCollab/Plasma_code/Models/")
+        FileList = os.listdir(modelpath)
         if self._variablecounter is False:
             modellist = []
             for File in FileList:
@@ -539,11 +542,17 @@ class PotentialCalculator:
 
                     priority = model.priority()
                     modelindex = modellist.index(model)
-
-            print(colored(modellist[modelindex].__repr__(), colour))
+            if priority == 0:
+                print('There are no valid models for the inputted parameters')
+                return 'Fail'
+            print('\n')
+            print(modellist[modelindex].__repr__())
+            _info = modellist[modelindex].get_info()
+            print(_info)
             _Phi = modellist[modelindex].potential_finder()
             if self._dimensionless is True:
-                print(colored(f"The normalised potential is: {_Phi}"), colour)
+                print('\n')
+                print(f"The normalised potential is: {_Phi:.3}")
             else:
                 for _vardict in self._dictlist:
                     if _vardict.get("var_name") == "Dust radius":
@@ -553,15 +562,13 @@ class PotentialCalculator:
                     if _vardict.get("var_name") == "Electron temperature":
                         _T_e = _vardict.get("Value")
                         _e = e
-                        _phi = (_Phi * k_B * _T_e) / (e)
+                        _phi = -(_Phi * k_B * _T_e) / (e)
                 _Q = DH_potential_to_charge(_a, _phi, _lambda_d)
+                print('\n')
+                print(f"The dust grain surface potential is {_phi:.3} V")
+                print(f"The charge on the dust grain is {_Q:.3} C")
+                print(f"The relative charge of the dust grain is {(_Q/_e):.3}")
 
-                print(colored(f"The dust grain surface potential is {_phi} V"), colour)
-                print(colored(f"The charge on the dust grain is {_Q} C"), colour)
-                print(colored(f"The relative charge of the dust grain is {_Q/_e}"), colour)
-
-            _info = modellist[modelindex].get_info()
-            print(colored(_info, colour))
         else:
             if self._dimensionless is True:
                 val = "Norm_value"
@@ -597,6 +604,9 @@ class PotentialCalculator:
                     _modelchange.append(i)
                     _modelname.append(modellist[modelindex].get_name())
                     _modelcolour.append(modellist[modelindex].get_colour())
+                if priority == 0:
+                    print('There are no valid models for the inputted parameters')
+                    return 'Fail'
             _modelchange.append(len(self._dictlist[0].get(val)) + 1)
 
             if self._dimensionless is True:

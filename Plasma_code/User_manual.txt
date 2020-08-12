@@ -1,0 +1,12 @@
+Setup:
+-Install the modules specified in requirements.txt
+-Open Dust_grain_potential_calculator.py and edit the base path on line 8.
+
+Usage:
+Run Dust_grain_potential_calculator.py
+You will be asked if you want to use dimensionless variables.
+If you choose yes, by typing y, you will be asked to input values for each of the 
+normalised variables. The definitions of the normalised variables can be found .....
+If you choose no, by typing n, you will be asked to input values in physical units.
+
+
