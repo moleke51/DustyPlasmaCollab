@@ -15,7 +15,7 @@ k_B = 1.38e-23  # [m^2][kg][s^-2][K^-1] The Boltzmann constant
 m_e = 9.11e-31  # [kg] The mass of an electron
 u = 1.66e-27  # [kg] The mass of a nucleon
 numgraphpoints = 10000
-colour = "red"
+colour = None  # "yellow"
 
 
 def speciesinput():
@@ -152,6 +152,7 @@ class LessThanEqualTo:
 
 
 class Norm:
+    '''Class for defining the normalisation factors of the input variables'''
     def __init__(self, dictionary_list=None):
         self._dictlist = dictionary_list
 
@@ -170,12 +171,14 @@ class Normunity(Norm):
 
 
 class Norm_T_i(Norm):
+    '''The normalisation factor for the ion temperature'''
     def getnormfactor(self):
         _T_e = self.getvarvalue("Electron temperature")
         return _T_e
 
 
 class Norm_a(Norm):
+    '''The normalisation factor for the dust grain radius'''
     def getnormfactor(self):
         _T_e = self.getvarvalue("Electron temperature")
         _n_e = self.getvarvalue("Electron density")
@@ -183,6 +186,7 @@ class Norm_a(Norm):
 
 
 class Norm_v(Norm):
+    '''The normalisation factor for the flow speed'''
     def getnormfactor(self):
         _T_i = self.getvarvalue("Ion temperature")
         _m_i = self.getvarvalue("Ion mass")
@@ -518,7 +522,7 @@ class PotentialCalculator:
                         "Norm_factor"
                     )
 
-    def get_Norm_Potential(self):
+    def get_Potential(self):
         self.initialise()
         FileList = os.listdir("DustyPlasmaCollab/Plasma_code/Models/")
         if self._variablecounter is False:
@@ -539,7 +543,7 @@ class PotentialCalculator:
             print(colored(modellist[modelindex].__repr__(), colour))
             _Phi = modellist[modelindex].potential_finder()
             if self._dimensionless is True:
-                print(f"The normalised potential is: {_Phi}")
+                print(colored(f"The normalised potential is: {_Phi}"), colour)
             else:
                 for _vardict in self._dictlist:
                     if _vardict.get("var_name") == "Dust radius":
@@ -552,12 +556,12 @@ class PotentialCalculator:
                         _phi = (_Phi * k_B * _T_e) / (e)
                 _Q = DH_potential_to_charge(_a, _phi, _lambda_d)
 
-                print(f"The dust grain surface potential is {_phi} V")
-                print(f"The charge on the dust grain is {_Q} C")
-                print(f"The relative charge of the dust grain is {_Q/_e}")
+                print(colored(f"The dust grain surface potential is {_phi} V"), colour)
+                print(colored(f"The charge on the dust grain is {_Q} C"), colour)
+                print(colored(f"The relative charge of the dust grain is {_Q/_e}"), colour)
 
-                _info = modellist[modelindex].get_info()
-                print(colored(_info, colour))
+            _info = modellist[modelindex].get_info()
+            print(colored(_info, colour))
         else:
             if self._dimensionless is True:
                 val = "Norm_value"
@@ -571,7 +575,7 @@ class PotentialCalculator:
                 _newdictlist = []
                 for _vardict in self._dictlist:
                     _newdict = _vardict.copy()
-                    if type(_vardict.get("Norm_value")) != type(None):
+                    if isinstance(_vardict.get("Norm_value"), type(None)) is False:
                         _newdict.update({"Norm_value": _vardict.get("Norm_value")[i]})
                         _newdictlist.append(_newdict)
 
@@ -595,7 +599,7 @@ class PotentialCalculator:
                     _modelcolour.append(modellist[modelindex].get_colour())
             _modelchange.append(len(self._dictlist[0].get(val)) + 1)
 
-            if self._dimensionless == True:
+            if self._dimensionless is True:
                 for _vardict in self._dictlist:
                     if _vardict.get("Norm_var_name") == self._variabletracker:
                         _X = _vardict.get("Norm_value")
@@ -628,8 +632,8 @@ class PotentialCalculator:
                 _Q = DH_potential_to_charge(_a, _phiarray, _lambda_d)
                 for i in range(len(_modelname)):
                     plt.plot(
-                        _X[_modelchange[i] : _modelchange[i + 1] - 1],
-                        _phiarray[_modelchange[i] : _modelchange[i + 1] - 1],
+                        _X[_modelchange[i]: _modelchange[i + 1] - 1],
+                        _phiarray[_modelchange[i]: _modelchange[i + 1] - 1],
                         color=_modelcolour[i],
                         label=_modelname[i],
                     )
@@ -641,4 +645,4 @@ class PotentialCalculator:
 
 
 pc = PotentialCalculator(dict_list)
-pc.get_Norm_Potential()
+pc.get_Potential()
