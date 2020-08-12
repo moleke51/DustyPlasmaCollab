@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1597223435 "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.tex" "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.pdf" "UserManual" 1597223436
-  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.aux" 1597223436 665 43a4c1a39ff5f8a221bc9a0b00cd27a0 ""
-  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.tex" 1597223435 5465 320fcd57b49ea063d0a0c1c5334ce8a8 ""
+["pdflatex"] 1597243870 "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.tex" "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.pdf" "UserManual" 1597243990
+  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.aux" 1597243872 1417 1c6049383bc1c3d830f6797652dc7393 ""
+  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.tex" 1597243990 11320 3ed4eb32158e4db90076df799dbef3a1 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -180,11 +180,18 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1596738798 4873736 58e4ef1643f1b71b8b12fbd5eeecf314 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1596738914 2441111 c1554bfd0cfc10da81682f1f259a65ee ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "UserManual.aux" 1597223436 665 43a4c1a39ff5f8a221bc9a0b00cd27a0 "pdflatex"
-  "UserManual.tex" 1597223435 5465 320fcd57b49ea063d0a0c1c5334ce8a8 ""
+  "Output/code1.jpeg" 1597232240 109600 84050a258c27f429c2c7446272f8f560 ""
+  "Output/code2.jpeg" 1597232264 91347 27557a14fc4ec2c10194dd35e629fe7b ""
+  "Output/code3.jpeg" 1597235943 18983 cd306b454b03b7c61097dcf6378d6aed ""
+  "Output/code4.jpeg" 1597237815 42443 1ec8c385d5cc5967bbe3f4f2a3710016 ""
+  "Output/code5.jpeg" 1597236500 340387 3f09ec319e4cd23c70f7ae7ec9339859 ""
+  "Output/code6.jpeg" 1597236626 237961 fee1e6b9e6544fc6733f143ef03cfbf4 ""
+  "Output/code7.jpeg" 1597237060 236265 81a12b7c9cc69f9b74f4c656d9de9abf ""
+  "UserManual.aux" 1597243872 1417 1c6049383bc1c3d830f6797652dc7393 "pdflatex"
+  "UserManual.tex" 1597243990 11320 3ed4eb32158e4db90076df799dbef3a1 ""
   (generated)
   "UserManual.aux"
-  "UserManual.pdf"
   "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.pdf"
   "UserManual.log"
   "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.log"
+  "UserManual.pdf"

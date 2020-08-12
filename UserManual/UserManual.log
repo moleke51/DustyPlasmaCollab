@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  12 AUG 2020 10:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  12 AUG 2020 15:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -500,7 +500,11 @@ File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count290
 \l__pdf_internal_box=\box86
-) (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.aux)
+) (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.aux
+
+LaTeX Warning: Label `tab:ValueTable' multiply defined.
+
+)
 \openout1 = `UserManual.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -565,20 +569,63 @@ Overfull \hbox (90.49535pt too wide) in paragraph at lines 60--79
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \vbox (98.2118pt too high) has occurred while \output is active []
 
- [2] (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.aux) ) 
+ [2]
+<Output/code1.jpeg, id=28, 494.84875pt x 265.99374pt>
+File: Output/code1.jpeg Graphic file (type jpg)
+<use Output/code1.jpeg>
+Package pdftex.def Info: Output/code1.jpeg  used on input line 210.
+(pdftex.def)             Requested size: 345.0pt x 185.44754pt.
+ [3]
+<Output/code2.jpeg, id=33, 525.965pt x 192.72pt>
+File: Output/code2.jpeg Graphic file (type jpg)
+<use Output/code2.jpeg>
+Package pdftex.def Info: Output/code2.jpeg  used on input line 221.
+(pdftex.def)             Requested size: 345.0pt x 126.4163pt.
+ [4 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code1.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code2.jpeg>]
+<Output/code3.jpeg, id=39, 736.7525pt x 32.12pt>
+File: Output/code3.jpeg Graphic file (type jpg)
+<use Output/code3.jpeg>
+Package pdftex.def Info: Output/code3.jpeg  used on input line 236.
+(pdftex.def)             Requested size: 345.0pt x 15.04051pt.
+<Output/code4.jpeg, id=40, 842.14626pt x 135.50626pt>
+File: Output/code4.jpeg Graphic file (type jpg)
+<use Output/code4.jpeg>
+Package pdftex.def Info: Output/code4.jpeg  used on input line 252.
+(pdftex.def)             Requested size: 345.0pt x 55.51242pt.
+<Output/code5.jpeg, id=41, 1054.94125pt x 655.44875pt>
+File: Output/code5.jpeg Graphic file (type jpg)
+<use Output/code5.jpeg>
+Package pdftex.def Info: Output/code5.jpeg  used on input line 262.
+(pdftex.def)             Requested size: 345.0pt x 214.3485pt.
+ [5 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code3.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code4.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code5.jpeg>]
+<Output/code6.jpeg, id=48, 730.73pt x 371.3875pt>
+File: Output/code6.jpeg Graphic file (type jpg)
+<use Output/code6.jpeg>
+Package pdftex.def Info: Output/code6.jpeg  used on input line 273.
+(pdftex.def)             Requested size: 345.0pt x 175.3455pt.
+<Output/code7.jpeg, id=49, 788.9475pt x 539.01375pt>
+File: Output/code7.jpeg Graphic file (type jpg)
+<use Output/code7.jpeg>
+Package pdftex.def Info: Output/code7.jpeg  used on input line 284.
+(pdftex.def)             Requested size: 345.0pt x 235.70277pt.
+ [6 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code6.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code7.jpeg>] [7] (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 18963 strings out of 480906
- 384387 string characters out of 5908284
- 633728 words of memory out of 5000000
- 34181 multiletter control sequences out of 15000+600000
+ 19016 strings out of 480906
+ 385267 string characters out of 5908284
+ 635013 words of memory out of 5000000
+ 34225 multiletter control sequences out of 15000+600000
  543072 words of font info for 60 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  60i,18n,96p,872b,694s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.pdf (2 pages, 145576 bytes).
+Output written on /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.pdf (7 pages, 698645 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 110 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

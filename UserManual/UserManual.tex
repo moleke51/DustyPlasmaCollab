@@ -52,7 +52,7 @@
     \item Open \textit{Dust\_grain\_potential\_calculator.py} and edit the base path on line 8
 \end{itemize}
 
-\section{Variables}
+\section{Variable table}
 
 \begin{table}[H]
     \begin{adjustwidth}{-2.5cm}{}
@@ -79,7 +79,11 @@
     \end{adjustwidth}
 \end{table}
 
-\section{Running the code}
+\begin{itemize}
+    \item The potential $\phi$ is normally negative and is normalised to $\Phi = -\frac{e\phi}{k_B T_e}$ which is a positive quantity.
+\end{itemize}
+
+\section{Using the code}
 
 \medskip
 
@@ -128,8 +132,168 @@
     \path [line] (variableChosen) -- (nextVariable);
     \path [line] (number) |- (nextVariable);
     \path [line] (nextVariable) -- (result);
-    
-    
 \end{tikzpicture}
+
+To run the code, see the flow diagram above where the yellow boxes show exactly what 
+to input into the terminal except [number] which means type a number. 
+It is possible to use the SI prefixes as shown in the following table. 
+
+\smallskip
+
+\begin{table}[H]
+    \begin{adjustwidth}{4cm}{}
+        \label{tab:ValueTable}
+        \begin{tabular}{|c|c|} 
+        \hline
+        Prefixes & Value \\
+        \hline
+        Y  & $1 \times 10^{24}$ \\
+        \hline
+        Z & $1 \times 10^{21}$ \\
+        \hline
+        E & $1 \times 10^{18}$ \\
+        \hline
+        P & $1 \times 10^{15}$ \\
+        \hline
+        T & $1 \times 10^{12}$ \\
+        \hline
+        G & $1 \times 10^{9}$ \\
+        \hline
+        M & $1 \times 10^{6}$ \\
+        \hline
+        k & $1 \times 10^{3}$ \\
+        \hline
+        m & $1 \times 10^{-3}$ \\
+        \hline
+        u & $1 \times 10^{-6}$ \\
+        \hline
+        n & $1 \times 10^{-9}$ \\
+        \hline
+        p & $1 \times 10^{-12}$ \\
+        \hline
+        f & $1 \times 10^{-15}$ \\
+        \hline
+        a & $1 \times 10^{-18}$ \\
+        \hline
+        z & $1 \times 10^{-21}$ \\
+        \hline
+        y & $1 \times 10^{-24}$ \\
+        \hline
+        \end{tabular}
+    \end{adjustwidth}
+\end{table}
+
+\smallskip
+
+It is also possible to type $5 \ast 10 \wedge 6$ for example which will be interpreted as 
+$5 \times 10^{6}$. Entering temperatures with "ev" after the number will allow the temperature to be 
+inputted in electron volts, for example, $5$ev will be interpreted as $57970K$. 
+Typing "variable" will prompt the user to enter a maximum and minimum value which will 
+produce a graph rather than a number as the result. Once "variable" has been inputted once it 
+will be impossible to set another parameter as the variable. 
+
+\section{Adding a new variable}
+
+\smallskip
+
+To add a new variable, the procedure is as follows:
+
+\medskip
+
+Copy the dictionary for flow speed on line 255 and paste it underneath the existing one. 
+Change the values to reflect the new variable and remove all that do not apply. 
+The requirement classes found above the dictionaries can be used to make requirements, to find how to do this, 
+the other dictionaries in the code should provide sufficient examples. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/code1.jpeg}
+\label{code1} 
+\end{figure}
+
+All new variables should have a default value corresponding to the case where they are not considered, 
+for example, not considering flow is to have a flow speed of zero. If a normalisation factor is required 
+that depends on the other variables, then an object must be created above the new dictionary. This object 
+will require a new class, to make this copy and paste the class for the flow velocity.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/code2.jpeg}
+\label{code2} 
+\end{figure}
+
+Change the variables it collects for the ones required to make the 
+normalisation factor. Note that if a value within the normalisation factor 
+can be zero then it will cause a dividing by zero error, so something such as 
+the code on lines 194-195 should be added to prevent this.
+
+\newpage
+
+Once the dictionary is complete add the name of the new dictionary to the list of dictionaries on line 269
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/code3.jpeg}
+\label{code3} 
+\end{figure}
+
+\section{Adding a new model}
+
+To add a new model, open the models folder and create a 
+new model as a \textit{.py} file. The name of the file must be 
+the same as the name of the model. The model requires at 
+least five functions; get\_name(), colour(), get\_info(), 
+potential\_finder() and priority(). For simplicity, 
+copy and paste \textit{OML.py} into the new model and 
+change the details. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/code4.jpeg}
+\label{code4} 
+\end{figure}
+
+Change the name in get\_name() to the new name and 
+change the colour to whatever colour you want the 
+model to be displayed as on a graph.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/code5.jpeg}
+\label{code5} 
+\end{figure}
+
+The function get\_info() should include all the assumptions 
+made by the model, the range of parameters it is valid 
+over, a reference to where to find the model and any other 
+information that the user may wish to know about the model.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/code6.jpeg}
+\label{code6} 
+\end{figure}
+
+The potential\_finder() function collects all the variables it needs 
+to calculate the potential like so. All required variables should be 
+collected in this way. Note the output should have the potential normalised 
+in the same way as the existing models, $\Phi = -\frac{e\phi}{k_B T_e}$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/code7.jpeg}
+\label{code7} 
+\end{figure}
+
+The priority function deals with which model will be chosen for a 
+given set of inputs. For the new priority function the variables should be 
+collected as shown, if they are within the accepted range the priority value 
+should increase by one and return a zero otherwise. Any input without a restriction 
+should still be added and increase the priority function by one. To account for variables 
+added after the creation of the model lines 85-87 should be included such that if there is 
+an input variable not in the list of expected input variables that is not equal to its default 
+value then the priority will be set to zero and the model will not be used. For example if the 
+flow speed is not zero (its default value) then OML will have a priority of zero and will not be 
+used. 
 
 \end{document}

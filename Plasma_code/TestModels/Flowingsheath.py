@@ -57,8 +57,14 @@ def ThinSheathFit(Theta):
 
     return -1*Phi
 
+def MOML_ps(Theta,gamma): 
+    mu = 43
+    z = 1
+    return Theta - realLambertW((np.sqrt(2*np.pi*Theta*(1+gamma*Theta)))*np.exp(Theta)) 
+
 #Parameters
-Theta = np.logspace(-5,0,1001)
+Theta = np.logspace(-3,3,1001)
+Theta2 = np.logspace(-7,3,1001)
 mu = 43
 z = 1
 
@@ -66,6 +72,28 @@ z = 1
 Phi_moml = np.zeros(len(Theta)) #gamma = 5/3
 for i in range(len(Theta)):
     Phi_moml[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,5/3))
+
+Phi_moml_ps = MOML_ps(Theta2,5/3)
+
+'''
+fig, (ax1, ax2) = plt.subplots(2, figsize = (7,7))
+ax1.plot(Theta,Phi_moml, color = "red", label = "MOML")
+ax1.plot(Theta, -3.34*np.ones(len(Theta)),'--', color = "red", label = "ABR value")
+ax2.plot(Theta2,Phi_moml_ps, color = "red")
+ax1.set(title = "(a) Normalised potential as a function of " + r"$\Theta$")
+ax2.set(title = "(b) MOML pre-sheath potential drop as a function of " + r"$\Theta$")
+ax1.set(ylabel = "Normalised potential, " + r"$\Phi_a$")
+ax2.set(ylabel = "Normalised sheath edge potential, " + r"$\Phi_p$")
+ax1.grid()
+ax2.grid()
+ax2.set(xlabel = r"$\Theta$")
+ax1.set(xscale = "log")
+ax2.set(xscale = "log")
+ax1.legend()
+plt.show()
+
+'''
+
 
 #Find best fit kappa
 Phi_fit = ThinSheathFit(Theta)
@@ -106,6 +134,7 @@ ax1.plot(Theta,Phi_flow,color = 'red',label = "Flowing sheath, " + r"$\gamma$" +
 ax1.plot(Theta, -3.34*np.ones(len(Theta)), ':', color = "Purple", label = "ABR value")
 ax1.set(title = "(a)")
 ax1.set(ylabel = "Normalised potential, " + r"$\Phi_a$")
+ax1.set(xscale = "log")
 ax1.legend(loc = 'upper right')
 ax1.grid()
 
@@ -117,8 +146,7 @@ ax2.set(title = "(b)")
 ax2.set(ylabel = "Percentage difference")
 ax2.legend()
 ax2.grid()
-plt.xscale("log")
-
+ax2.set(xscale = "log")
 
 plt.show()
 

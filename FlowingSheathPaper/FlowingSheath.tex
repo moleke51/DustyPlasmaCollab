@@ -39,7 +39,15 @@
 \maketitle
 
 \begin{abstract}
-Abstract goes here
+    
+Large dust immersed in a collisionless plasma are well described 
+by ABR and MOML for almost all values of ion temperature to electron temperature, $\Theta$. 
+A detailed comparison between ABR and MOML in their respective limits has identified 
+a previously unexpected discrepancy between the two. We have concluded that MOML breaks
+down in the cold ion limit and thus is invalid for $\Theta \leq 1$. Therefore, we have introduced a new 
+analytic model that rectifies this discrepancy and describes the potential 
+of a large dust grain for $0 \leq \Theta \leq 1$.
+
 \end{abstract}
 
 \section{Introduction}
@@ -278,11 +286,7 @@ the the principle branch of the Lambert W function, $W_0$, yields
 \Phi_a =  \frac{\Theta}{Z} - W_{0}\left(\sqrt{2\pi \Theta (1 + \gamma \Theta)} \exp{\left (\frac{\Theta}{Z}\right)}\right) + \frac{1}{2}\ln{\left[\frac{2\pi Z^2}{\mu^2}(1 + \gamma \Theta)\right]}.
 \end{equation}
 
-Willis compares the MOML solution with simulated data ran by PIC and concludes that 
-$\gamma = \frac{5}{3}$ seems to produce the most appropriate predictions \cite{Willis}. 
-Hence, $\gamma = \frac{5}{3}$ is chosen as the default value for our investigation. It is worth noting
-that from (Fig. \ref{MOMLgamma}) we see that for extreme, and even intermediate, $\Theta$ values, 
-the choice of $\gamma$ has very little affect on the predicted potential.
+\newpage
 
 \begin{figure}[H]
 \centering
@@ -297,8 +301,16 @@ the choice of $\gamma$ has very little affect on the predicted potential.
 \caption{Normalised surface potential as a function of $\Theta$ for singly ionised ($Z = 1$) Hydrogen, Argon and Xenon plasmas according on the MOML prediction, plotted on a log-linear scale.}
 \label{MOMLgraph} 
 \end{figure}
+
+Willis compares the MOML solution with simulated data ran by PIC and concludes that 
+$\gamma = \frac{5}{3}$ seems to produce the most appropriate predictions \cite{Willis}. 
+Hence, $\gamma = \frac{5}{3}$ is chosen as the default value for our investigation. It is worth noting
+that from (Fig. \ref{MOMLgamma}) we see that for extreme, and even intermediate, $\Theta$ values, 
+the choice of $\gamma$ has very little affect on the predicted potential.
+
     
-    
+\newpage 
+
 \section{SCEPTIC numerical fit}
 
 \smallskip
@@ -341,6 +353,8 @@ for differing $\Theta$ ranges.
 \end{table}
 
 
+\newpage 
+
 \section{Comparison between models for low ion temperature}
 
 \smallskip
@@ -375,28 +389,25 @@ This shows a discrepancy between ABR and MOML, when MOML is used to
 describe a cold ion plasma. As the ABR limit recovers well known and accepted values for
 the potential drop across a cold plasma in the planar sheath limit \cite{Stangeby1986} \cite{Stangeby2000}, this result essentially
 invalidates MOML in the cold ion limit.
-    
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{Output/MOMLvsABR.jpeg}
-\caption{Normalised potential as a function of $\Theta$ for a singly charged hydrogenic plasma.
-We in fact see that in the limit of $\Theta \to 0$ MOML does not agree with ABR.}
-\label{MOMLvsABR} 
-\end{figure}
 
-Upon further investigation, one sees that in the cold ion limit, MOML
+\medskip
+
+Upon further investigation, as shown in figure (\ref{MOMLvsABR}), one sees that in the cold ion limit, MOML
 predicts a zero potential drop across the pre-sheath, where we expect it to be $-\frac{1}{2}$ \cite{Stangeby1986}.
 It is believed that this discrepancy arises due to the existence of absorption radii well into
 the pre-sheath for low $\Theta$, which is a result of applying OML at the sheath edge. 
 Hence, we conclude that MOML is incorrect for $\Theta \to 0$.
 
+    
 \begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{Output/MOMLpresheath.jpeg}
-\caption{Pre-sheath potential drop as a function of $\Theta$ for a singly charged hydrogenic plasma as predicted
-by MOML.}
-\label{MOMLpresheath} 
+\includegraphics[width=\linewidth]{Output/MOMLvsABR.jpeg}
+\caption{(a) Normalised potential as a function of $\Theta$ for a singly charged hydrogenic plasma. 
+(b) MOML pre-sheath potential drop as a function of $\Theta$ for a singly charged hydrogenic plasma.}
+\label{MOMLvsABR} 
 \end{figure}
+
+\newpage
 
 \section{Flowing sheath approximation}
 
@@ -488,6 +499,8 @@ Using energy conservation across the pre-sheath,
 E_0 - \langle E_{s} \rangle = Ze\phi_p,
 \end{equation}
 
+\smallskip
+
 \noindent then subbing in expressions for $E_0$, $\langle E_{s} \rangle$ and rearranging for $\phi$
 
 \begin{equation}\label{eq:PS1}
@@ -549,6 +562,8 @@ ABR and the flowing sheath approximation with $\kappa = \frac{3}{2}$. (b) Percen
 sheath approximation and the SCEPTIC fit with $\kappa = \frac{3}{2}$.}
 \label{MOMLvsFS_kappa_1_5} 
 \end{figure}
+
+\newpage 
 
 \subsubsection{$\kappa = 2$}
 
@@ -677,6 +692,16 @@ ABR and the flowing sheath approximation for $0 \leq \Theta \leq 10$.}
 
 \section{Conclusion}
 
+Together, ABR and MOML are capable of describing the 
+potential attained by a large dust grain immersed in a collisionless plasma
+for almost all values of ion temperature to electron temperature, $\Theta$. 
+However, when considering MOML in the cold 
+ion limit and comparing with ABR in the infinite dust size limit, one can identify an 
+unexpected discrepancy between the two. Therefore, in order to rectify this 
+discrepancy and complete the description over all $\Theta$ space, we have introduced a new model 
+which is capable of describing the potential of a large dust grain for values 
+of $\Theta$ that MOML cannot correctly describe; this model recovers 
+the ABR value for the cold ion limit as expected.
 
 \section{References and Acknowledgements}
 \bibliography{DustyLib}

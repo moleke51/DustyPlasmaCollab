@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  12 AUG 2020 14:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  12 AUG 2020 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -267,86 +267,79 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<Output/ABRgraph.jpeg, id=22, 462.528pt x 346.896pt>
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+<Output/ABRgraph.jpeg, id=27, 462.528pt x 346.896pt>
 File: Output/ABRgraph.jpeg Graphic file (type jpg)
 <use Output/ABRgraph.jpeg>
-Package pdftex.def Info: Output/ABRgraph.jpeg  used on input line 205.
+Package pdftex.def Info: Output/ABRgraph.jpeg  used on input line 213.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
- [3] [4 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/ABRgraph.jpeg>]
-<Output/MOMLgamma.jpeg, id=32, 578.16pt x 361.35pt>
+ [4 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/ABRgraph.jpeg>] [5]
+<Output/MOMLgamma.jpeg, id=36, 578.16pt x 361.35pt>
 File: Output/MOMLgamma.jpeg Graphic file (type jpg)
 <use Output/MOMLgamma.jpeg>
-Package pdftex.def Info: Output/MOMLgamma.jpeg  used on input line 289.
+Package pdftex.def Info: Output/MOMLgamma.jpeg  used on input line 293.
 (pdftex.def)             Requested size: 345.0pt x 215.6207pt.
- [5]
-<Output/MOMLgraph.jpeg, id=36, 578.16pt x 361.35pt>
+<Output/MOMLgraph.jpeg, id=37, 578.16pt x 361.35pt>
 File: Output/MOMLgraph.jpeg Graphic file (type jpg)
 <use Output/MOMLgraph.jpeg>
-Package pdftex.def Info: Output/MOMLgraph.jpeg  used on input line 296.
+Package pdftex.def Info: Output/MOMLgraph.jpeg  used on input line 300.
 (pdftex.def)             Requested size: 345.0pt x 215.6207pt.
- [6 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLgamma.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLgraph.jpeg>] [7]
-<Output/MOMLvsABR.jpeg, id=46, 462.528pt x 346.896pt>
+ [6 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLgamma.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLgraph.jpeg>] [7] [8]
+<Output/MOMLvsABR.jpeg, id=50, 505.89pt x 505.89pt>
 File: Output/MOMLvsABR.jpeg Graphic file (type jpg)
 <use Output/MOMLvsABR.jpeg>
-Package pdftex.def Info: Output/MOMLvsABR.jpeg  used on input line 381.
-(pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-<Output/MOMLpresheath.jpeg, id=47, 462.528pt x 346.896pt>
-File: Output/MOMLpresheath.jpeg Graphic file (type jpg)
-<use Output/MOMLpresheath.jpeg>
-Package pdftex.def Info: Output/MOMLpresheath.jpeg  used on input line 395.
-(pdftex.def)             Requested size: 345.0pt x 258.76335pt.
- [8 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLvsABR.jpeg>] [9 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLpresheath.jpeg>]
-Overfull \hbox (4.23477pt too wide) detected at line 452
+Package pdftex.def Info: Output/MOMLvsABR.jpeg  used on input line 404.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+ [9] [10 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLvsABR.jpeg>]
+Overfull \hbox (4.23477pt too wide) detected at line 463
 \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 E[]\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^Ym [][] [] [] [][] v[] [] [] [][] [] ^^R [] [] d^^Rdv;
  []
 
-[10]
-<Output/MOMLvsFS_kappa1_5.jpeg, id=59, 609.9588pt x 432.1746pt>
+[11] [12]
+<Output/MOMLvsFS_kappa1_5.jpeg, id=65, 609.9588pt x 432.1746pt>
 File: Output/MOMLvsFS_kappa1_5.jpeg Graphic file (type jpg)
 <use Output/MOMLvsFS_kappa1_5.jpeg>
-Package pdftex.def Info: Output/MOMLvsFS_kappa1_5.jpeg  used on input line 546.
+Package pdftex.def Info: Output/MOMLvsFS_kappa1_5.jpeg  used on input line 559.
 (pdftex.def)             Requested size: 345.0pt x 244.44948pt.
- [11]
-<Output/FSpotential.jpeg, id=64, 462.528pt x 346.896pt>
+ [13 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLvsFS_kappa1_5.jpeg>]
+<Output/FSpotential.jpeg, id=70, 462.528pt x 346.896pt>
 File: Output/FSpotential.jpeg Graphic file (type jpg)
 <use Output/FSpotential.jpeg>
-Package pdftex.def Info: Output/FSpotential.jpeg  used on input line 577.
+Package pdftex.def Info: Output/FSpotential.jpeg  used on input line 592.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
- [12 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLvsFS_kappa1_5.jpeg>] [13 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/FSpotential.jpeg>]
-Overfull \hbox (11.58401pt too wide) detected at line 657
+ [14 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/FSpotential.jpeg>] [15]
+Overfull \hbox (11.58401pt too wide) detected at line 672
 \OT1/cmr/m/n/10 ^^H[] = []
  []
 
-<Output/MOMLvsFS.jpeg, id=72, 462.528pt x 346.896pt>
+<Output/MOMLvsFS.jpeg, id=77, 462.528pt x 346.896pt>
 File: Output/MOMLvsFS.jpeg Graphic file (type jpg)
 <use Output/MOMLvsFS.jpeg>
-Package pdftex.def Info: Output/MOMLvsFS.jpeg  used on input line 663.
+Package pdftex.def Info: Output/MOMLvsFS.jpeg  used on input line 678.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-[14]
-<Output/ModelComparions.jpeg, id=76, 462.528pt x 346.896pt>
+<Output/ModelComparions.jpeg, id=78, 462.528pt x 346.896pt>
 File: Output/ModelComparions.jpeg Graphic file (type jpg)
 <use Output/ModelComparions.jpeg>
-Package pdftex.def Info: Output/ModelComparions.jpeg  used on input line 672.
+Package pdftex.def Info: Output/ModelComparions.jpeg  used on input line 687.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
- [15 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLvsFS.jpeg>] (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.bbl [16 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/ModelComparions.jpeg>]) [17] [18] (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.aux)
+[16 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/MOMLvsFS.jpeg>] (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.bbl [17 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/Output/ModelComparions.jpeg>]) [18] [19] (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5854 strings out of 480906
- 88973 string characters out of 5908284
- 335633 words of memory out of 5000000
- 21344 multiletter control sequences out of 15000+600000
- 545834 words of font info for 69 fonts, out of 8000000 for 9000
+ 5855 strings out of 480906
+ 88876 string characters out of 5908284
+ 336633 words of memory out of 5000000
+ 21343 multiletter control sequences out of 15000+600000
+ 547080 words of font info for 74 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  55i,10n,96p,883b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.pdf (18 pages, 1249368 bytes).
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.pdf (19 pages, 1316732 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 150 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
