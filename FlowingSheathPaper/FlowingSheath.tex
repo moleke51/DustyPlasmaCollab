@@ -48,8 +48,8 @@ Abstract goes here
 
 In the case of a large dust grain with a negative equilibrium charge, we can establish regions within an infinite plasma with well-defined
 transitions. We firstly have the dust grain itself, followed
-by a positive region of space, called the sheath, usually a few electron Debye lengths
-in size. The electron Debye length is a characteristic length over which quasi-neutrality breaks down, 
+by an electron deficient region, called the sheath, usually a few electron Debye lengths
+in size. The electron Debye length is a characteristic length over which quasi-neutrality breaks down \cite{DebyeLength} \cite{IntroToPlasmas}, 
 defined as
 
 \begin{equation}\label{eq:Debye}
@@ -61,15 +61,15 @@ defined as
 \noindent where $k_B$ is the Boltzmann constant, $T_e$ is the electron temperature, $e$ is the 
 electron charge, $n_0$ is the electron number density at infinity and $\varepsilon_{0}$ is the
 permittivity of free space. Following the sheath, there exists the infinite pre-sheath where quasi-neutrality holds;
-quasi-neutrality is mathematically written as an approximate equality between the ion and electron
-densities, $Zn_i \approx n_e$.
+quasi-neutrality can be expressed as an approximate equality between the ion and electron
+densities, $Zn_i \approx n_e$ \cite{IntroToPlasmas}.
 
 \medskip
 
 Positive ions are continuously collected by the negative dust, so there must be
 a net influx of ions into the sheath to maintain the equilibrium. This establishes the Bohm
-criterion, where the speed of ions required to enter the sheath must be 
-greater then of equal to the Bohm speed. For the cold ion case, the Bohm speed is defined as
+criterion \cite{Bohm}, where the speed of the ions required to enter the sheath must be 
+greater than or equal to the Bohm speed. For the cold ion case, the Bohm speed is defined as
 
 \smallskip 
 
@@ -228,7 +228,7 @@ Orbital motion limited (OML) models the potential, $\phi_a$, on a small spherica
 dust grain immersed in an infinite and collisionless plasma, it does so by considering
 energy and angular momentum conservations of the ions along side a critical grazing incidence.
 OML considers an equilibrium of ion and electron currents at the dust 
-surface, $I_i = I_e$, while simultaneously invoking quasi-neutrality.
+surface, $I_i = I_e$, while simultaneously invoking quasi-neutrality \cite{OriginalOML}.
 Hence, the standard result acquired from OML is 
 the following
 
@@ -291,7 +291,6 @@ the choice of $\gamma$ has very little affect on the predicted potential.
 \label{MOMLgamma} 
 \end{figure}
 
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{Output/MOMLgraph.jpeg}
@@ -342,7 +341,7 @@ for differing $\Theta$ ranges.
 \end{table}
 
 
-\section{Comparison between models for low $\Theta$}
+\section{Comparison between models for low ion temperature}
 
 \smallskip
 
@@ -363,8 +362,8 @@ with certainty.
 We may compare ABR and MOML in their respective limits to see if they are in 
 agreement with one another, which is what we would expected.
 If we consider ABR in the limit of $\alpha \to \infty$ we recover the cold planar
-wall limit as shown in section 3, this value is approximately $-3.34$. If we now consider
-the MOML solution, (\ref{eq:MOMLsol}) in the cold ion limit with $Z = 1$, we attain the following
+wall limit as shown in section 3, this value, for a singly charged hydrogenic plasma, is approximately $-3.34$. If we now consider
+the MOML solution, (\ref{eq:MOMLsol}), in the cold ion limit with $Z = 1$, we attain the following
 
 \begin{equation}\label{eq:OMLLim}
 \lim_{\Theta \to 0} \Phi_{a} = \frac{1}{2}\ln{\left(2 \pi \right)} - \ln{\left(\mu \right)}.
@@ -372,9 +371,9 @@ the MOML solution, (\ref{eq:MOMLsol}) in the cold ion limit with $Z = 1$, we att
 
 \smallskip
 
-This shows a discrepancy between ABR and MOML when MOML is used to
+This shows a discrepancy between ABR and MOML, when MOML is used to
 describe a cold ion plasma. As the ABR limit recovers well known and accepted values for
-the potential drop across a cold plasma in the planar sheath limit \cite{Stangeby1986} \cite{Stangeby2000}, this results essentially
+the potential drop across a cold plasma in the planar sheath limit \cite{Stangeby1986} \cite{Stangeby2000}, this result essentially
 invalidates MOML in the cold ion limit.
     
 \begin{figure}[H]
@@ -389,14 +388,22 @@ Upon further investigation, one sees that in the cold ion limit, MOML
 predicts a zero potential drop across the pre-sheath, where we expect it to be $-\frac{1}{2}$ \cite{Stangeby1986}.
 It is believed that this discrepancy arises due to the existence of absorption radii well into
 the pre-sheath for low $\Theta$, which is a result of applying OML at the sheath edge. 
-Hence, we conclude that MOML is wrong for $\Theta \to 0$.
+Hence, we conclude that MOML is incorrect for $\Theta \to 0$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/MOMLpresheath.jpeg}
+\caption{Pre-sheath potential drop as a function of $\Theta$ for a singly charged hydrogenic plasma as predicted
+by MOML.}
+\label{MOMLpresheath} 
+\end{figure}
 
 \section{Flowing sheath approximation}
 
 We are now posed with the task of finding an analytic solution for the
 potential on a large dust grain which is valid for low $\Theta$. The approach we will
-take assumes the same electron behaviour as existing models \cite{Willis}, however, we wil slightly
-change the behaviour of the ions to better suit the problem.
+take assumes the same electron behaviour as existing models \cite{Willis}, however, we will
+change the way in which the ions are modelled.
 
 \smallskip
 
@@ -413,7 +420,7 @@ Maxwellian at the sheath edge, with drift speed $u$,
 
 \begin{equation}\label{FlowingMaxwellian}
 f_i(\underline{\mathbf{v}}) = \left(\frac{m_i}{2\pi k_B T_i}\right)^{\frac{3}{2}} 
-\exp{\left(\frac{-m_i}{2k_B T_i}|\underline{\mathbf{v}} - \underline{\mathbf{u}}|\right)}.
+\exp{\left(\frac{-m_i}{2k_B T_i}|\underline{\mathbf{v}} - \underline{\mathbf{u}}|^2\right)}.
 \end{equation}
 
 \smallskip
@@ -429,14 +436,14 @@ integral
 \smallskip
     
 For convenience, we will drop the subscripts for the time being,
-change to spherical polar coordinates and let $\xi = \frac{m}{2k_B T_i}$, yielding,
+change to spherical polar coordinates and let $\xi = \frac{m_i}{2k_B T_i}$, yielding,
 
 \begin{equation}\label{eq:Int2}
 \langle E_{s} \rangle = \frac{1}{2}m \left(\frac{\xi}{\pi}\right)^{\frac{3}{2}}
-\int v^4 \sin{\theta}\exp{\left(-\xi v^s - \xi u^2 + 2uv \xi \cos{\theta}\right)} \,dv d\theta d\phi,
+\int v^4 \sin{\theta}\exp{\left(-\xi v^s - \xi u^2 + 2uv \xi \cos{\theta}\right)} \,dv d\theta d\varphi,
 \end{equation}
 
-\noindent where $\theta$ and $\phi$ are the polar and azimuthal angle respectively. We continue
+\noindent where $\theta$ and $\varphi$ are the polar and azimuthal angle respectively. We continue
 in the following way
 
 \begin{equation}\label{eq:Int3}
@@ -496,8 +503,7 @@ Ze\phi_p = \kappa k_B T_i - \frac{1}{2}k_B T_e \left(1 + \Theta\left(\gamma + 3\
 \smallskip
 
 \noindent which is the temperature dependant pre-sheath potential drop.
-When $\Theta = 0$ we recover the potential drop across a cold pre-sheath \cite{Stangeby1986}, 
-which is very promising.
+When $\Theta = 0$ we recover the potential drop across a cold pre-sheath \cite{Stangeby1986}.
 
 \smallskip
 
@@ -505,22 +511,83 @@ Therefore, we may determine the total potential drop across the plasma, by summi
 $\Phi_s$ with the newly determined $\Phi_p$, given by the following equation
 
 \begin{equation}\label{eq:FSpotential}
-\Phi_a =  \frac{1}{2}\ln{\left[\frac{2\pi Z^2}{\mu^2}(1 + \gamma \Theta)\right]} - \frac{1}{2Z}\left(1 + \Theta\left(\gamma + 3 -2\kappa\right)\right),
+\Phi_a =  \frac{1}{2}\ln{\left[\frac{2\pi Z^2}{\mu^2}(1 + \gamma \Theta)\right]} - \frac{1}{2Z}\left(1 + \Theta\left(\gamma + 3 -2\kappa\right)\right).
 \end{equation}
 
-\medskip 
+\smallskip
 
-\noindent where $\gamma = \frac{5}{3}$ and $\kappa = 2$ give the best results. It should be noted 
-that a possible justification for the optimal choice of $\kappa$ 
-may be related to the ion heat flux \cite{Stangeby1986} \cite{Stangeby2000}.
+\noindent where $\gamma = \frac{5}{3}$ and $\kappa$ is still to be determined.
+
+\subsection{Choosing the value of $\kappa$}
 
 \medskip
 
-Figure (\ref{FSpotential}) shows the predicted dust potential as a function of $\Theta$ for 
-our model; we see that for values of $\Theta \leq 1$ the potential seems reasonable, however, for higher
+The value of $\kappa$ is sensitive to the choice of distribution function at infinity. In this
+section we suggest two possible functions and discuss their effects on the expected results in the region of interest, 
+$0 \leq \Theta \leq 1$.
+
+\subsubsection{$\kappa = \frac{3}{2}$}
+
+\medskip
+
+Given a flowing Maxwellian at the sheath edge, it would be logical to assume a static Maxwellian at infinity.
+In doing so, we find the average ion energy to be $E = \frac{3}{2}k_B T_i$.
+
+\medskip
+
+Analysing figure (\ref{MOMLvsFS_kappa_1_5}) shows that the model agrees with ABR in the cold ion limit, which is the behaviour we 
+expect. However, as $\Theta$ approaches $1$, the predicted potential actually decreases and the percentage 
+error of the model compared to the SCEPTIC fit becomes worse than MOML. Suggesting that, despite $\kappa = \frac{3}{2}$ being the best choice for consistency with our assumption
+at the sheath edge, the model fails to predict the expected behaviour in the region of interest with said $\kappa$.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/MOMLvsFS_kappa1_5.jpeg}
+\caption{(a) Variation of normalised potential with $\Theta$ for a singly charged hydrogenic plasma using MOML, SCEPTIC,
+ABR and the flowing sheath approximation with $\kappa = \frac{3}{2}$. (b) Percentage difference between MOML, flowing 
+sheath approximation and the SCEPTIC fit with $\kappa = \frac{3}{2}$.}
+\label{MOMLvsFS_kappa_1_5} 
+\end{figure}
+
+\subsubsection{$\kappa = 2$}
+
+We now consider a different distribution function at infinity, which would be a result of changing our choice for the ion
+source function. Stangeby presents two potential candidates for the ion source function at infinity, the first being 
+the standard Maxwellian, as discussed in the previous subsection, and the second being a non Maxwellian distribution presented by Emmert et al. \cite{kappa2} given 
+as
+
+\begin{equation}\label{eq:DistFunc}
+S(x,v_x) = S_p(x) \left(\frac{m_i |v_x|}{2k_B T_i}\right) \exp{\left(\frac{- m_i |v_x|^2}{2k_B T_i}\right)}.
+\end{equation}
+
+\smallskip
+
+Stangeby discusses that upon further analysis, one may find that the average ion energy according to this 
+distribution in 3D is in fact $E = 2k_B T_i$.
+
+\medskip 
+
+Surprisingly, when fitting the flowing sheath approximation to available SCEPTIC data, one finds that
+the optimal choice for $\kappa$ is 2.1, hence, for the remainder of the analysis we will choose $\kappa = 2$. However, it should be noted that the reason as to why and how 
+the ion distribution function changes across the pre-sheath, as suggested by this model, is still unknown.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/FSpotential.jpeg}
+\caption{Normalised potential as a function of $\Theta$ for a singly charged hydrogenic plasma
+using the newly determined model with $\kappa = 2$.}
+\label{FSpotential} 
+\end{figure}
+
+\subsubsection{The flowing sheath approximation as a lower bound}
+\medskip
+
+Figure (\ref{FSpotential}) (section 7.1.2) shows the predicted dust potential as a function of $\Theta$ for 
+the model with $\kappa = 2$. We see that for values of $\Theta \leq 1$ the potential seems reasonable, however, for higher
 values of $\Theta$ the model seems to completely diverge from MOML. Initially, when seeing this behaviour 
-one may become sceptical of our model, however, it should be noted that we have assumed that the average ion speed at
-the sheath edge is equal to $c_s^{hot}$. It is very likely that the average ion
+one may become sceptical of the model, however, it should be noted that we have assumed the average ion speed at
+the sheath edge to be $c_s^{hot}$. It is very likely that the average ion
 speed at the sheath edge is not $c_s^{hot}$, but in fact greater than $c_s^{hot}$. Hence, our assumption does not account for the possibility of the average ion 
 speed being greater than $c_s^{hot}$. 
 
@@ -542,45 +609,33 @@ Following the same steps as (\ref{eq:AverageEnergy2}) through (\ref{eq:PSpotenti
 \Phi_a \geq  \frac{1}{2}\ln{\left[\frac{2\pi Z^2}{\mu^2}(1 + \gamma \Theta)\right]} - \frac{1}{2Z}\left(1 + \Theta\left(\gamma + 3 -2\kappa\right)\right),
 \end{equation}
 
+\smallskip
+
 \noindent suggesting that the potential predicted by this model acts as a lower bound for the dust grain potential.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{Output/FSpotential.jpeg}
-\caption{Normalised potential as a function of $\Theta$ for a singly charged hydrogenic plasma
-using our newly determined model.}
-\label{FSpotential} 
-\end{figure}
-
-\subsection{Validity range for our model}
+\subsection{Validity range for the flowing sheath approximation}
 
 \smallskip
 
-In order to determine the reliability of our model, we must compare it to existing 
+In order to determine the reliability of the model, we must compare it to existing 
 models that are accepted within the plasma community. As stated before, we know that 
-our new model deviates from MOML for values of $\Theta > 1$; however, the MOML potential 
-is in fact greater than the potential predicted by model in this region, and so is above
-the lower bound that our model imposes. Therefore, for values of $\Theta > 1$, MOML is still the most
+the new model deviates from MOML for values of $\Theta > 1$; however, the MOML potential 
+is in fact greater than the potential predicted by the model in this region, and so is above
+the lower bound that the model imposes. Therefore, for values of $\Theta > 1$, MOML is still the most
 appropriate model available. 
 
 \medskip
 
-The most interesting behaviour of our model is seen for $\Theta \leq 1$. In the limit of 
-$\Theta \to 0$ our model exactly recovers the ABR value and so rectifies the discrepancy between
-MOML and ABR. Furthermore, the value predicted by the flowing sheath approximation for 
-$\Theta = 1$ is the same as that predicted by OM theory for $\alpha = 1$ and $\Theta = 1$, suggesting 
-that our model exactly reproduces known values for the extreme values of $0 \leq \Theta \leq 1$.
-Within the region of interest, we see that our model predicts an 
+The most interesting behaviour of the model is seen for $\Theta \leq 1$. In the limit of 
+$\Theta \to 0$ the model exactly recovers the ABR value and so rectifies the discrepancy between
+MOML and ABR. Furthermore, the value predicted for 
+$\Theta = 1$ is the same as that predicted by OM theory for $\alpha = 100$ and $\Theta = 1$, suggesting 
+that the model exactly reproduces known values for the extreme values of $0 \leq \Theta \leq 1$.
+Within the region of interest, we see that the model predicts an 
 increasing potential from the ABR value, as is expected, in direct contrast to a decreasing potential from a 
 wrong cold ion value as suggested by MOML.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{Output/ModelComparions.jpeg}
-\caption{Normalised potential as a function of $\Theta$ for a singly charged hydrogenic plasma using MOML, SCEPTIC,
-ABR and the flowing sheath approximation.}
-\label{ModelComparions} 
-\end{figure}
+\medskip
 
 Upon further analysis, as shown in figure (\ref{MOMLvsFS}), we have determined 
 that in this range the flowing sheath approximation has, on average, 
@@ -589,7 +644,9 @@ the SCEPTIC fit to be correct for $\Theta \to 0$, ignoring its discrepancy from 
 flowing sheath approximation is the better model in this range. Thus providing sufficient evidence to replace MOML with 
 the flowing sheath approximation for these values of $\Theta$.
 
-Therefore, the new proposed potential on a large dust grain in a finite temperature plasma is given as follows
+\medskip
+
+Therefore, the new proposed potential on a large dust grain in a finite ion temperature plasma is given as follows
 
 \begin{equation}
 \Phi_a = 
@@ -608,6 +665,14 @@ Therefore, the new proposed potential on a large dust grain in a finite temperat
 ABR and the flowing sheath approximation. (b) Percentage difference between MOML, flowing 
 sheath approximation and the SCEPTIC fit.}
 \label{MOMLvsFS} 
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Output/ModelComparions.jpeg}
+\caption{Normalised potential as a function of $\Theta$ for a singly charged hydrogenic plasma using MOML, SCEPTIC,
+ABR and the flowing sheath approximation for $0 \leq \Theta \leq 10$.}
+\label{ModelComparions} 
 \end{figure}
 
 \section{Conclusion}
@@ -653,7 +718,6 @@ $\Phi$ & Normalised electric potential \\
 
 \end{tabular}
 \end{center}
-
 
 
 \end{document}

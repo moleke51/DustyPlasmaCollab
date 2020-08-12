@@ -67,15 +67,24 @@ Phi_moml = np.zeros(len(Theta)) #gamma = 5/3
 for i in range(len(Theta)):
     Phi_moml[i] = bisect(MOML_function,-10,10,args = (Theta[i],mu,z,5/3))
 
-
 #Find best fit kappa
 Phi_fit = ThinSheathFit(Theta)
 kappa,cov_kappa = spo.curve_fit(FlowingSheathMOML,Theta,Phi_fit)
 kappa = kappa[0]
 print(f"Best fit: kappa = {kappa} +/- {np.sqrt(cov_kappa[0,0])}")
 
+
 #Find the flowing sheath values
 Phi_flow = FlowingSheathMOML(Theta,(2)*np.ones(len(Theta)))
+
+'''
+plt.plot(Theta,Phi_flow, color = "red")
+plt.title("Normalised potential as a function of " + r"$\Theta$" + " for " + r"$\kappa$" + " = 2")
+plt.ylabel("Normalised potential, " + r"$\Phi_a$")
+plt.xlabel(r"$\Theta$")
+plt.grid()
+plt.xscale("log")
+'''
 
 #Redsiduals
 Phi_mfit = np.zeros(len(Theta))

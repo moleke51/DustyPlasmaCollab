@@ -1,0 +1,135 @@
+\documentclass{journal}
+
+\usepackage{here}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{makecell}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{etoolbox}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{changepage}
+\usepackage{dsfont}
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usepackage{array}
+\usetikzlibrary{shapes,arrows}
+\captionsetup[table]{skip=5pt}
+\newcommand{\cmark}{\ding{51}}
+
+\DeclareMathOperator\erf{erf}
+
+\interdisplaylinepenalty=2500
+\hyphenation{op-tical net-works semi-conduc-tor}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+\begin{document}
+
+\title{Dust grain potential calculator \\ \it{User manual}}
+\author{Dogan Akpinar and George E. B. Doran}
+\markboth{D. Akpinar \& G. E. B. Doran}
+{Shell \MakeLowercase{\textit{et al.}}:}
+
+\maketitle
+
+\section{Setup}
+
+\begin{itemize}
+    \item Install the modules specified in \textit{requirements.txt}
+    \item Open \textit{Dust\_grain\_potential\_calculator.py} and edit the base path on line 8
+\end{itemize}
+
+\section{Variables}
+
+\begin{table}[H]
+    \begin{adjustwidth}{-2.5cm}{}
+        \label{tab:ValueTable}
+        \begin{tabular}{|c|c|c|c|c|c|c|} 
+        \hline
+        Variable name & Unit & Requirements & \makecell{Normalised \\ variable name} & \makecell{Normalisation \\ factor} & Default value & Variable\\
+        \hline
+        Electron temperature ($T_e$) & $K$ & $T_e > 0$ & - & - & - & Yes \\
+        \hline
+        Ion temperature ($T_i$) & $K$ & $T_i \geq 0$ & $\Theta$ & $T_e$ & - & Yes \\
+        \hline
+        Relative ion charge ($z$) & - & \makecell{$0 < z \leq z_{max}$ \\ z $\in \mathds{Z}$} & - & - & - & No \\
+        \hline
+        Ion mass ($m_i$) & $kg$ & $m_i > 0$ & $\mu^2$ & $m_e$ & - & No \\
+        \hline
+        \makecell{Electron number density \\ at infinity ($n_0$)} & $m^{-3}$ & $n_0>0$ & - & - & - & No\\
+        \hline
+        Dust grain radius ($a$) & $m$ & $a \geq 0$ & $\alpha$ & $\lambda_D = \sqrt{\frac{\varepsilon_0 k_B T_e}{n_0 e^2}}$ & - & Yes\\
+        \hline
+        Flow speed (v) & $ms^{-1}$ & v $\geq 0$ & $\upsilon$ & $\upsilon_B = \sqrt{\frac{z k_B T_e}{m_i}}$ & 0 & Yes \\
+        \hline
+        \end{tabular}
+    \end{adjustwidth}
+\end{table}
+
+\section{Running the code}
+
+\medskip
+
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=yellow!20, 
+    text width=5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=7em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{resultBlock} = [rectangle, draw, fill=red!20, 
+    text width=7em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{requirement} = [ellipse, draw, fill=green!20, 
+    text width=4em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
+    
+\begin{tikzpicture}[node distance = 2cm, auto]
+    % Place nodes
+    \node [block] (init) {Do you want to use dimensionless variables (y/n)};
+    \node [decision, below left of = init, node distance = 4cm] (decideY) {y};
+    \node [decision, below right of = init, node distance = 4cm] (decideN) {n};
+    \node [block, below of = init, node distance = 5.5cm] (variableInput) {Enter variables according to requirements};
+    \node [decision, below right of = variableInput, node distance = 4cm] (variables) {variable};
+    \node [decision, below left of = variableInput, node distance = 4cm] (number) {[number]};
+    \node [requirement, below of = variables, node distance = 3cm] (variableCentre) {Variable already chosen};
+    \node [requirement, left of = variableCentre, node distance = 3cm] (variableLeft) {Can be varied};
+    \node [requirement, right of = variableCentre, node distance = 3cm] (variableRight) {Can not be varied};
+    \node [block, below right of = variableCentre, node distance = 4cm] (Retry) {Enter variables according to requirements};
+    \node [block, below of = variableLeft, node distance = 2.8cm] (variableChosen) {Variable chosen};
+    \node [block, below of = variableChosen, node distance = 3cm] (nextVariable) {Repeat for the other variables};
+    \node [resultBlock, below of = nextVariable, node distance = 3cm] (result) {Result};
+    %\node [block, below right of = variableCentre, node distance = 4cm] (NextVariable) {Enter next variable};
+    % Draw edges
+    \path [line] (init) -- (decideY);
+    \path [line] (init) -- (decideN);
+    \path [line] (decideY) -- (variableInput);
+    \path [line] (decideN) -- (variableInput);
+    \path [line] (variableInput) -- (variables);
+    \path [line] (variableInput) -- (number);
+    \path [line] (variables) -- (variableCentre);
+    \path [line] (variables) -- (variableLeft);
+    \path [line] (variables) -- (variableRight);
+    \path [line] (variableCentre) -- (Retry);
+    \path [line] (variableRight) -- (Retry);
+    \path [line] (variableLeft) -- (variableChosen);
+    \path [line] (variableChosen) -- (nextVariable);
+    \path [line] (number) |- (nextVariable);
+    \path [line] (nextVariable) -- (result);
+    
+    
+\end{tikzpicture}
+
+\end{document}

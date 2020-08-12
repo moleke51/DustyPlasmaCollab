@@ -13,44 +13,44 @@ Database file #1: DustyLib.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 6 entries,
+You've used 11 entries,
             4024 wiz_defined-function locations,
-            858 strings with 8305 characters,
-and the built_in function-call counts, 3482 in all, are:
-= -- 306
-> -- 54
-< -- 18
-+ -- 29
-- -- 10
-* -- 169
-:= -- 618
-add.period$ -- 12
-call.type$ -- 6
-change.case$ -- 4
-chr.to.int$ -- 36
-cite$ -- 6
-duplicate$ -- 251
-empty$ -- 281
-format.name$ -- 12
-if$ -- 769
+            897 strings with 9003 characters,
+and the built_in function-call counts, 7001 in all, are:
+= -- 628
+> -- 116
+< -- 43
++ -- 62
+- -- 21
+* -- 333
+:= -- 1186
+add.period$ -- 22
+call.type$ -- 11
+change.case$ -- 9
+chr.to.int$ -- 81
+cite$ -- 11
+duplicate$ -- 523
+empty$ -- 553
+format.name$ -- 26
+if$ -- 1580
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 45
-newline$ -- 47
-num.names$ -- 6
-pop$ -- 89
+int.to.str$ -- 11
+missing$ -- 88
+newline$ -- 66
+num.names$ -- 11
+pop$ -- 174
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 278
+skip$ -- 572
 stack$ -- 0
-substring$ -- 101
-swap$ -- 202
-text.length$ -- 6
+substring$ -- 234
+swap$ -- 421
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 6
+type$ -- 11
 warning$ -- 0
-while$ -- 14
-width$ -- 7
-write$ -- 86
+while$ -- 29
+width$ -- 13
+write$ -- 142
