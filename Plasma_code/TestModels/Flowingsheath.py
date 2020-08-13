@@ -63,7 +63,7 @@ def MOML_ps(Theta,gamma):
     return Theta - realLambertW((np.sqrt(2*np.pi*Theta*(1+gamma*Theta)))*np.exp(Theta)) 
 
 #Parameters
-Theta = np.logspace(-3,3,1001)
+Theta = np.logspace(-5,0,1001)
 Theta2 = np.logspace(-7,3,1001)
 mu = 43
 z = 1
