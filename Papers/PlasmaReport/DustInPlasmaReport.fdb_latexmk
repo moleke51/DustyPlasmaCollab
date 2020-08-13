@@ -1,14 +1,24 @@
 # Fdb version 3
 ["bibtex DustInPlasmaReport"] 0 "DustInPlasmaReport.aux" "DustInPlasmaReport.bbl" "DustInPlasmaReport" 0
-  "./IEEEtran.bst" 1168503386 59215 bc5380b3434a66b895bbc75d3d380540 ""
+  "./IEEEtran.bst" 1597271044 59215 bc5380b3434a66b895bbc75d3d380540 ""
   "DustInPlasmaReport.aux" 0 -1 0 "pdflatex"
+<<<<<<< HEAD
   "DustyLib.bib" 1597142179 4286 e74227dd14693d11e6339cb79e3260f5 ""
+=======
+  "DustyLib.bib" 1597271044 4286 e74227dd14693d11e6339cb79e3260f5 ""
+>>>>>>> 02c600ac2515afe059c3d8095016c3d5d8558bd2
   (generated)
-  "DustInPlasmaReport.blg"
   "DustInPlasmaReport.bbl"
+<<<<<<< HEAD
 ["pdflatex"] 1597316304 "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex" "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.pdf" "DustInPlasmaReport" 1597316304
   "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux" 1597316304 8 a94a2480d3289e625eea47cd1b285758 ""
   "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex" 1597316301 44688 89cb730d0f9a499535d76497f85461e6 ""
+=======
+  "DustInPlasmaReport.blg"
+["pdflatex"] 1597315111 "/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex" "/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.pdf" "DustInPlasmaReport" 1597315111
+  "/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux" 1597315111 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex" 1597315095 44686 0f6041fa48e8d886a9cc97abbde42314 ""
+>>>>>>> 02c600ac2515afe059c3d8095016c3d5d8558bd2
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -81,7 +91,11 @@
   "/usr/local/texlive/2020/texmf-dist/tex/latex/collectbox/collectbox.sty" 1337644648 9116 495d44b5a3e7be0c46c5d1f053f457f0 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty" 1561238569 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
+<<<<<<< HEAD
   "/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1594851515 45550 25b26e89acd0ac6952aa57218c49823c ""
+=======
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1569190624 45259 743c52a37a6e5ed83cfe0e128b2da10d ""
+>>>>>>> 02c600ac2515afe059c3d8095016c3d5d8558bd2
   "/usr/local/texlive/2020/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def" 1585083172 17448 c8e20d5f7e69b0cbecf82ab29daeebd9 ""
@@ -90,6 +104,7 @@
   "/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty" 1580683321 3976 d7fa7d81d2870d509d25b17d0245e735 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/here/here.sty" 1258935436 439 d908692e0f19922874ccfe2bf35addc7 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty" 1461535682 2148 0426cd8bb94163c1e23726d0c15e2c21 ""
+<<<<<<< HEAD
   "/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def" 1593552530 24606 ecae4e851ce9ce4554d156050e5057f9 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1279039959 678 4792914a8f45be57bb98413425e4c7af ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty" 1559339157 5486 a1d954b09782ba0acd8a8abfd98e1028 ""
@@ -98,10 +113,21 @@
   "/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upsy.fd" 1137110629 148 2da0acd77cba348f34823f44cabf0058 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upzd.fd" 1137110629 148 b2a94082cb802f90d3daf6dd0c7188a0 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty" 1596739058 48596 2b6a95da931c07a430b1a61904aaa42d ""
+=======
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def" 1584044900 25398 19ae1e59d7f4a47fefb457d851f6f503 ""
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1279039959 678 4792914a8f45be57bb98413425e4c7af ""
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty" 1559339157 5486 a1d954b09782ba0acd8a8abfd98e1028 ""
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd" 1137110629 961 15056f4a61917ceed3a44e4ac11fcc52 ""
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/pifont.sty" 1156702453 2284 330328193b4aeb08dd45b0dd3e5ae732 ""
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upsy.fd" 1137110629 148 2da0acd77cba348f34823f44cabf0058 ""
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upzd.fd" 1137110629 148 b2a94082cb802f90d3daf6dd0c7188a0 ""
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty" 1571259403 48596 2b6a95da931c07a430b1a61904aaa42d ""
+>>>>>>> 02c600ac2515afe059c3d8095016c3d5d8558bd2
   "/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty" 1238697683 10894 d359a13923460b2a73d4312d613554c8 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1417732693 4962 9c1069474ff71dbc47d5006555e352d3 ""
   "/usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf" 1583102494 39451 60d7debd9ef8ece44cbe965493576c2d ""
+<<<<<<< HEAD
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1596738798 4873736 58e4ef1643f1b71b8b12fbd5eeecf314 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1596738914 2441111 c1554bfd0cfc10da81682f1f259a65ee ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
@@ -127,4 +153,31 @@
   "DustInPlasmaReport.aux"
   "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.pdf"
   "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.log"
+=======
+  "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
+  "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1597266940 2432462 a389e8e4b1e7ec59e4002e4cb9ca7bc2 ""
+  "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
+  "DustInPlasmaReport.aux" 0 -1 0 "pdflatex"
+  "DustInPlasmaReport.bbl" 0 -1 0 "bibtex DustInPlasmaReport"
+  "DustInPlasmaReport.tex" 1597315095 44686 0f6041fa48e8d886a9cc97abbde42314 ""
+  "Imperial_lab_report.cls" 1597271044 282075 e85949ed0591f4c82f483d3be7b2f041 ""
+  "Output/ABRgraph.jpeg" 1597271044 121852 fa67a99466c952fd44d1a23762883a10 ""
+  "Output/CorrectedOMLvsABR.jpeg" 1597271044 74548 b0c8b37ce799912c66f2f4e3fe861c3c ""
+  "Output/CorrectedResiduals.jpeg" 1597271044 88507 b7e7dce2cd8890d3bc95f9df8a39fbb8 ""
+  "Output/Impactparameter.jpeg" 1597271044 26247 5dc57d70baeeece0a645d87b041c7027 ""
+  "Output/MOMLgamma.jpeg" 1597271044 51564 c167809a10d30ae6780fa8897b63c013 ""
+  "Output/MOMLgraph.jpeg" 1597271044 45269 c5615181d0598311a220b91c1166269f ""
+  "Output/OMLgraph.jpeg" 1597271044 54815 b3b7fbab29b45f6dd3b68faeabac1bac ""
+  "Output/OMLvsABR.jpeg" 1597271044 69787 efac257fdd132d799618a58aa74ef93e ""
+  "Output/Residuals.jpeg" 1597271044 96415 3cf80dcda1928678b9a1c33223994035 ""
+  "Output/SMOMLgraph.jpeg" 1597271044 64870 8062e9db61a2b844797411eb15bdf6d3 ""
+  "Output/SOMLgraph.jpeg" 1597271044 75435 7eec2302f5253d0c4f3d1f9d781d1f1c ""
+  "Output/flowinggraph.jpeg" 1597271044 42393 033ca5cab29d34060b9701aa1dac372e ""
+  "Output/staticgraph.jpeg" 1597271044 34050 4e47da89f093f298279c69be20a18ec3 ""
+  (generated)
+  "/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.log"
+  "/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.pdf"
+  "DustInPlasmaReport.aux"
+  "DustInPlasmaReport.log"
+>>>>>>> 02c600ac2515afe059c3d8095016c3d5d8558bd2
   "DustInPlasmaReport.pdf"

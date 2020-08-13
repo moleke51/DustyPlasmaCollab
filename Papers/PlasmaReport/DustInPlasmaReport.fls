@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 PWD /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport
 INPUT /usr/local/texlive/2020/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
@@ -6,6 +7,16 @@ INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/Pl
 OUTPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.log
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/Imperial_lab_report.cls
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/Imperial_lab_report.cls
+=======
+PWD /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport
+INPUT /usr/local/texlive/2020/texmf.cnf
+INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex
+OUTPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.log
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Imperial_lab_report.cls
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Imperial_lab_report.cls
+>>>>>>> 02c600ac2515afe059c3d8095016c3d5d8558bd2
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map
@@ -120,9 +131,15 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+<<<<<<< HEAD
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux
 OUTPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux
+=======
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux
+OUTPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux
+>>>>>>> 02c600ac2515afe059c3d8095016c3d5d8558bd2
 INPUT /usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
@@ -142,7 +159,11 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+<<<<<<< HEAD
 OUTPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.pdf
+=======
+OUTPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.pdf
+>>>>>>> 02c600ac2515afe059c3d8095016c3d5d8558bd2
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -162,9 +183,15 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+<<<<<<< HEAD
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/Output/Impactparameter.jpeg
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/Output/Impactparameter.jpeg
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/Output/Impactparameter.jpeg
+=======
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/Impactparameter.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/Impactparameter.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/Impactparameter.jpeg
+>>>>>>> 02c600ac2515afe059c3d8095016c3d5d8558bd2
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
@@ -180,6 +207,7 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+<<<<<<< HEAD
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/Output/OMLgraph.jpeg
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/Output/OMLgraph.jpeg
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/Output/OMLgraph.jpeg
@@ -217,6 +245,45 @@ INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/Pl
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/Output/CorrectedResiduals.jpeg
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/Output/CorrectedResiduals.jpeg
 INPUT /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux
+=======
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/OMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/OMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/OMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/MOMLgamma.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/MOMLgamma.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/MOMLgamma.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/MOMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/MOMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/MOMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/SOMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/SOMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/SOMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/SMOMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/SMOMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/SMOMLgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/staticgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/staticgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/staticgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/flowinggraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/flowinggraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/flowinggraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/ABRgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/ABRgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/ABRgraph.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/OMLvsABR.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/OMLvsABR.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/OMLvsABR.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/Residuals.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/Residuals.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/Residuals.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/CorrectedOMLvsABR.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/CorrectedOMLvsABR.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/CorrectedOMLvsABR.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/CorrectedResiduals.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/CorrectedResiduals.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/CorrectedResiduals.jpeg
+INPUT /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux
+>>>>>>> 02c600ac2515afe059c3d8095016c3d5d8558bd2
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb

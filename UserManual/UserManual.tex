@@ -104,7 +104,9 @@
     % Place nodes
     \node [block] (init) {Do you want to use dimensionless variables (y/n)};
     \node [decision, below left of = init, node distance = 4cm] (decideY) {y};
-    \node [decision, below right of = init, node distance = 4cm] (decideN) {n};
+    \node [decision, right of = init, node distance = 4cm] (decideN) {n};
+    \node [block, below of = decideN, node distance = 3cm] (speciesInput) {Enter the plasma ion species};
+    \node [decision, below of = speciesInput, node distance = 2.5cm] (decideSpecies) {[element]};
     \node [block, below of = init, node distance = 5.5cm] (variableInput) {Enter variables according to requirements};
     \node [decision, below right of = variableInput, node distance = 4cm] (variables) {variable};
     \node [decision, below left of = variableInput, node distance = 4cm] (number) {[number]};
@@ -120,7 +122,9 @@
     \path [line] (init) -- (decideY);
     \path [line] (init) -- (decideN);
     \path [line] (decideY) -- (variableInput);
-    \path [line] (decideN) -- (variableInput);
+    \path [line] (decideN) -- (speciesInput);
+    \path [line] (speciesInput) -- (decideSpecies);
+    \path [line] (decideSpecies) -- (variableInput);
     \path [line] (variableInput) -- (variables);
     \path [line] (variableInput) -- (number);
     \path [line] (variables) -- (variableCentre);
@@ -135,7 +139,8 @@
 \end{tikzpicture}
 
 To run the code, see the flow diagram above where the yellow boxes show exactly what 
-to input into the terminal except [number] which means type a number. 
+to input into the terminal except [number] which means type a number and [element] 
+which means enter the name or chemical symbol of an element e.g hydrogen/H. 
 It is possible to use the SI prefixes as shown in the following table. 
 
 \smallskip
