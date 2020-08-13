@@ -1,36 +1,36 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  12 AUG 2020 15:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.12)  13 AUG 2020 12:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.tex
-(/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.tex
+**/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/UserManual.tex
+(/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/UserManual.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-07-17> (/usr/local/texlive/2020/texmf-dist/tex/latex/paper/journal.cls
+L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/paper/journal.cls
 Document Class: journal 2008/05/30 1.0l LaTeX document class (wm).
 (/usr/local/texlive/2020/texmf-dist/tex/latex/paper/paper.cls
 Document Class: paper 2008/05/30 1.0l LaTeX document class (wm).
-\hours=\count168
-\minutes=\count169
+\hours=\count167
+\minutes=\count168
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \beforetitlespace=\skip47
-\c@part=\count170
-\c@section=\count171
-\c@subsection=\count172
-\c@subsubsection=\count173
-\c@paragraph=\count174
-\c@subparagraph=\count175
+\c@part=\count169
+\c@section=\count170
+\c@subsection=\count171
+\c@subsubsection=\count172
+\c@paragraph=\count173
+\c@subparagraph=\count174
 \exampleindent=\skip48
-\c@figure=\count176
-\c@table=\count177
+\c@figure=\count175
+\c@table=\count176
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen134
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/here/here.sty) (/usr/local/texlive/2020/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count178
+\c@float@type=\count177
 \float@exts=\toks15
 \float@box=\box45
 \@float@everytoks=\toks16
@@ -43,7 +43,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks17
 \XKV@tempa@toks=\toks18
  (/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count179
+\XKV@depth=\count178
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
@@ -86,11 +86,11 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@ptotalheight=\dimen148
  (/usr/local/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count180
+\c@checkoddpage=\count179
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box48
-\sift@deathcycles=\count181
+\sift@deathcycles=\count180
 \@vwid@loff=\dimen149
 \@vwid@roff=\dimen150
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/makecell/makecell.sty
@@ -106,7 +106,7 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \ar@cellbox=\box50
 )
 \rotheadsize=\dimen153
-\c@nlinenum=\count182
+\c@nlinenum=\count181
 \TeXr@lab=\toks20
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
@@ -129,13 +129,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count183
+\inf@bad=\count182
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count184
-\leftroot@=\count185
+\uproot@=\count183
+\leftroot@=\count184
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count186
-\DOTSCASE@=\count187
+\classnum@=\count185
+\DOTSCASE@=\count186
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
@@ -144,15 +144,15 @@ LaTeX Info: Redefining \cdots on input line 610.
 \big@size=\dimen156
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count188
-\c@MaxMatrixCols=\count189
+\macc@depth=\count187
+\c@MaxMatrixCols=\count188
 \dotsspace@=\muskip16
-\c@parentequation=\count190
-\dspbrk@lvl=\count191
+\c@parentequation=\count189
+\dspbrk@lvl=\count190
 \tag@help=\toks22
-\row@=\count192
-\column@=\count193
-\maxfields@=\count194
+\row@=\count191
+\column@=\count192
+\maxfields@=\count193
 \andhelp@=\toks23
 \eqnshift@=\dimen157
 \alignsep@=\dimen158
@@ -176,7 +176,7 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/pifont.sty
-Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
@@ -191,20 +191,20 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen163
 \enit@toks=\toks27
 \enit@inbox=\box53
-\enit@count@id=\count195
-\enitdp@description=\count196
+\enit@count@id=\count194
+\enitdp@description=\count195
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip57
-\multirow@cntb=\count197
+\multirow@cntb=\count196
 \multirow@dima=\skip58
 \bigstrutjot=\dimen164
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/07/15 v2.5i e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count198
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count197
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box54
@@ -217,9 +217,9 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \titlewidthlast=\dimen168
 \titlewidthfirst=\dimen169
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/05/30 v3.4k Customizing captions (AR)
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/07/20 v1.12b caption3 kernel (AR)
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
 \captionmargin=\dimen170
 \captionmargin@=\dimen171
@@ -231,20 +231,20 @@ Package caption3 Info: TeX engine: e-TeX on input line 61.
 Package caption Info: thesis document class detected.
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
-Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionskip \setbox \@tempboxa \hbox {{\cph@font #1:} {\cpb@font #2}}\ifdim \wd \@tempboxa >\hsize \@hangfrom {\cph@font #1: }{\cpb@font #2\par }\else \hbox to\hsize {\hfil \box \@tempboxa \hfil }\fi \vskip \belowcaptionskip  on input line 1055.
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionskip \setbox \@tempboxa \hbox {{\cph@font #1:} {\cpb@font #2}}\ifdim \wd \@tempboxa >\hsize \@hangfrom {\cph@font #1: }{\cpb@font #2\par }\else \hbox to\hsize {\hfil \box \@tempboxa \hfil }\fi \vskip \belowcaptionskip  on input line 1082.
 )
 
 Package caption Warning: Unknown document class (or package),
 (caption)                standard defaults will be used.
 See the caption package documentation for explanation.
 
-\c@caption@flags=\count199
-\c@continuedfloat=\count266
+\c@caption@flags=\count198
+\c@continuedfloat=\count199
 Package caption Info: float package is loaded.
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count267
-\cp@tempcnt=\count268
+\c@cp@cntr=\count266
+\cp@tempcnt=\count267
 LaTeX Info: Redefining \checkoddpage on input line 59.
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
@@ -286,14 +286,14 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@yd=\dimen188
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count269
-\c@pgf@countb=\count270
-\c@pgf@countc=\count271
-\c@pgf@countd=\count272
+\c@pgf@counta=\count268
+\c@pgf@countb=\count269
+\c@pgf@countc=\count270
+\c@pgf@countd=\count271
 \t@pgf@toka=\toks35
 \t@pgf@tokb=\toks36
 \t@pgf@tokc=\toks37
-\pgf@sys@id@count=\count273
+\pgf@sys@id@count=\count272
  (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -304,8 +304,8 @@ File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
 File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 ))) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count274
-\pgfsyssoftpath@bigbuffer@items=\count275
+\pgfsyssoftpath@smallbuffer@items=\count273
+\pgfsyssoftpath@bigbuffer@items=\count274
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -327,13 +327,13 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen189
-\pgfmath@count=\count276
+\pgfmath@count=\count275
 \pgfmath@box=\box56
 \pgfmath@toks=\toks38
 \pgfmath@stack@operand=\toks39
 \pgfmath@stack@operation=\toks40
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count277
+\c@pgfmathroundto@lastzeros=\count276
 )) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@picminx=\dimen190
@@ -363,7 +363,7 @@ File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfpic=\box57
 \pgf@hbox=\box58
 \pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count278
+\pgf@picture@serial@count=\count277
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgflinewidth=\dimen264
@@ -384,8 +384,8 @@ File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@max=\dimen269
-\pgf@sys@shading@range@num=\count279
-\pgf@shadingcount=\count280
+\pgf@sys@shading@range@num=\count278
+\pgf@shadingcount=\count279
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
@@ -421,7 +421,7 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count281
+\pgf@plot@mark@count=\count280
 \pgfplotmarksize=\dimen274
 )
 \tikz@lastx=\dimen275
@@ -436,17 +436,17 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@figbox@bg=\box63
 \tikz@tempbox=\box64
 \tikz@tempbox@bg=\box65
-\tikztreelevel=\count282
-\tikznumberofchildren=\count283
-\tikznumberofcurrentchild=\count284
-\tikz@fig@count=\count285
+\tikztreelevel=\count281
+\tikznumberofchildren=\count282
+\tikznumberofcurrentchild=\count283
+\tikz@fig@count=\count284
  (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count286
-\pgfmatrixcurrentcolumn=\count287
-\pgf@matrix@numberofcolumns=\count288
+\pgfmatrixcurrentrow=\count285
+\pgfmatrixcurrentcolumn=\count286
+\pgf@matrix@numberofcolumns=\count287
 )
-\tikz@expandcount=\count289
+\tikz@expandcount=\count288
  (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
@@ -497,10 +497,10 @@ File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \arrowsize=\dimen283
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count290
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count289
 \l__pdf_internal_box=\box86
-) (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.aux
+) (/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/UserManual.aux
 
 LaTeX Warning: Label `tab:ValueTable' multiply defined.
 
@@ -523,16 +523,16 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
  (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
+\scratchcounter=\count290
 \scratchdimen=\dimen284
 \scratchbox=\box87
-\nofMPsegments=\count292
-\nofMParguments=\count293
+\nofMPsegments=\count291
+\nofMParguments=\count292
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count294
+\MPscratchCnt=\count293
 \MPscratchDim=\dimen285
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
+\MPnumerator=\count294
+\makeMPintoPDFobject=\count295
 \everyMPtoPDFconversion=\toks44
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -541,9 +541,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen286
-\caption@adjustwidth@linewidth=\dimen287
 Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
 LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
@@ -567,62 +564,62 @@ Overfull \hbox (90.49535pt too wide) in paragraph at lines 60--79
 
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \vbox (98.2118pt too high) has occurred while \output is active []
+Overfull \vbox (99.28214pt too high) has occurred while \output is active []
 
  [2]
 <Output/code1.jpeg, id=28, 494.84875pt x 265.99374pt>
 File: Output/code1.jpeg Graphic file (type jpg)
 <use Output/code1.jpeg>
-Package pdftex.def Info: Output/code1.jpeg  used on input line 210.
+Package pdftex.def Info: Output/code1.jpeg  used on input line 215.
 (pdftex.def)             Requested size: 345.0pt x 185.44754pt.
  [3]
 <Output/code2.jpeg, id=33, 525.965pt x 192.72pt>
 File: Output/code2.jpeg Graphic file (type jpg)
 <use Output/code2.jpeg>
-Package pdftex.def Info: Output/code2.jpeg  used on input line 221.
+Package pdftex.def Info: Output/code2.jpeg  used on input line 226.
 (pdftex.def)             Requested size: 345.0pt x 126.4163pt.
- [4 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code1.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code2.jpeg>]
+ [4 </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/Output/code1.jpeg> </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/Output/code2.jpeg>]
 <Output/code3.jpeg, id=39, 736.7525pt x 32.12pt>
 File: Output/code3.jpeg Graphic file (type jpg)
 <use Output/code3.jpeg>
-Package pdftex.def Info: Output/code3.jpeg  used on input line 236.
+Package pdftex.def Info: Output/code3.jpeg  used on input line 241.
 (pdftex.def)             Requested size: 345.0pt x 15.04051pt.
 <Output/code4.jpeg, id=40, 842.14626pt x 135.50626pt>
 File: Output/code4.jpeg Graphic file (type jpg)
 <use Output/code4.jpeg>
-Package pdftex.def Info: Output/code4.jpeg  used on input line 252.
+Package pdftex.def Info: Output/code4.jpeg  used on input line 257.
 (pdftex.def)             Requested size: 345.0pt x 55.51242pt.
 <Output/code5.jpeg, id=41, 1054.94125pt x 655.44875pt>
 File: Output/code5.jpeg Graphic file (type jpg)
 <use Output/code5.jpeg>
-Package pdftex.def Info: Output/code5.jpeg  used on input line 262.
+Package pdftex.def Info: Output/code5.jpeg  used on input line 267.
 (pdftex.def)             Requested size: 345.0pt x 214.3485pt.
- [5 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code3.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code4.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code5.jpeg>]
+ [5 </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/Output/code3.jpeg> </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/Output/code4.jpeg> </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/Output/code5.jpeg>]
 <Output/code6.jpeg, id=48, 730.73pt x 371.3875pt>
 File: Output/code6.jpeg Graphic file (type jpg)
 <use Output/code6.jpeg>
-Package pdftex.def Info: Output/code6.jpeg  used on input line 273.
+Package pdftex.def Info: Output/code6.jpeg  used on input line 278.
 (pdftex.def)             Requested size: 345.0pt x 175.3455pt.
 <Output/code7.jpeg, id=49, 788.9475pt x 539.01375pt>
 File: Output/code7.jpeg Graphic file (type jpg)
 <use Output/code7.jpeg>
-Package pdftex.def Info: Output/code7.jpeg  used on input line 284.
+Package pdftex.def Info: Output/code7.jpeg  used on input line 289.
 (pdftex.def)             Requested size: 345.0pt x 235.70277pt.
- [6 </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code6.jpeg> </Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/Output/code7.jpeg>] [7] (/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.aux)
+ [6 </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/Output/code6.jpeg> </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/Output/code7.jpeg>] [7] (/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/UserManual.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19016 strings out of 480906
- 385267 string characters out of 5908284
- 635013 words of memory out of 5000000
- 34225 multiletter control sequences out of 15000+600000
- 543072 words of font info for 60 fonts, out of 8000000 for 9000
+ 18964 strings out of 480608
+ 384219 string characters out of 5903630
+ 633163 words of memory out of 5000000
+ 34468 multiletter control sequences out of 15000+600000
+ 540322 words of font info for 55 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 60i,18n,96p,872b,694s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,18n,96p,899b,694s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on /Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/UserManual/UserManual.pdf (7 pages, 698645 bytes).
+Output written on /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/UserManual/UserManual.pdf (7 pages, 699388 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream

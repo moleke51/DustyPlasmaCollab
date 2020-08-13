@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.6)  11 AUG 2020 10:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.12)  13 AUG 2020 11:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**DustInPlasmaReport.tex
-(./DustInPlasmaReport.tex
+**/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex
+(/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-07-17> (./Imperial_lab_report.cls
+L3 programming layer <2020-03-06> (/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Imperial_lab_report.cls
 
 LaTeX Warning: You have requested document class `Imperial_lab_report',
                but the document class provides `IEEEtran'.
@@ -18,12 +18,11 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmpdimenA=\dimen134
 \@IEEEtrantmpdimenB=\dimen135
 \@IEEEtrantmpdimenC=\dimen136
-\@IEEEtrantmpcountA=\count168
-\@IEEEtrantmpcountB=\count169
-\@IEEEtrantmpcountC=\count170
+\@IEEEtrantmpcountA=\count167
+\@IEEEtrantmpcountB=\count168
+\@IEEEtrantmpcountC=\count169
 \@IEEEtrantmptoksA=\toks15
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
-04.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 504.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -38,52 +37,42 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1091.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1091.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1091.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1091.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1091.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1091.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1091.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1091.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1091.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1091.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1091.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1091.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1091.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1091.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1091.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1091.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1091.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1091.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1091.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1091.
-
 \IEEEquantizedlength=\dimen141
 \IEEEquantizedlengthdiff=\dimen142
 \IEEEquantizedtextheightdiff=\dimen143
@@ -96,80 +85,65 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEiednormlabelsep=\dimen150
 \IEEEiedmathlabelsep=\dimen151
 \IEEEiedtopsep=\skip47
-\c@section=\count171
-\c@subsection=\count172
-\c@subsubsection=\count173
-\c@paragraph=\count174
-\c@IEEEsubequation=\count175
+\c@section=\count170
+\c@subsection=\count171
+\c@subsubsection=\count172
+\c@paragraph=\count173
+\c@IEEEsubequation=\count174
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
-\c@figure=\count176
-\c@table=\count177
-\@IEEEeqnnumcols=\count178
-\@IEEEeqncolcnt=\count179
-\@IEEEsubeqnnumrollback=\count180
+\c@figure=\count175
+\c@table=\count176
+\@IEEEeqnnumcols=\count177
+\@IEEEeqncolcnt=\count178
+\@IEEEsubeqnnumrollback=\count179
 \@IEEEquantizeheightA=\dimen152
 \@IEEEquantizeheightB=\dimen153
 \@IEEEquantizeheightC=\dimen154
 \@IEEEquantizeprevdepth=\dimen155
-\@IEEEquantizemultiple=\count181
+\@IEEEquantizemultiple=\count180
 \@IEEEquantizeboxA=\box45
 \@IEEEtmpitemindent=\dimen156
 \IEEEPARstartletwidth=\dimen157
-\c@IEEEbiography=\count182
+\c@IEEEbiography=\count181
 \@IEEEtranrubishbin=\box46
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/here/here.sty)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/float/float.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/here/here.sty) (/usr/local/texlive/2020/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count183
+\c@float@type=\count182
 \float@exts=\toks16
 \float@box=\box47
 \@float@everytoks=\toks17
 \@floatcapt=\box48
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks18
 \XKV@tempa@toks=\toks19
-
-(/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count184
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count183
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
--ends (calc, etex, pgfmath)
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/trimclip.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen158
 \Gin@req@width=\dimen159
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/collectbox/collectbox.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box49
 )
@@ -178,8 +152,7 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@urx=\dimen162
 \tc@ury=\dimen163
 Package trimclip Info: Using driver 'tc-pdftex.def'.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen164
@@ -190,50 +163,43 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pheight=\dimen169
 \adjbox@pdepth=\dimen170
 \adjbox@ptotalheight=\dimen171
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count185
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
+\c@checkoddpage=\count184
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box50
-\sift@deathcycles=\count186
+\sift@deathcycles=\count185
 \@vwid@loff=\dimen172
 \@vwid@roff=\dimen173
-))
-(/usr/local/texlive/2020/texmf-dist/tex/latex/cite/cite.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen174
-))
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen175
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count187
+\inf@bad=\count186
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count188
-\leftroot@=\count189
+\uproot@=\count187
+\leftroot@=\count188
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count190
-\DOTSCASE@=\count191
+\classnum@=\count189
+\DOTSCASE@=\count190
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
@@ -242,15 +208,15 @@ LaTeX Info: Redefining \cdots on input line 610.
 \big@size=\dimen176
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count192
-\c@MaxMatrixCols=\count193
+\macc@depth=\count191
+\c@MaxMatrixCols=\count192
 \dotsspace@=\muskip16
-\c@parentequation=\count194
-\dspbrk@lvl=\count195
+\c@parentequation=\count193
+\dspbrk@lvl=\count194
 \tag@help=\toks21
-\row@=\count196
-\column@=\count197
-\maxfields@=\count198
+\row@=\count195
+\column@=\count196
+\maxfields@=\count197
 \andhelp@=\toks22
 \eqnshift@=\dimen177
 \alignsep@=\dimen178
@@ -264,58 +230,46 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/pifont.sty
-Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
-
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upzd.fd
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
-
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upsy.fd
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
-))
-(/usr/local/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \enitkv@toks@=\toks25
 \labelindent=\skip53
 \enit@outerparindent=\dimen183
 \enit@toks=\toks26
 \enit@inbox=\box53
-\enit@count@id=\count199
-\enitdp@description=\count266
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
+\enit@count@id=\count198
+\enitdp@description=\count199
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip54
-\multirow@cntb=\count267
+\multirow@cntb=\count266
 \multirow@dima=\skip55
 \bigstrutjot=\dimen184
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/07/15 v2.5i e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count268
-)
-(/usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count267
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box54
 \beforetitleunit=\skip56
@@ -332,10 +286,10 @@ Package titlesec Warning: Non standard sectioning command \subparagraph
 (titlesec)                detected. Using default spacing and no format.
 
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count269
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count268
 \l__pdf_internal_box=\box55
-) (./DustInPlasmaReport.aux)
+) (/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux)
 \openout1 = `DustInPlasmaReport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -356,99 +310,279 @@ LaTeX Font Info:    ... okay on input line 31.
 -- Lines per column: 58 (exact).
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count270
+\scratchcounter=\count269
 \scratchdimen=\dimen190
 \scratchbox=\box56
-\nofMPsegments=\count271
-\nofMParguments=\count272
+\nofMPsegments=\count270
+\nofMParguments=\count271
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count273
+\MPscratchCnt=\count272
 \MPscratchDim=\dimen191
-\MPnumerator=\count274
-\makeMPintoPDFobject=\count275
+\MPnumerator=\count273
+\makeMPintoPDFobject=\count274
 \everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+
+LaTeX Warning: Citation `99percent' on page 1 undefined on input line 48.
+
+
+LaTeX Warning: Citation `Thomas' on page 1 undefined on input line 48.
+
+
+LaTeX Warning: Citation `Thomas' on page 1 undefined on input line 48.
+
+
+LaTeX Warning: Citation `Thomas' on page 1 undefined on input line 48.
+
+
+LaTeX Warning: Citation `Willis' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Willis' on page 1 undefined on input line 64.
+
 LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
-
-
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
-
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+)
+
+LaTeX Warning: Citation `Willis' on page 1 undefined on input line 84.
+
+
+LaTeX Warning: Citation `Thomas' on page 1 undefined on input line 106.
+
+
+LaTeX Warning: Citation `Thomas' on page 1 undefined on input line 106.
+
+[1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+
+LaTeX Warning: Citation `Thomas' on page 2 undefined on input line 122.
+
+
+LaTeX Warning: Citation `Thomas' on page 2 undefined on input line 126.
+
+
+LaTeX Warning: Citation `OriginalOML' on page 2 undefined on input line 130.
+
+
+LaTeX Warning: Citation `Thomas' on page 2 undefined on input line 130.
+
+
+LaTeX Warning: Citation `OML' on page 2 undefined on input line 130.
+
+
+LaTeX Warning: Citation `Willis' on page 2 undefined on input line 130.
+
+
+LaTeX Warning: Citation `SandM' on page 2 undefined on input line 130.
+
+
+LaTeX Warning: Citation `Thomas' on page 2 undefined on input line 134.
+
 <Output/Impactparameter.jpeg, id=17, 379.4175pt x 231.86626pt>
 File: Output/Impactparameter.jpeg Graphic file (type jpg)
 <use Output/Impactparameter.jpeg>
 Package pdftex.def Info: Output/Impactparameter.jpeg  used on input line 138.
 (pdftex.def)             Requested size: 252.0pt x 154.0016pt.
- [2 <./Output/Impactparameter.jpeg>]
+
+LaTeX Warning: Citation `Thomas' on page 2 undefined on input line 139.
+
+
+LaTeX Warning: Citation `Thomas' on page 2 undefined on input line 139.
+
+
+LaTeX Warning: Citation `Thomas' on page 2 undefined on input line 143.
+
+
+LaTeX Warning: Reference `OMLtrejectories' on page 2 undefined on input line 143.
+
+
+LaTeX Warning: Citation `Thomas' on page 2 undefined on input line 147.
+
+
+LaTeX Warning: Citation `Thomas' on page 2 undefined on input line 147.
+
+
+LaTeX Warning: Citation `Thomas' on page 2 undefined on input line 157.
+
+[2 </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/Impactparameter.jpeg>]
+
+LaTeX Warning: Citation `Thomas' on page 3 undefined on input line 181.
+
 <Output/OMLgraph.jpeg, id=26, 578.16pt x 361.35pt>
 File: Output/OMLgraph.jpeg Graphic file (type jpg)
 <use Output/OMLgraph.jpeg>
 Package pdftex.def Info: Output/OMLgraph.jpeg  used on input line 205.
 (pdftex.def)             Requested size: 252.0pt x 157.50026pt.
 
+LaTeX Warning: Citation `Thomas' on page 3 undefined on input line 206.
+
+
+LaTeX Warning: Citation `Thomas' on page 3 undefined on input line 206.
+
+
+LaTeX Warning: Reference `eq:OMLsol' on page 3 undefined on input line 210.
+
+
+LaTeX Warning: Reference `eq:OMLsol' on page 3 undefined on input line 210.
+
+
+LaTeX Warning: Citation `Angelis' on page 3 undefined on input line 214.
+
+
+LaTeX Warning: Citation `Willis' on page 3 undefined on input line 214.
+
+
+LaTeX Warning: Citation `Willis' on page 3 undefined on input line 214.
+
+
+LaTeX Warning: Citation `Thomas' on page 3 undefined on input line 218.
+
+
+LaTeX Warning: Citation `Thomas' on page 3 undefined on input line 226.
+
+
+LaTeX Warning: Citation `Thomas' on page 3 undefined on input line 226.
+
+
+LaTeX Warning: Citation `Willis' on page 3 undefined on input line 226.
+
+
+LaTeX Warning: Reference `eq:OMLeqn' on page 3 undefined on input line 230.
+
+
+LaTeX Warning: Citation `Thomas' on page 3 undefined on input line 230.
+
+
+LaTeX Warning: Reference `eq:PhiS' on page 3 undefined on input line 242.
+
+
+LaTeX Warning: Reference `eq:OMLeqn' on page 3 undefined on input line 242.
+
+
 Overfull \hbox (36.7021pt too wide) detected at line 246
-\OT1/cmr/m/n/10 ^^H[] \OMS/cmsy/m/n/10 ^^Y [] ^^@ \OML/cmm/m/it/10 W[] [] \OT1/
-cmr/m/n/10 + [] [] []\OML/cmm/m/it/10 ;
+\OT1/cmr/m/n/10 ^^H[] \OMS/cmsy/m/n/10 ^^Y [] ^^@ \OML/cmm/m/it/10 W[] [] \OT1/cmr/m/n/10 + [] [] []\OML/cmm/m/it/10 ;
  []
+
+
+LaTeX Warning: Citation `Coppins' on page 3 undefined on input line 252.
 
 <Output/MOMLgamma.jpeg, id=27, 578.16pt x 361.35pt>
 File: Output/MOMLgamma.jpeg Graphic file (type jpg)
 <use Output/MOMLgamma.jpeg>
 Package pdftex.def Info: Output/MOMLgamma.jpeg  used on input line 256.
 (pdftex.def)             Requested size: 252.0pt x 157.50026pt.
-[3 <./Output/OMLgraph.jpeg>]
+
+LaTeX Warning: Citation `Thomas' on page 3 undefined on input line 257.
+
+
+LaTeX Warning: Citation `Thomas' on page 3 undefined on input line 257.
+
+[3 </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/OMLgraph.jpeg>]
+
+LaTeX Warning: Reference `MOMLgamma' on page 4 undefined on input line 261.
+
+
+LaTeX Warning: Citation `Willis' on page 4 undefined on input line 261.
+
 <Output/MOMLgraph.jpeg, id=33, 578.16pt x 361.35pt>
 File: Output/MOMLgraph.jpeg Graphic file (type jpg)
 <use Output/MOMLgraph.jpeg>
 Package pdftex.def Info: Output/MOMLgraph.jpeg  used on input line 265.
 (pdftex.def)             Requested size: 252.0pt x 157.50026pt.
 
-./DustInPlasmaReport.tex:299: Missing } inserted.
+LaTeX Warning: Citation `Thomas' on page 4 undefined on input line 266.
+
+
+LaTeX Warning: Citation `Thomas' on page 4 undefined on input line 266.
+
+
+LaTeX Warning: Citation `Willis' on page 4 undefined on input line 270.
+
+
+LaTeX Warning: Reference `MOMLgamma' on page 4 undefined on input line 270.
+
+
+LaTeX Warning: Reference `eq:MOMLsol' on page 4 undefined on input line 270.
+
+
+LaTeX Warning: Citation `Thomas' on page 4 undefined on input line 292.
+
+
+LaTeX Warning: Citation `Thomas' on page 4 undefined on input line 292.
+
+/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex:299: Missing } inserted.
 <inserted text> 
                 }
 l.299 ...ta s_1(\upsilon)}{Z s_2(\upsilon)\right)}
                                                   \right)}},
-? 
-./DustInPlasmaReport.tex:299: Extra }, or forgotten $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex:299: Extra }, or forgotten $.
 l.299 ...psilon)}{Z s_2(\upsilon)\right)}\right)}}
                                                   ,
-? 
-./DustInPlasmaReport.tex:304: Extra }, or forgotten $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex:304: Extra }, or forgotten $.
 l.304 \noindent where $s_{1}(\upsilon)}
                                        $ and $s_{2}(\upsilon)}$ are expressi...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-? 
-./DustInPlasmaReport.tex:304: Extra }, or forgotten $.
+/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex:304: Extra }, or forgotten $.
 l.304 ... $s_{1}(\upsilon)}$ and $s_{2}(\upsilon)}
                                                   $ are expressions given by
-? 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Citation `Thomas' on page 4 undefined on input line 319.
+
+
+LaTeX Warning: Citation `NormFactor' on page 4 undefined on input line 319.
+
+
+LaTeX Warning: Citation `NormFactorCoppins' on page 4 undefined on input line 319.
+
 <Output/SOMLgraph.jpeg, id=34, 578.16pt x 361.35pt>
 File: Output/SOMLgraph.jpeg Graphic file (type jpg)
 <use Output/SOMLgraph.jpeg>
 Package pdftex.def Info: Output/SOMLgraph.jpeg  used on input line 327.
 (pdftex.def)             Requested size: 252.0pt x 157.50026pt.
-[4 <./Output/MOMLgamma.jpeg> <./Output/MOMLgraph.jpeg> <./Output/SOMLgraph.jpeg
->]
 
-./DustInPlasmaReport.tex:340: LaTeX Error: \begin{multline} on input line 338 e
-nded by \end{multiline}.
+LaTeX Warning: Citation `Thomas' on page 4 undefined on input line 328.
+
+
+LaTeX Warning: Citation `Thomas' on page 4 undefined on input line 328.
+
+[4 </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/MOMLgamma.jpeg> </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/MOMLgraph.jpeg> </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/SOMLgraph.jpeg>]
+
+/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex:340: LaTeX Error: \begin{multline} on input line 338 ended by \end{multiline}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -456,39 +590,76 @@ Type  H <return>  for immediate help.
                                                   
 l.340 \end{multiline}
                      
-? 
-./DustInPlasmaReport.tex:340: Missing } inserted.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex:340: Missing } inserted.
 <inserted text> 
                 }
 l.340 \end{multiline}
                      
-? 
-./DustInPlasmaReport.tex:340: Extra }, or forgotten $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex:340: Extra }, or forgotten $.
 <argument> ...mu ^2}(1 + \gamma \Theta )\right ]}}
                                                   . 
 l.340 \end{multiline}
                      
-? 
-./DustInPlasmaReport.tex:340: Missing } inserted.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex:340: Missing } inserted.
 <inserted text> 
                 }
 l.340 \end{multiline}
                      
-? 
-./DustInPlasmaReport.tex:340: Extra }, or forgotten $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex:340: Extra }, or forgotten $.
 <argument> ...mu ^2}(1 + \gamma \Theta )\right ]}}
                                                   . 
 l.340 \end{multiline}
                      
-? 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Reference `SMOMLgraph' on page 5 undefined on input line 342.
+
 <Output/SMOMLgraph.jpeg, id=43, 578.16pt x 361.35pt>
 File: Output/SMOMLgraph.jpeg Graphic file (type jpg)
 <use Output/SMOMLgraph.jpeg>
 Package pdftex.def Info: Output/SMOMLgraph.jpeg  used on input line 346.
 (pdftex.def)             Requested size: 252.0pt x 157.50026pt.
 
-./DustInPlasmaReport.tex:363: LaTeX Error: \begin{multline} on input line 361 e
-nded by \end{multiline}.
+LaTeX Warning: Citation `Thomas' on page 5 undefined on input line 347.
+
+
+LaTeX Warning: Citation `Thomas' on page 5 undefined on input line 347.
+
+
+LaTeX Warning: Citation `Willis' on page 5 undefined on input line 355.
+
+
+LaTeX Warning: Citation `Willis' on page 5 undefined on input line 359.
+
+
+/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.tex:363: LaTeX Error: \begin{multline} on input line 361 ended by \end{multiline}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -496,88 +667,177 @@ Type  H <return>  for immediate help.
                                                   
 l.363 \end{multiline}
                      
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 
 Overfull \hbox (20.44655pt too wide) detected at line 363
  []$[]  []\OML/cmm/m/it/10 ;$ []  
  []
+
+
+LaTeX Warning: Citation `Willis' on page 5 undefined on input line 365.
 
 <Output/staticgraph.jpeg, id=44, 578.16pt x 361.35pt>
 File: Output/staticgraph.jpeg Graphic file (type jpg)
 <use Output/staticgraph.jpeg>
 Package pdftex.def Info: Output/staticgraph.jpeg  used on input line 373.
 (pdftex.def)             Requested size: 252.0pt x 157.50026pt.
+
+LaTeX Warning: Citation `Willis' on page 5 undefined on input line 374.
+
+
+LaTeX Warning: Citation `Willis' on page 5 undefined on input line 374.
+
+
+LaTeX Warning: Reference `eq:Numfit' on page 5 undefined on input line 382.
+
+
+LaTeX Warning: Reference `FlowingNumFit' on page 5 undefined on input line 386.
+
 <Output/flowinggraph.jpeg, id=45, 578.16pt x 361.35pt>
 File: Output/flowinggraph.jpeg Graphic file (type jpg)
 <use Output/flowinggraph.jpeg>
 Package pdftex.def Info: Output/flowinggraph.jpeg  used on input line 390.
 (pdftex.def)             Requested size: 252.0pt x 157.50026pt.
-[5 <./Output/SMOMLgraph.jpeg> <./Output/staticgraph.jpeg> <./Output/flowinggrap
-h.jpeg>]
+
+LaTeX Warning: Citation `Willis' on page 5 undefined on input line 391.
+
+
+LaTeX Warning: Citation `Willis' on page 5 undefined on input line 391.
+
+
+LaTeX Warning: Citation `ABR' on page 5 undefined on input line 397.
+
+[5 </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/SMOMLgraph.jpeg> </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/staticgraph.jpeg> </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/flowinggraph.jpeg>]
+
+LaTeX Warning: Citation `ABR' on page 6 undefined on input line 412.
+
+
+LaTeX Warning: Citation `ABR' on page 6 undefined on input line 424.
+
+
+LaTeX Warning: Citation `ABR' on page 6 undefined on input line 449.
+
+
+LaTeX Warning: Reference `eq:ABR9' on page 6 undefined on input line 449.
+
+
+LaTeX Warning: Reference `eq:ABR12' on page 6 undefined on input line 449.
+
+
+LaTeX Warning: Reference `eq:ABR10' on page 6 undefined on input line 449.
+
+
+LaTeX Warning: Reference `eq:ABR11' on page 6 undefined on input line 449.
+
+
+LaTeX Warning: Reference `eq:ABR9' on page 6 undefined on input line 449.
+
+
+LaTeX Warning: Reference `eq:ABR9' on page 6 undefined on input line 449.
+
+
+LaTeX Warning: Reference `eq:ABR12' on page 6 undefined on input line 449.
+
 <Output/ABRgraph.jpeg, id=52, 462.528pt x 346.896pt>
 File: Output/ABRgraph.jpeg Graphic file (type jpg)
 <use Output/ABRgraph.jpeg>
 Package pdftex.def Info: Output/ABRgraph.jpeg  used on input line 455.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+
+LaTeX Warning: Citation `ABR' on page 6 undefined on input line 456.
+
+
+LaTeX Warning: Citation `Thomas' on page 6 undefined on input line 456.
+
+
+LaTeX Warning: Citation `ABR' on page 6 undefined on input line 456.
+
+
+LaTeX Warning: Citation `Thomas' on page 6 undefined on input line 456.
+
+
+LaTeX Warning: Reference `eq:Q' on page 6 undefined on input line 484.
+
+
+LaTeX Warning: Reference `OMLvsABR' on page 6 undefined on input line 494.
+
 <Output/OMLvsABR.jpeg, id=53, 578.16pt x 361.35pt>
 File: Output/OMLvsABR.jpeg Graphic file (type jpg)
 <use Output/OMLvsABR.jpeg>
 Package pdftex.def Info: Output/OMLvsABR.jpeg  used on input line 498.
 (pdftex.def)             Requested size: 252.0pt x 157.50026pt.
- [6 <./Output/ABRgraph.jpeg>]
+[6 </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/ABRgraph.jpeg>]
 <Output/Residuals.jpeg, id=59, 578.16pt x 361.35pt>
 File: Output/Residuals.jpeg Graphic file (type jpg)
 <use Output/Residuals.jpeg>
 Package pdftex.def Info: Output/Residuals.jpeg  used on input line 505.
 (pdftex.def)             Requested size: 252.0pt x 157.50026pt.
+
+
+LaTeX Warning: Reference `OMLvsABR' on page 7 undefined on input line 510.
+
+
+LaTeX Warning: Reference `Residuals' on page 7 undefined on input line 514.
+
+
+LaTeX Warning: Reference `OMLvsABR' on page 7 undefined on input line 518.
+
+
+LaTeX Warning: Reference `eq:Planarlim' on page 7 undefined on input line 518.
+
+
+LaTeX Warning: Reference `eq:MOMLlim' on page 7 undefined on input line 518.
+
+
+LaTeX Warning: Reference `Residuals' on page 7 undefined on input line 518.
+
 <Output/CorrectedOMLvsABR.jpeg, id=60, 578.16pt x 361.35pt>
 File: Output/CorrectedOMLvsABR.jpeg Graphic file (type jpg)
 <use Output/CorrectedOMLvsABR.jpeg>
 Package pdftex.def Info: Output/CorrectedOMLvsABR.jpeg  used on input line 522.
-
 (pdftex.def)             Requested size: 252.0pt x 157.50026pt.
 <Output/CorrectedResiduals.jpeg, id=61, 578.16pt x 361.35pt>
 File: Output/CorrectedResiduals.jpeg Graphic file (type jpg)
 <use Output/CorrectedResiduals.jpeg>
-Package pdftex.def Info: Output/CorrectedResiduals.jpeg  used on input line 529
-.
+Package pdftex.def Info: Output/CorrectedResiduals.jpeg  used on input line 529.
 (pdftex.def)             Requested size: 252.0pt x 157.50026pt.
- [7 <./Output/OMLvsABR.jpeg> <./Output/Residuals.jpeg> <./Output/CorrectedOMLvs
-ABR.jpeg> <./Output/CorrectedResiduals.jpeg>] (./DustInPlasmaReport.bbl) [8]
+
+LaTeX Warning: Reference `CorrectedOMLvsABR' on page 7 undefined on input line 534.
+
+
+LaTeX Warning: Reference `CorrectedResiduals' on page 7 undefined on input line 542.
+
+
+LaTeX Warning: Reference `Residuals' on page 7 undefined on input line 542.
+
+[7 </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/OMLvsABR.jpeg> </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/Residuals.jpeg> </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/CorrectedOMLvsABR.jpeg> </Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/Output/CorrectedResiduals.jpeg>]
+No file DustInPlasmaReport.bbl.
+[8]
 Overfull \hbox (13.51505pt too wide) in paragraph at lines 823--854
  [] 
  []
 
-[9] (./DustInPlasmaReport.aux) ) 
+[9] (/Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5510 strings out of 480906
- 83475 string characters out of 5908284
- 343873 words of memory out of 5000000
- 21002 multiletter control sequences out of 15000+600000
- 572158 words of font info for 101 fonts, out of 8000000 for 9000
+ 5501 strings out of 480608
+ 84507 string characters out of 5903630
+ 341303 words of memory out of 5000000
+ 21288 multiletter control sequences out of 15000+600000
+ 570486 words of font info for 97 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 51i,15n,41p,1725b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/d
-vips/base/8r.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
-.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pf
-b></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
-texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2020/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts
-/type1/urw/times/utmri8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/ur
-w/zapfding/uzdr.pfb>
-Output written on DustInPlasmaReport.pdf (9 pages, 844895 bytes).
+ 45i,15n,33p,1840b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on /Users/georgedoran/Documents/George_Doran/Imperial/Physics/Dust_in_plasma/DustyPlasmaCollab/Papers/PlasmaReport/DustInPlasmaReport.pdf (9 pages, 843867 bytes).
 PDF statistics:
  138 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream
