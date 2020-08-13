@@ -18,7 +18,6 @@
 \newcommand{\cmark}{\ding{51}}
 
 \DeclareMathOperator\erf{erf}
-
 \interdisplaylinepenalty=2500
 \hyphenation{op-tical net-works semi-conduc-tor}
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
@@ -42,7 +41,7 @@
     
 Large dust immersed in a collisionless plasma are well described 
 by ABR and MOML for almost all values of ion temperature to electron temperature, $\Theta$. 
-A detailed comparison between ABR and MOML in their respective limits has identified 
+A comparison between ABR and MOML in their respective limits has identified 
 a previously unexpected discrepancy between the two. We have concluded that MOML breaks
 down in the cold ion limit and thus is invalid for $\Theta \leq 1$. Therefore, we have introduced a new 
 analytic model that rectifies this discrepancy and describes the potential 
@@ -52,6 +51,21 @@ of a large dust grain for $0 \leq \Theta \leq 1$.
 
 \section{Introduction}
 
+The computational complexity of orbital motion (OM) theory limits the parameter 
+space over which the theory may be used to model a spherical dust grain immersed in a static, collisionless plasma. 
+Solving the OM equations becomes computationally taxing at extreme values of parameter space
+and so becomes an inefficient method of predicting the surface potential of dust. 
+Therefore, it is essential to find analytic models that correctly describe the dust surface potential for extreme values of parameter space, most of which is already 
+accounted for. 
+
+\medskip
+
+The scope of this paper has been restricted to the large dust grain limit. In this limit, the 
+following models are known to correctly describe the surface potential 
+of a dust grain in a static, collisionless plasma for extreme values of parameter space: 
+ABR describes dust of all sizes in a cold ion plasma and MOML describes large dust for a finite ion 
+temperature plasma. 
+ 
 \section{Background}
 
 In the case of a large dust grain with a negative equilibrium charge, we can establish regions within an infinite plasma with well-defined
@@ -108,6 +122,8 @@ Hence, the potential drop across the sheath for $T_i \neq 0$ is given as
 
 \noindent where $Z$ is the relative ion charge, $\mu = \sqrt{\frac{m_i}{m_e}}$ and $\Theta = \frac{T_i}{T_e}$ \cite{Stangeby1986}.
 
+\newpage
+
 \section{Radial motion theory (ABR)}
 
 \smallskip
@@ -118,9 +134,9 @@ by a dust grain immersed in an infinite and stationary plasma \cite{ABR}.
 \medskip
 
 Consider a spherical dust grain, of arbitrary radius $a$, immersed in this infinite plasma. Far from the surface we assume that the electron
-and ion densities are equal, denoted $n_e$ and $n_i$ respectively; this is known as quasi-neutrality. As electrons are faster than ions, it can be shown that such a dust grain will become negatively 
+and ion densities are equal, denoted $n_e$ and $n_i$ respectively; known as quasi-neutrality. As electrons are faster than ions, it can be shown that such a dust grain will become negatively 
 charged \cite{Thomas}, thus ions will experience an attractive force due to the potential on the dust surface, 
-$\phi_a$. We assume that ions at infinity have no kinetic energy, hence, they move radially
+$\phi_a$. We assume that the ions at infinity have no kinetic energy, hence, they move radially
 towards the dust grain. Therefore, it is appropriate to say that an ion at a distance 
 $r$ from the dust center has radial speed $v_i$. Using energy conservation, one can show the following,
 
@@ -152,7 +168,7 @@ we further assume that only inbound electrons contribute to the electron current
 grain, given as
 
 \begin{equation}\label{eq:ABRIe}
-I_i = I_e = 4 \pi a^2 n_0 e \sqrt{\frac{k_B T_e}{2 \pi m_e }} \exp{\left(\frac{e \phi_a}{k_B T_e}\right)}.
+I_e = 4 \pi a^2 n_0 e \sqrt{\frac{k_B T_e}{2 \pi m_e }} \exp{\left(\frac{e \phi_a}{k_B T_e}\right)}.
 \end{equation}  
 
 \noindent where $m_e$ is the electron mass \cite{ABR}.
@@ -227,6 +243,8 @@ the cold planar wall limit \cite{Thomas}, given as the following
 \noindent where $Z = 1$ and the $-\frac{1}{2}$ is due to the potential drop across the cold ion pre-sheath,
 as discussed by Stangeby \cite{Stangeby1986} \cite{Stangeby2000}. Furthermore, one can clearly see that in the limit
 of $\alpha \to 0$ the ABR prediction tends to zero also \cite{ABR}.
+
+\newpage 
 
 \section{Modified orbital motion limited (MOML)}
 
@@ -584,7 +602,7 @@ distribution in 3D is in fact $E = 2k_B T_i$.
 \medskip 
 
 Surprisingly, when fitting the flowing sheath approximation to available SCEPTIC data for $0 \leq \Theta \leq 1$, one finds that
-the optimal choice for $\kappa$ is 2.1, hence, for the remainder of the analysis we will choose $\kappa = 2$. However, it should be noted that the reason as to why and how 
+the optimal choice for $\kappa$ is approximately $2.09 \pm 0.02$, hence, for the remainder of the analysis we will choose $\kappa = 2$. However, it should be noted that the reason as to why and how 
 the ion distribution function changes across the pre-sheath, as suggested by this model, is still unknown.
 
 \begin{figure}[H]
@@ -632,7 +650,7 @@ Following the same steps as (\ref{eq:AverageEnergy2}) through (\ref{eq:PSpotenti
 
 \smallskip
 
-In order to determine the reliability of the model, we must compare it to existing 
+In order to determine the reliability of this new model, we must compare it to existing 
 models that are accepted within the plasma community. As stated before, we know that 
 the new model deviates from MOML for values of $\Theta > 1$; however, the MOML potential 
 is in fact greater than the potential predicted by the model in this region, and so is above
@@ -641,12 +659,12 @@ appropriate model available.
 
 \medskip
 
-The most interesting behaviour of the model is seen for $\Theta \leq 1$. In the limit of 
+In the limit of 
 $\Theta \to 0$ the model exactly recovers the ABR value and so rectifies the discrepancy between
 MOML and ABR. Furthermore, the value predicted for 
 $\Theta = 1$ is the same as that predicted by OM theory for $\alpha = 100$ and $\Theta = 1$, suggesting 
 that the model exactly reproduces known values for the extreme values of $0 \leq \Theta \leq 1$.
-Within the region of interest, we see that the model predicts an 
+Within this region of interest, we see that the model predicts an 
 increasing potential from the ABR value, as is expected, in direct contrast to a decreasing potential from a 
 wrong cold ion value as suggested by MOML.
 
@@ -692,7 +710,7 @@ ABR and the flowing sheath approximation for $0 \leq \Theta \leq 10$.}
 
 \section{Conclusion}
 
-Together, ABR and MOML are capable of describing the 
+ABR and MOML, together, are capable of describing the 
 potential attained by a large dust grain immersed in a collisionless plasma
 for almost all values of ion temperature to electron temperature, $\Theta$. 
 However, when considering MOML in the cold 

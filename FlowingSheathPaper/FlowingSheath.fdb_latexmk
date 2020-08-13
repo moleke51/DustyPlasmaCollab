@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex FlowingSheath"] 1597267762 "FlowingSheath.aux" "FlowingSheath.bbl" "FlowingSheath" 1597315531
+["bibtex FlowingSheath"] 1597318793 "FlowingSheath.aux" "FlowingSheath.bbl" "FlowingSheath" 1597329387
   "./IEEEtran.bst" 1168503386 59215 bc5380b3434a66b895bbc75d3d380540 ""
   "DustyLib.bib" 1597230610 7868 1ad35226080aa47ba45d9bf0229cdff1 ""
-  "FlowingSheath.aux" 1597314458 6965 e5cc67a7bcefeed64db0584b80cce8ec "pdflatex"
+  "FlowingSheath.aux" 1597329367 6967 5982ff18c2a4d18fd69acd2e1df8eedf "pdflatex"
   (generated)
-  "FlowingSheath.bbl"
   "FlowingSheath.blg"
-["pdflatex"] 1597314457 "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.tex" "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.pdf" "FlowingSheath" 1597315531
-  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.aux" 1597314458 6965 e5cc67a7bcefeed64db0584b80cce8ec ""
-  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.tex" 1597315530 31555 31d0f6ef881a6784a1f757f9c3f94200 ""
+  "FlowingSheath.bbl"
+["pdflatex"] 1597329366 "/Users/doganakpinar/Documents/Physics/Physics_Research/DustyPlamsa/DustyPlasmaCollab2020/FlowingSheathPaper/FlowingSheath.tex" "/Users/doganakpinar/Documents/Physics/Physics_Research/DustyPlamsa/DustyPlasmaCollab2020/FlowingSheathPaper/FlowingSheath.pdf" "FlowingSheath" 1597329387
+  "/Users/doganakpinar/Documents/Physics/Physics_Research/DustyPlamsa/DustyPlasmaCollab2020/FlowingSheathPaper/FlowingSheath.aux" 1597329367 6967 5982ff18c2a4d18fd69acd2e1df8eedf ""
+  "/Users/doganakpinar/Documents/Physics/Physics_Research/DustyPlamsa/DustyPlasmaCollab2020/FlowingSheathPaper/FlowingSheath.tex" 1597329386 32465 4632affd775f3fd21ff5f964f6aaa6bd ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -109,9 +109,9 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1596738798 4873736 58e4ef1643f1b71b8b12fbd5eeecf314 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1596738914 2441111 c1554bfd0cfc10da81682f1f259a65ee ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "FlowingSheath.aux" 1597314458 6965 e5cc67a7bcefeed64db0584b80cce8ec "pdflatex"
-  "FlowingSheath.bbl" 1597267762 3460 94c26512b387a544656d8720773a8cb9 "bibtex FlowingSheath"
-  "FlowingSheath.tex" 1597315530 31555 31d0f6ef881a6784a1f757f9c3f94200 ""
+  "FlowingSheath.aux" 1597329367 6967 5982ff18c2a4d18fd69acd2e1df8eedf "pdflatex"
+  "FlowingSheath.bbl" 1597318793 3460 94c26512b387a544656d8720773a8cb9 "bibtex FlowingSheath"
+  "FlowingSheath.tex" 1597329386 32465 4632affd775f3fd21ff5f964f6aaa6bd ""
   "Output/ABRgraph.jpeg" 1568632125 121852 fa67a99466c952fd44d1a23762883a10 ""
   "Output/FSpotential.jpeg" 1597233035 110570 be28c06987061f8464392ba51185b97c ""
   "Output/MOMLgamma.jpeg" 1567609244 51564 c167809a10d30ae6780fa8897b63c013 ""
@@ -121,8 +121,8 @@
   "Output/MOMLvsFS_kappa1_5.jpeg" 1597229434 219446 65f92f0e478ccb802374967a71410450 ""
   "Output/ModelComparions.jpeg" 1596981923 154185 791bb4f75bb1b48843cda1ad8847865d ""
   (generated)
+  "/Users/doganakpinar/Documents/Physics/Physics_Research/DustyPlamsa/DustyPlasmaCollab2020/FlowingSheathPaper/FlowingSheath.pdf"
   "FlowingSheath.aux"
+  "/Users/doganakpinar/Documents/Physics/Physics_Research/DustyPlamsa/DustyPlasmaCollab2020/FlowingSheathPaper/FlowingSheath.log"
   "FlowingSheath.log"
   "FlowingSheath.pdf"
-  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.pdf"
-  "/Users/doganakpinar/Documents/Physics_Research/DustyPlasmaCollab/FlowingSheathPaper/FlowingSheath.log"
